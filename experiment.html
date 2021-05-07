@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jspsych.js"></script>
+    <script src="plugins/jspsych-instructions.js"></script> 
+    <script src="plugins/jspsych-survey-likert.js"></script> 
+    <script src="plugins/jspsych-survey-text.js"></script> 
+    <script src="plugins/jspsych-html-slider-response.js"></script> 
+    <link rel="stylesheet" href="css/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+
+    // Scales
+
+var scale_7 = ["Strongly Disagree", "","Disagree", "Neutral", "Agree", "", "Strongly Agree"];
+    
+var practice_scale_7 = ["I never practice this with students", "", "", "I sometimes practice this with students", "", "", "I very frequently practice this with students."];
+
+var rp_scale_7 = ["This is not an RP skill", "", "", "This skill partially fosters RP", "", "", "This skill is the essence of RP"];
+
+var ap_scale_7 = ["This is not an AP skill", "", "", "This skill partially fosters AP", "", "", "This skill is the essence of AP"];
+
+var teach_scale_7 = ["This is an easy skill for students to learn", "", "", "Middle", "", "", "This is a difficult skill for students to learn"];
+
+var learn_scale_7 = ["This is an easy skill to teach students", "", "", "Mild Sauce", "", "", "This is difficult to teach"];
+
+    
+// Drafting Of Aural Skills Survey Experiment 
+
+    var intro_text = {
+	type: 'instructions',
+	pages: ['<p>This survey is designed to learn more about how music pedagogues define Relative Pitch and its attributes. This survey will include both multiple-choice and free-response questions. We hope that the survey will take no more than 30 minutes of your time. Thank you for participating. If you are willing to participate, please press NEXT!</p>','<p>{ Info here from UT Ethics Requirement regarding data storage, harm, age…} </p>','<p>Thank you for agreeing to participate in this survey. As noted before, the survey will take about 30 minutes of your time. In that time you will be asked to complete FOUR sections.</p><p>The first section will ask you questions about your beliefs about Relative Pitch.</p><p>The second section will ask you to answer questions about your teaching practice and how it relates to relative pitch.</p><p>The third section will ask you to answer questions about your teaching practice and how it relates to absolute pitch.</p><p>The fourth section will ask you to respond to some questions regarding your demographic background and teaching experiences, so as to contextualize your responses.</p><p>We welcome all opinions and experiences on the topic; do not consult outside sources while completing the survey. We want you to respond based on your own experiences and the beliefs you hold now (rather than looking up a definition).</p><p>A progress bar will be displayed at the top of the page so you have an idea of how far you are into the survey.</p><p>If you are ready to begin, please press NEXT.</p>','<p>PAGE HERE SAYING ABOUT TO START SECTION ONE</p>'],
+    show_clickable_nav: true
+  }
+
+  var multi_response_text = {
+	type: 'instructions',
+	pages: ['<p>You have now completed the first section of the survey. In the next part of the survey, you will be presented with several different types of activities that aural skills teachers (various levels?) have used when teaching aural skills. For each activity, you will complete a similar Agree/Disagree scale for each activity, except that you will be asked to rate each activity on several dimensions.</p><p>All questions pertain to your teaching of aural skills, be that high school, university, private?<</p><p>For each question you will answer</p><ul><li>How often you practice this skill with the students you teach</li><li>The degree to which you believe this activity reflects relative pitch ability</li><li>The difficulty of teaching this activity?</li><li>The difficulty a “typical?” student has with this activity?</li></ul><p>Each item will be presented on its own page. If you are ready… press next?</p>'],
+    show_clickable_nav: true
+  }
+
+    // RP Questions 
+    
+    var rp_instructions_slider = {
+	type: 'instructions',
+	pages: ['<p>Next are several definitions of Relative Pitch from well-known authors and experts in aural skills research. (Sentence here about there not being any correct answers, we are more interested in their own beliefs.).  Using the slider, please indicate the degree that you either agree or disagree with 1 meaning “I strongly disagree” and 7 meaning “I strongly agree” with each definition. Leaving the slider in the middle would indicate that you neither agree or disagree with the definition.</p><p>If none of these definitions match your own personal definition of Relative Pitch, you will have the chance to provide your own on the next page.</p><p>Relative pitch is...</p>'],
+    show_clickable_nav: true
+  }
+
+var rp_1 = {
+    type: 'html-slider-response',
+    stimulus: '<p>Relative Pitch is...</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>the ability to idenity scale degrees with reference to a tonality.</p>"
+};
+
+var rp_2 = {
+    type: 'html-slider-response',
+    stimulus: '<p>Relative Pitch is...</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>the ability to identify the interval between two tones.</p>"
+};
+
+var rp_3 = {
+    type: 'html-slider-response',
+    stimulus: '<p>Relative Pitch is...</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>the ability to identify or produce musical intervals or relations between pitches.</p>"
+};
+
+var rp_4 = {
+    type: 'html-slider-response',
+    stimulus: '<p>Relative Pitch is...</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>the ability to perceive transposed melodies as “the same.”</p>"
+};
+
+var rp_5 = {
+    type: 'html-slider-response',
+    stimulus: '<p>Relative Pitch is...</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>primarily understanding music as relationships among notes, not labeling exact pitches.</p>"
+};
+
+    // AP Questions
+    
+    var ap_instructions_slider = {
+	type: 'instructions',
+	pages: ['<p>Below are several groups of people who aural skills researchers have identified with having Relative Pitch. (Sentence here about there not being any correct answers, we are more interested in their own beliefs.). Using the slider, please indicate the degree that you either agree or disagree with 0 meaning “I strongly disagree” and 100 meaning “I strongly agree” with each definition. Leaving the slider in the middle would indicate that you neither agree or disagree with the definition.</p><p>If none of these definitions match your own personal definition of who has Relative Pitch, you will have the chance to provide your own on the next page.</p>'],
+    show_clickable_nav: true
+  }
+
+var ap_1 = {
+    type: 'html-slider-response',
+    stimulus: '<p>PLACEHOLDER</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>All trained musicians have relative pitch.</p>"
+};
+
+var ap_2 = {
+    type: 'html-slider-response',
+    stimulus: '<p>PLACEHOLDER</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>All trained musicians who don’t have perfect pitch have relative pitch.</p>"
+};
+
+var ap_3 = {
+    type: 'html-slider-response',
+    stimulus: '<p>PLACEHOLDER</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>All individuals with normal hearing have relative pitch. (i.e. Relative Pitch is a function of the auditory system)</p>"
+};
+
+var ap_4 = {
+    type: 'html-slider-response',
+    stimulus: '<p>PLACEHOLDER</p>',
+    labels: ['Strongly Disagree', 'Strongly Agree'],
+    prompt: "<p>All individuals with normal hearing who don't have perfect pitch have relative pitch.</p>"
+};
+
+
+    
+
+    // Single Likert Page Examples
+
+
+    var m_instructions_slider = {
+	type: 'instructions',
+	pages: ['<p>For each of the the following Aural Skills activities, please rate<ul><li>How often you practice this skill with the students you teach</li><li>The degree to which you believe this activity reflects relative pitch ability</li><li>The difficulty of teaching this activity??</li><li>The difficulty is “typical?” student has with this activity?</li></ul></p>'],
+    show_clickable_nav: true
+  }
+
+    
+var ess_1 = {
+  type: 'survey-likert',
+    preamble: "Finding/singing tonic when hearing some music",
+  questions: [
+      {prompt: "1", name: 'often', labels: practice_scale_7},
+      {prompt: "2", name: 'rp', labels: rp_scale_7},
+      {prompt: "3", name: 'ap', labels: ap_scale_7},
+      {prompt: "4", name: 'learn', labels: teach_scale_7},
+      {prompt: "5", name: 'teach', labels: learn_scale_7}
+  ],
+  randomize_question_order: false 
+};
+
+var ess_2 = {
+  type: 'survey-likert',
+    preamble: "Singing/identifying an interval from a given note (without necessarily labeling individual notes)",
+  questions: [
+      {prompt: "1", name: 'often', labels: practice_scale_7},
+      {prompt: "2", name: 'rp', labels: rp_scale_7},
+      {prompt: "3", name: 'ap', labels: ap_scale_7},
+      {prompt: "4", name: 'learn', labels: teach_scale_7},
+      {prompt: "5", name: 'teach', labels: learn_scale_7}
+  ],
+  randomize_question_order: false 
+};
+
+var ess_n = {
+  type: 'survey-likert',
+    preamble: "More prompts here...",
+  questions: [
+      {prompt: "1", name: 'often', labels: practice_scale_7},
+      {prompt: "2", name: 'rp', labels: rp_scale_7},
+      {prompt: "3", name: 'ap', labels: ap_scale_7},
+      {prompt: "4", name: 'learn', labels: teach_scale_7},
+      {prompt: "5", name: 'teach', labels: learn_scale_7}
+  ],
+  randomize_question_order: false 
+};
+    // Free Response
+
+    var rp_free_response = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "If you believe none of the following definitions suited or matched your definition of Relative Pitch, please use the space below to provide your own.</p><p>Relative pitch is...</p>", rows: 10, columns: 70}
+  ],
+};
+
+ var ap_free_response = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "If you believe none of the following definitions suited or matched your definition of Absolute Pitch, please use the space below to provide your own.</p><p>Relative pitch is...</p>", rows: 10, columns: 70}
+  ],
+};
+
+
+  jsPsych.init({
+      timeline: [
+	  intro_text,
+	  rp_instructions_slider,
+	  rp_1, rp_2, rp_3, rp_4, rp_5,
+	  rp_free_response, 
+	  ap_instructions_slider,
+	  ap_1, ap_2, ap_3, ap_4,
+	  ap_free_response,
+	  multi_response_text,
+	  m_instructions_slider,
+	  ess_1,
+	  ess_2,
+	  ess_n,
+      ],
+    on_finish: function(){ jsPsych.data.displayData(); }
+  });
+
+  </script>
+</html>
