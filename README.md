@@ -17,8 +17,8 @@ The following are needed to be done for the survey:
 * [ ] Prettify HTML with CSS
 * [ ] Finalise Questions
 * [ ] Add consent and ethics page text 
-* [ ] Lock length of slider per page 
-* [ ] ADD Progress bar 
+* [x] Lock length of slider per page 
+* [x] ADD Progress bar 
 
 * [ ] Page 1, RP and AP Ref and their attributes 
 * [ ] dont break up the slider 
