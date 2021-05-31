@@ -23,7 +23,7 @@
    display: flex;
    margin: auto;
    flex: 1 1 100%;
-   width: 100%;
+   width: 50%; /* Here adjust for text width */ 
  }
 
  .jspsych-content {
@@ -59,7 +59,9 @@
 .jspsych-btn {
   display: inline-block;
   padding: 6px 12px;
-  margin: 0px;
+  margin: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
   font-size: 14px;
   font-weight: 400;
   font-family: 'Open Sans', 'Arial', sans-serif;
