@@ -15,12 +15,13 @@
   <script>
 
     // Introduction
+    // TODO: See How Long It takes (add that in!) 
     
     var intro_text = {
 	type: 'instructions',
-	pages: ['<p>Welcome to this survey on <strong>aural skills pedagogy!</strong></p><p>This survey is designed to help our research team learn more about how music pedagogues define relative pitch, absolute pitch (a.k.a. perfect pitch), and their attributes. This survey will include both multiple-choice and free-response questions. We hope that the survey will take no more than 30 minutes of your time. Thank you for participating.</p><p>If you are willing to participate, please press NEXT.</p>',
+	pages: ['<p>Welcome!</p><p>This survey is designed to help our research team learn more about how music pedagogues define relative pitch, absolute pitch (a.k.a. perfect pitch), and their attributes. This survey will include both multiple-choice and free-response questions. We hope that the survey will take no more than 30 minutes of your time. Thank you for participating.</p><p>If you are willing to participate, please press NEXT.</p>',
 		'<p>{ Info here from UT Ethics Requirement regarding data storage, harm, age…} </p>',
-		'<p>Thank you for agreeing to participate in this survey. As noted before, the survey will take about XX minutes of your time.</p><p>Note here that how we describe the structure has changed and that should be reflected on this page.</p><p> In that time you will be asked to complete THREE sections.</p><p><ol><li>The <strong>first section</strong> will ask you to asses the degree you agree with several assertions about Relative Pitch.</li><li>The <strong>second section</strong> will ask you to list activities that you believe best reflect how to teach and asses skills related to relative and absolute pitch.</li><li>The <strong>third section</strong> will ask you questions about your background so we can better contextualize your answers.</li></ul></p><p>We welcome all opinions and experiences on the topic; do not consult outside sources while completing the survey. We want you to respond based on your own experiences and the beliefs you hold now (rather than looking up a definition).</p><p>A progress bar will be displayed at the top of the page so you have an idea of how far you are into the survey.</p><p>If you are ready to begin, please press Next.</p>','<p>Please note here that you will <strong>not be able to go backwards once you have progressed through a section</strong>.</p>'],
+		'<p>Thank you for agreeing to participate in this survey. As noted before, the survey will take about 30 minutes of your time.</p><p>We have a wide range of questions in this survey that include both questions about your beliefs about absolute and relative pitch as well as your educational and teaching background.</p><p>Throughout the course of the survey, you will complete <strong>THREE</strong> sections. Please note that the way the survey is designed, you will not be able to go back and change your answers and closing the browser will delete your data.</p><p><ol><li>The <strong>first section</strong> will ask you to indicate the degree to which you agree with several assertions about both relative and absolute pitch.</li><li>The <strong>second section</strong> will ask you to describe activities that you use in your own teaching regarding relative and absolute pitch.</li><li>The <strong>third section</strong> will ask you questions about your background so we can better contextualize your answers.</li></ol></p><p>We welcome all opinions and experiences on the topic; we ask that you do not consult outside sources while completing the survey. We want you to respond based on your own experiences and the beliefs you hold now (rather than looking up a definition).</p><p>A progress bar will be displayed at the top of the page so you have an idea of how far you are into the survey. Please note that although we have divided the survey into three sections, they are not all of equal length. The first section is the longest.</p><p>If you are ready to begin, please press Next.</p>','<p>Please note here that you will <strong>not be able to go backwards once you have progressed through a section</strong>.</p>'],
     show_clickable_nav: true
   }
 
@@ -34,42 +35,57 @@
 
     var rp_instructions_slider = {
 	type: 'instructions',
-	pages: ['<p>(on next pages) Below are several possible definitions of Relative Pitch and Absolute Pitch. Using the slider, please indicate the degree to which you agree with each definition, where 0 means “I strongly disagree” and 100 means “I strongly agree.” Leaving the slider in the middle would indicate that you neither agree nor disagree with the definition. Remember that we are interested in what you think, based on your expertise and teaching experiences.</p>'],
+	pages: ['<p>SECTION I: Definitions of <strong>Relative</strong> and <strong>Absolute</strong> Pitch.</p>'],
     show_clickable_nav: true
   }
 
+    var rp_instructions_slider_2 = {
+	type: 'instructions',
+	pages: ['<p>We will now ask you questions about <strong>people</strong> with absolute and relative pitch.</p>'],
+    show_clickable_nav: true
+  }
+
+    var rp_instructions_slider_3 = {
+	type: 'instructions',
+	pages: ['<p>Please note that the next set of questions will look very similar to the questions you just responded. They are similar, but please note the wording is different.</p>'],
+    show_clickable_nav: true
+  }
 
     var aprp_page = {
   type: 'survey-likert',
-    preamble: "<p>Below are several possible definitions of <strong>Relative Pitch</strong> and <strong>Absolute Pitch</strong>. Using the seven point scale below, please indicate the degree to which you agree with each definition, where 1 means “I strongly disagree” and 7 means “I strongly agree.” Selecting four or the middle of the scale would indicate that you neither agree nor disagree with the definition.</p><p>Remember that we are interested in what you think, based on your expertise and teaching experiences.</p><p><i>If none of these definitions match your own personal definitions, you will have the chance to provide your own on the next page</i>.</p>",
+    preamble: "<p>Below are several possible definitions of <strong>relative pitch</strong> and <strong>absolute pitch</strong>. Using the seven point scale below, please indicate the degree to which you agree with each definition. The left hand side will always correspond with “I strongly disagree” and the right hand scale will correspond with “I strongly agree.” Selecting the middle of the scale would indicate that you neither agree nor disagree with the definition.</p><p>Remember that we are interested in what <strong>you</strong> think, based on your expertise and teaching experiences. As give you your answers, we encourage you to use the full range of the rating scale.</p><p><i>If none of these definitions match your own personal definitions, you will have the chance to provide your own on the next page</i>.</p>",
   questions: [
       // RP Questions 
       {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> scale degrees with reference to a tonality.", name: 'rp_ref_tonal', labels: scale_7, required: true},
       {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> scale degrees with reference to a tonality.", name: 'rp_produce_tonality', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>recognize</u> if a song is played in the correct key without relying on a reference tone.", name: 'ap_ref_tonal', labels: scale_7, required: true},
       {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> the interval between two tones.", name: 'rp_id_interval', labels: scale_7, required: true},
       {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> the interval between two tones.", name: 'rp_produce_interval', labels: scale_7, required: true},
-      {prompt: "<strong>Relative</strong> pitch is the ability to <u>name</u> a musical tone by its relation to a reference tone.", name: 'rp_name_relation', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>label</u> a musical tone by its relation to a reference tone.", name: 'rp_name_relation', labels: scale_7, required: true},
       {prompt: "<strong>Relative</strong> pitch is the ability to <u>perceive</u> transposed melodies as 'the same'.", name: 'rp_perceive_same', labels: scale_7, required: true},
-      {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> a pitch in relation to a single, remembered pitch, e.g., A44 or Middle C.", name: 'rp_id_440', labels: scale_7, required: true},
-      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> a pitch in relation to a single, remembered pitch, e.g., A44 or Middle C.", name: 'rp_produce_440', labels: scale_7, required: true},
-      {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> a note in the absence of a reference note.", name: 'rp_id_abref', labels: scale_7, required: true},
-      {prompt: "<strong>Relative</strong> pitch is the ability to <u>name</u> a note in the absence of a reference note.", name: 'rp_name_abref', labels: scale_7, required: true},
-      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> a note in the absense of a reference note.", name: 'rp_produce_abref', labels: scale_7, required: true},
-      {prompt: "<strong>Relative</strong> pitch is the ability to <u>remember </u> a recently heard group note or group of notes.", name: 'rp_remember_group', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> a pitch in relation to a single, remembered pitch (e.g., A440 or Middle C).", name: 'rp_id_440', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> a pitch in relation to a single, remembered pitch (e.g. A440 or Middle C).", name: 'rp_produce_440', labels: scale_7, required: true},
+   //   {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> a note without relying on reference tone.", name: 'rp_id_abref', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>label</u> a note without relying on reference tone.", name: 'rp_name_abref', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> a note without relying on reference tone.", name: 'rp_produce_abref', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>remember</u> a recently heard group note or group of notes.", name: 'rp_remember_group', labels: scale_7, required: true},
       {prompt: "One can lose <strong>relative</strong> pitch.", name: 'rp_lose', labels: scale_7, required: true},
+      {prompt: "At some point, good <strong>relative</strong> pitch becomes <strong>absolute</strong> pitch.", name: 'rp_to_ap', labels: scale_7, required: true},
       // AP Questions
       {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> scale degrees with reference to a tonality.", name: 'ap_ref_tonal', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>recognize</u> if a song is played in the correct key without relying on a reference tone.", name: 'ap_ref_tonal', labels: scale_7, required: true},
       {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> scale degrees with reference to a tonality.", name: 'ap_produce_tonality', labels: scale_7, required: true},
       {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> the interval between two tones.", name: 'ap_id_interval', labels: scale_7, required: true},
       {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> the interval between two tones.", name: 'ap_produce_interval', labels: scale_7, required: true},
-      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>name</u> a musical tone by its relation to a reference tone.", name: 'ap_name_relation', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>label</u> a musical tone by its relation to a reference tone.", name: 'ap_name_relation', labels: scale_7, required: true},
       {prompt: "<strong>Absolute</strong> pitch is the ability to <u>perceive</u> transposed melodies as 'the same'.", name: 'ap_perceive_same', labels: scale_7, required: true},
-      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> a pitch in relation to a single, remembered pitch, e.g., A44 or Middle C.", name: 'ap_id_440', labels: scale_7, required: true},
-      {prompt: "<strong>Absolute<strong> pitch is the ability to <u>produce</u> a pitch in relation to a single, remembered pitch, e.g., A44 or Middle C.", name: 'ap_produce_440', labels: scale_7, required: true},
-      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> a note in the absence of a reference note.", name: 'ap_id_abref', labels: scale_7, required: true},
-      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>name</u> a note in the absence of a reference note.", name: 'ap_name_abref', labels: scale_7, required: true},
-      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> a note in the absense of a reference note.", name: 'ap_produce_abref', labels: scale_7, required: true},
-      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>remember </u> a recently heard group note or group of notes.", name: 'ap_remember_group', labels: scale_7, required: true},
+      {prompt: "At some point, good <strong>absolute</strong> pitch becomes <strong>relative</strong> pitch.", name: 'ap_to_rp', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> a pitch in relation to a single, remembered pitch (e.g., A440 or Middle C).", name: 'ap_id_440', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> a pitch in relation to a single, remembered pitch (e.g., A440 or Middle C).", name: 'ap_produce_440', labels: scale_7, required: true},
+    //  {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> a note without relying on reference tone.", name: 'ap_id_abref', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>label</u> a note without relying on reference tone.", name: 'ap_name_abref', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> a note without relying on reference tone.", name: 'ap_produce_abref', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>remember</u> a recently heard group note or group of notes.", name: 'ap_remember_group', labels: scale_7, required: true},
       {prompt: "One can lose <strong>absolute </strong>pitch.", name: 'ap_lose', labels: scale_7, required: true}
   ],
 	randomize_question_order: true
@@ -81,6 +97,8 @@
   questions: [
       // RP Questions 
       {prompt: "All trained musicians have relative pitch.", name: 're_people_al', labels: scale_7, required: true},
+      {prompt: "People with relative pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'rp_impaired', labels: scale_7, required: true},
+      {prompt: "People with relative pitch default to functional labels to complete aural skills tasks.", name: 'rp_override', labels: scale_7, required: true},
       {prompt: "All trained musicians who don’t have absolute pitch have relative pitch.", name: 'rp_trained_ap', labels: scale_7, required: true},
       {prompt: "All individuals with normal audiology and no tone deafness have relative pitch.", name: 'rp_tonedeaf', labels: scale_7, required: true},
       {prompt: "All individuals with normal hearing who don't have absolute pitch have relative pitch.", name: 'rp_normal', labels: scale_7, required: true},
@@ -88,39 +106,35 @@
   ],
   randomize_question_order: true 
 };
-    
+
+
+    // Have section that alerts people of what is about to come for this ( so they know two of similar pages!!!) 
+    // randomise these pages 
+
+    // COMBINE ap_people and rp_people, add bold to questions, change prompt so it includes both 
+
+    // Change the start of the prompt! Remove the disagree
     var ap_people = {
   type: 'survey-likert',
     preamble: "<p>Below are statements about <strong>people</strong> with Absolute Pitch. Using the slider, please indicate the degree to which you agree with each statement, where 1 means “I strongly disagree” and 7 means “I strongly agree.” Leaving the slider in the middle would indicate that you neither agree nor disagree with the definition. Remember that we are interested in what <strong><u>you</u></strong> think, based on your expertise and teaching experiences.</p>",
   questions: [
       // AP Questions 
       {prompt: "All trained musicians have absolute pitch.", name: 'ap_people_all', labels: scale_7, required: true},
+      {prompt: "People with absolute pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'ap_impaired', labels: scale_7, required: true},
+      {prompt: "People with absolute pitch default to labeling pitches to complete aural skills tasks.", name: 'ap_override', labels: scale_7, required: true},
       {prompt: "All trained musicians who don’t have relative pitch have absolute pitch.", name: 'ap_trained_ap', labels: scale_7, required: true},
       {prompt: "All individuals with normal audiology and no tone deafness have absolute pitch.", name: 'ap_tonedeaf', labels: scale_7, required: true},
-      {prompt: "All individuals with normal hearing who don't have absolute pitch have absolute pitch.", name: 'ap_normal', labels: scale_7, required: true},
+      {prompt: "All individuals with normal hearing who don't have relative pitch have absolute pitch.", name: 'ap_normal', labels: scale_7, required: true},
       {prompt: "Some people have better absolute pitch than others.", name: 'ap_better_others', labels: scale_7, required: true},
   ],
   randomize_question_order: true 
 };
+    // SECTION II: Teaching Absolute and Relative Pitch  
 
-    var rp_to_ap_compare = {
-  type: 'survey-likert',
-    preamble: "<p>We now are interested in knowing the extent to which you believe that Absolute Pitch or Perfect Pitch differs from Relative Pitch.  Again, there are no correct or incorrect answers for this section, we want your gut reaction. Please do not look up any definitions. NOTE LIKERT COMPARE.</p>",
-  questions: [
-      // Compare Questions 
-      {prompt: "AP labeling overrides RP identification (e.g., listener labels pitch names to determine interval)", name: 'ap_override', labels: scale_7, required: true},
-      {prompt: "RP is less impaired by music in a non-A440 standard.", name: 'rp_impaired', labels: scale_7, required: true},
-      {prompt: "At some point, good “relative pitch” becomes “absolute pitch.”", name: 'rp_to_ap', labels: scale_7, required: true}
-  ],
-  randomize_question_order: true 
-};
-    // New Section
-
-    
-
+    // TODO: TRY TO PUT ALL DEMOGRAPHICS ON THE SAME PAGE !!
     var section_activities = {
 	type: 'instructions',
-	pages: ['<p>You have now completed the first section of the survey. In the next part of the survey, you will be presented with several different types of activities that aural skills teachers (various levels?) have used when teaching aural skills. For each activity, you will complete a similar Agree/Disagree scale for each activity, except that you will be asked to rate each activity on several dimensions.</p><p>All questions pertain to your teaching of aural skills, be that high school, university, private?</p><p>For each question you will answer</p><ol><li>The frequency with which you practice this skill with the students you teach</li><li>The degree to which you believe this activity reflects relative pitch ability</li><li>The difficulty of teaching this activity</li><li>The difficulty a “typical?” student has with this activity</li></ol></p><p>Each item will be presented on its own page</p><p>If you are ready, press Next?</p>'],
+	pages: ['<p>You have now completed the <strong>first section</strong> of the survey. In the <strong>second</strong> part of the survey, we will ask you to list activities that you think could be used to determine the degree that someone either has or does not have relative or absolute pitch.</p>'],
     show_clickable_nav: true
   }
 
@@ -132,7 +146,7 @@
 
     var thank_you = {
 	type: 'instructions',
-	pages: ['<p>Thank you so much for your time and effort in completing this survey. If you have any further questions regarding the survey, your data, or this research, please contact either Jenine Brow at EMAIL, Daphne Tan EMAIL, David John Baker EMAIL or Elizabeht Marvin EMAIL.</p>'],
+	pages: ['<p>Thank you so much for your time and effort in completing this survey. If you have any further questions regarding the survey, your data, or this research, please contact either Jenine Brown at EMAIL, Daphne Tan EMAIL, David John Baker EMAIL or Elizabeth Marvin EMAIL.</p>'],
     show_clickable_nav: true
   }
     
@@ -147,36 +161,41 @@
     var rp_free_response = {
   type: 'survey-text',
   questions: [
-    {prompt: "If none of the above definitions of Relative Pitch were sufficient, please provide your own definition in the space below.<p>Relative pitch is...</p>", rows: 10, columns: 70}
+    {prompt: "If you felt that none of the definitions of <strong>relative pitch</strong> on the page before were sufficient, please provide your own definition in the space below.<p>Relative pitch is...</p>", rows: 10, columns: 70}
   ],
 };
 
  var ap_free_response = {
   type: 'survey-text',
   questions: [
-    {prompt: "If none of the above definitions of Absolute Pitch were sufficient, please provide your own definition in the space below.</p><p>Absolute pitch is...</p>", rows: 10, columns: 70}
+    {prompt: "If you felt that none of the definitions of <strong>absolute pitch</strong> were sufficient, please provide your own definition in the space below.</p><p>Absolute pitch is...</p>", rows: 10, columns: 70}
   ],
 };
+
+    // five fields to do this, then click the ones that you do 
+    // NEED TO DO BESPOKE THING HERE 
+    // (look to see if this can be put onto one screen???) 
 
  var ap_inductive = {
   type: 'survey-text',
   questions: [
-    {prompt: "Here is where we put prompt about activities", rows: 10, columns: 70}
+    {prompt: "Please list up to five ways that <strong>absolute pitch</strong> skills can be fostered in the classroom. Then please rate the extent to which you do this activity in the classroom.", rows: 10, columns: 70}
   ],
 };
 
  var rp_inductive = {
   type: 'survey-text',
   questions: [
-    {prompt: "Here is where we put prompt about activities", rows: 10, columns: 70}
+    {prompt: "Please list up to five ways that <strong>relative pitch</strong> skills can be fostered in the classroom. Then please rate the extent to which you do this activity in the classroom.", rows: 10, columns: 70}
   ],
 };
+
     // Demography
 
 
     var demo_intro_text = {
 	type: 'instructions',
-	pages: ['We will now end with questions about demographics and your background. These questions will be used to contextualize your answers from before.'],
+	pages: ['The <strong>third</strong> and final section of this survey will ask you questions about your about your background and teaching experience. These questions will be used to contextualize the answers that you have already provided..'],
     show_clickable_nav: true
   }
 
@@ -196,7 +215,8 @@
 	      "High school choir",
 	      "High school music theory",
 	      "K-8 music classes",
-	      "K-12 private lessons (in music performance)"], 
+	      "K-12 private lessons (in music performance)",
+	      "I do not currently teach"], 
         horizontal: false,
         required: true,
         name: 'Colors'
@@ -204,10 +224,11 @@
     randomize_question_order: true
 };
 
+    // TODO: ADD ALL REQUIRED RESPONSES FOR EVERY FREE TEXT RESPONSE
     var years_teaching_music = {
 	type: 'survey-text',
 	questions: [
-	{prompt: "How many years have you been teaching music", placeholder: "8"}
+	{prompt: "How many years have you been teaching music?", placeholder: "8"}
 	],
     };
 
@@ -221,7 +242,7 @@
 	      "Bachelor’s in music",
 "Master’s in music",
 	      "DMA", 
-	      "Ph.D. in music theory (or musicology?)"
+	      "Ph.D. in Music Theory/Musicology"
 	  ], 
         horizontal: false,
         required: true,
@@ -273,7 +294,7 @@
     var years_since_degree = {
 	type: 'survey-text',
 	questions: [
-	{prompt: " About how many years has it been since graduating with that degree?", placeholder: "12"}
+	{prompt: " About how many <strong>years</strong> has it been since graduating with your highest earned degree?", placeholder: "12"}
 	]};
    
 // Aural Skills Questions 
@@ -287,7 +308,7 @@
     var years_taught_aural= {
 	type: 'survey-text',
 	questions: [
-	{prompt: "How many years of aural skills have you taught?", placeholder: "12"}
+	{prompt: "How many years of aural skills have you taught in your professional career?", placeholder: "12"}
 	]};
    
     var aural_system_learned = {
@@ -297,11 +318,11 @@
         prompt: "What system did you learn when you were a student? Select all that apply.", 
           options: [
 
-	      "Scale-degree numbers with inflections",
-	      "Scale-degree numbers without inflections",
+	      "Scale-degree numbers with inflections (e.g. An F# in the key of C is sung as Fi)",
+	      "Scale-degree numbers without inflections (e.g. An F# in the key of C is sung as Fa)",
 	      "Moveable-Do (La-based minor)",
 	      "Moveable-Do (Do-based minor)",
-	      "Fixed Do with inflections",
+	      "Fixed Do with inflections ",
 	      "Fixed Do without inflections",
 	      "Curwen or Kodaly hand symbols",
 	      "Letter names",
@@ -319,7 +340,7 @@
     type: 'survey-multi-select',
     questions: [
       {
-        prompt: "What system are you currently using? Select all that apply.", 
+        prompt: "What system do you primarily teach at your institution? Select all that apply.", 
           options: [
 	      "Scale-degree numbers with inflections",
 	      "Scale-degree numbers without inflections",
@@ -371,15 +392,15 @@
     var feedback = {
 	type: 'survey-text',
 	questions: [
-	{prompt: "Do you have any feedback you would like to provide on this survey?", placeholder: "Enter a Number: 22"}
+	    {prompt: "Do you have any feedback you would like to provide on this survey?", placeholder: "Enter a Number: 22", rows: 20, columns: 70}
 	]};
 
 var aural_rpap_priority = {
   type: 'survey-likert',
     preamble: "Finding/singing tonic when hearing some music",
   questions: [
-      {prompt: "How high a priority does your curriculum place in developing absolute pitch in your students?", name: 'often', labels: scale_priority_5},
-      {prompt: "How high a priority does your curriculum place in developing relative pitch in your students?", name: 'rp', labels: scale_priority_5}
+      {prompt: "How high a priority does your curriculum place in developing <strong>absolute</strong> pitch in your students?", name: 'often', labels: scale_priority_5},
+      {prompt: "How high a priority does your curriculum place in developing <strong>relative</strong> pitch in your students?", name: 'rp', labels: scale_priority_5}
   ],
   randomize_question_order: false 
 };
@@ -397,7 +418,7 @@ var aural_theory_parallel_pitch_cleff = {
     // Institution and Faculty
     var aural_teach_intro_text = {
 	type: 'instructions',
-	pages: ['The next set of questions will ask about your current teaching situation.'],
+	pages: ['The next set of questions will ask about your current teaching responsibilities.'],
     show_clickable_nav: true
   }
 
@@ -428,7 +449,7 @@ var aural_theory_parallel_pitch_cleff = {
     var current_number_majors = {
 	type: 'survey-text',
 	questions: [
-	{prompt: "Approximately how many music majors in your program (or music students, if pre-college)", placeholder: "Enter a Number: 22"}]};
+	{prompt: "Approximately how many music majors are enrolled in your music program? Please include both undergraduate and graduate students if your school offers both.", placeholder: "Enter a Number: 150"}]};
     
     var state = {
 	type: 'survey-text',
@@ -518,13 +539,14 @@ var aural_theory_parallel_pitch_cleff = {
 	  aprp_page,
 	  rp_free_response, 
 	  ap_free_response,
+	  rp_instructions_slider_2,
 	  rp_people,
+	  rp_instructions_slider_3,
 	  ap_people,
+// RP to AP
 	  multi_response_text,
 	  section_activities,
 	  m_instructions_slider,
-// RP to AP
-	  rp_to_ap_compare,
 // Inductive Questions
 	  section_two,
 	  ap_inductive,
