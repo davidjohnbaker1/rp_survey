@@ -10,16 +10,37 @@
     <script src="plugins/jspsych-survey-multi-choice.js"></script> 
     <script src="plugins/jspsych-html-slider-response.js"></script> 
     <link rel="stylesheet" href="css/jspsych.css">
+    <style>
+
+    .column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
   </head>
   <body></body>
   <script>
 
+    // TODO: See How Long It takes
+    // TODO: Combine RP and AP free response in first section to be on the same page
+    // TODO: ADD ALL REQUIRED RESPONSES FOR EVERY FREE TEXT RESPONSE
+    // TODO: TRY TO PUT ALL DEMOGRAPHICS ON THE SAME PAGE !!
+    // TODO: ADD Free Text Response for Other Option 
+
     // Introduction
-    // TODO: See How Long It takes (add that in!) 
-    
+
     var intro_text = {
 	type: 'instructions',
-	pages: ['<p>Welcome!</p><p>This survey is designed to help our research team learn more about how music pedagogues define relative pitch, absolute pitch (a.k.a. perfect pitch), and their attributes. This survey will include both multiple-choice and free-response questions. We hope that the survey will take no more than 30 minutes of your time. Thank you for participating.</p><p>If you are willing to participate, please press NEXT.</p>',
+	pages: ['<p><div class="row"><div class="column"><img src="img/eastman.jpg" alt="Eastman" style="width:100%"></div><div class="column"><img src="img/johnhopkins.png" alt="John Hopkins" style="width:100%"></div><div class="column"><img src="img/utoronto.png" alt="University of Toronto" style="width:100%"></div><div class="column"><img src="img/goldsmiths2.png" alt="Goldsmiths" style="width:100%"></div></div></p><p>Welcome!</p><p>This survey is designed to help our research team learn more about how music pedagogues define relative pitch, absolute pitch (a.k.a. perfect pitch), and their attributes. This survey will include both multiple-choice and free-response questions. We hope that the survey will take no more than 30 minutes of your time. Thank you for participating.</p><p>If you are willing to participate, please press NEXT.</p>',
 		'<p>{ Info here from UT Ethics Requirement regarding data storage, harm, age…} </p>',
 		'<p>Thank you for agreeing to participate in this survey. As noted before, the survey will take about 30 minutes of your time.</p><p>We have a wide range of questions in this survey that include both questions about your beliefs about absolute and relative pitch as well as your educational and teaching background.</p><p>Throughout the course of the survey, you will complete <strong>THREE</strong> sections. Please note that the way the survey is designed, you will not be able to go back and change your answers and closing the browser will delete your data.</p><p><ol><li>The <strong>first section</strong> will ask you to indicate the degree to which you agree with several assertions about both relative and absolute pitch.</li><li>The <strong>second section</strong> will ask you to describe activities that you use in your own teaching regarding relative and absolute pitch.</li><li>The <strong>third section</strong> will ask you questions about your background so we can better contextualize your answers.</li></ol></p><p>We welcome all opinions and experiences on the topic; we ask that you do not consult outside sources while completing the survey. We want you to respond based on your own experiences and the beliefs you hold now (rather than looking up a definition).</p><p>A progress bar will be displayed at the top of the page so you have an idea of how far you are into the survey. Please note that although we have divided the survey into three sections, they are not all of equal length. The first section is the longest.</p><p>If you are ready to begin, please press Next.</p>','<p>Please note here that you will <strong>not be able to go backwards once you have progressed through a section</strong>.</p>'],
     show_clickable_nav: true
@@ -33,9 +54,9 @@
 
     // RP + AP Belief  Questions 
 
-    var rp_instructions_slider = {
+    var section_1_banner = {
 	type: 'instructions',
-	pages: ['<p>SECTION I: Definitions of <strong>Relative</strong> and <strong>Absolute</strong> Pitch.</p>'],
+	pages: ['<p>SECTION I:</p><p>Definitions of <strong>Relative</strong> and <strong>Absolute</strong> Pitch.</p>'],
     show_clickable_nav: true
   }
 
@@ -45,11 +66,6 @@
     show_clickable_nav: true
   }
 
-    var rp_instructions_slider_3 = {
-	type: 'instructions',
-	pages: ['<p>Please note that the next set of questions will look very similar to the questions you just responded. They are similar, but please note the wording is different.</p>'],
-    show_clickable_nav: true
-  }
 
     var aprp_page = {
   type: 'survey-likert',
@@ -91,59 +107,264 @@
 	randomize_question_order: true
 };
     
-    var rp_people = {
+    var rpap_people = {
   type: 'survey-likert',
-    preamble: "<p>Below are statements about <strong>people</strong> with Relative Pitch. Using the slider, please indicate the degree to which you agree with each statement, where 1 means “I strongly disagree” and 7 means “I strongly agree.” Leaving the slider in the middle would indicate that you neither agree nor disagree with the definition. Remember that we are interested in what <strong><u>you</u></strong> think, based on your expertise and teaching experiences.</p>",
+    preamble: "<p>Below are statements about <strong>people</strong> with relative and absolute pitch. Using the slider, please indicate the degree to which you agree with each statement, where 1 means “I strongly disagree” and 7 means “I strongly agree.” Leaving the slider in the middle would indicate that you neither agree nor disagree with the statement. Remember that we are interested in what <strong><u>you</u></strong> think, based on your expertise and teaching experiences.</p>",
   questions: [
       // RP Questions 
-      {prompt: "All trained musicians have relative pitch.", name: 're_people_al', labels: scale_7, required: true},
-      {prompt: "People with relative pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'rp_impaired', labels: scale_7, required: true},
-      {prompt: "People with relative pitch default to functional labels to complete aural skills tasks.", name: 'rp_override', labels: scale_7, required: true},
-      {prompt: "All trained musicians who don’t have absolute pitch have relative pitch.", name: 'rp_trained_ap', labels: scale_7, required: true},
-      {prompt: "All individuals with normal audiology and no tone deafness have relative pitch.", name: 'rp_tonedeaf', labels: scale_7, required: true},
-      {prompt: "All individuals with normal hearing who don't have absolute pitch have relative pitch.", name: 'rp_normal', labels: scale_7, required: true},
-      {prompt: "Some people have better relative pitch than others.", name: 'rp_better_others', labels: scale_7, required: true},
+      {prompt: "All trained musicians have <strong>relative</strong> pitch.", name: 're_people_al', labels: scale_7, required: true},
+      {prompt: "People with <strong>relative</strong> pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'rp_impaired', labels: scale_7, required: true},
+      {prompt: "People with <strong>relative</strong> pitch default to functional labels to complete aural skills tasks.", name: 'rp_override', labels: scale_7, required: true},
+      {prompt: "All trained musicians who don’t have <strong>absolute</strong> pitch have <strong>relative</strong> pitch.", name: 'rp_trained_ap', labels: scale_7, required: true},
+      {prompt: "All individuals with normal audiology and no tone deafness have <strong>relative</strong> pitch.", name: 'rp_tonedeaf', labels: scale_7, required: true},
+      {prompt: "All individuals with normal hearing who don't have <strong>absolute</strong> pitch have <strong>relative</strong> pitch.", name: 'rp_normal', labels: scale_7, required: true},
+      {prompt: "Some people have better <strong>relative</strong> pitch than others.", name: 'rp_better_others', labels: scale_7, required: true},
+      // Added AP Questions
+      {prompt: "All trained musicians have <strong>absolute</strong> pitch.", name: 'ap_people_all', labels: scale_7, required: true},
+      {prompt: "People with <strong>absolute</strong> pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'ap_impaired', labels: scale_7, required: true},
+      {prompt: "People with <strong>absolute</strong> pitch default to labeling pitches to complete aural skills tasks.", name: 'ap_override', labels: scale_7, required: true},
+      {prompt: "All trained musicians who don’t have <strong>relative</strong> pitch have <strong>absolute</strong> pitch.", name: 'ap_trained_ap', labels: scale_7, required: true},
+      {prompt: "All individuals with normal audiology and no tone deafness have <strong>absolute</strong> pitch.", name: 'ap_tonedeaf', labels: scale_7, required: true},
+      {prompt: "All individuals with normal hearing who don't have <strong>relative</strong> pitch have <strong>absolute</strong> pitch.", name: 'ap_normal', labels: scale_7, required: true},
+      {prompt: "Some people have better <strong>absolute</strong> pitch than others.", name: 'ap_better_others', labels: scale_7, required: true},
+      
   ],
   randomize_question_order: true 
 };
 
 
-    // Have section that alerts people of what is about to come for this ( so they know two of similar pages!!!) 
-    // randomise these pages 
-
-    // COMBINE ap_people and rp_people, add bold to questions, change prompt so it includes both 
-
-    // Change the start of the prompt! Remove the disagree
-    var ap_people = {
-  type: 'survey-likert',
-    preamble: "<p>Below are statements about <strong>people</strong> with Absolute Pitch. Using the slider, please indicate the degree to which you agree with each statement, where 1 means “I strongly disagree” and 7 means “I strongly agree.” Leaving the slider in the middle would indicate that you neither agree nor disagree with the definition. Remember that we are interested in what <strong><u>you</u></strong> think, based on your expertise and teaching experiences.</p>",
-  questions: [
-      // AP Questions 
-      {prompt: "All trained musicians have absolute pitch.", name: 'ap_people_all', labels: scale_7, required: true},
-      {prompt: "People with absolute pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'ap_impaired', labels: scale_7, required: true},
-      {prompt: "People with absolute pitch default to labeling pitches to complete aural skills tasks.", name: 'ap_override', labels: scale_7, required: true},
-      {prompt: "All trained musicians who don’t have relative pitch have absolute pitch.", name: 'ap_trained_ap', labels: scale_7, required: true},
-      {prompt: "All individuals with normal audiology and no tone deafness have absolute pitch.", name: 'ap_tonedeaf', labels: scale_7, required: true},
-      {prompt: "All individuals with normal hearing who don't have relative pitch have absolute pitch.", name: 'ap_normal', labels: scale_7, required: true},
-      {prompt: "Some people have better absolute pitch than others.", name: 'ap_better_others', labels: scale_7, required: true},
-  ],
-  randomize_question_order: true 
-};
+    ////////////////////////////////////////////////////////////////////////////////////////////
     // SECTION II: Teaching Absolute and Relative Pitch  
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    
 
-    // TODO: TRY TO PUT ALL DEMOGRAPHICS ON THE SAME PAGE !!
-    var section_activities = {
+
+    var section_2_banner = {
 	type: 'instructions',
-	pages: ['<p>You have now completed the <strong>first section</strong> of the survey. In the <strong>second</strong> part of the survey, we will ask you to list activities that you think could be used to determine the degree that someone either has or does not have relative or absolute pitch.</p>'],
+	pages: ['<p>SECTION II:</p><p>Classroom <strong>Relative</strong> and <strong>Absolute</strong> Pitch Activities.</p>'],
     show_clickable_nav: true
   }
 
-    var m_instructions_slider = {
+    var section_2_instructions_a = {
 	type: 'instructions',
-	pages: ['<p>For each of the the following Aural Skills activities, please rate<ul><li>How often you practice this skill with the students you teach</li><li>The degree to which you believe this activity reflects relative pitch ability</li><li>The difficulty of teaching this activity??</li><li>The difficulty is “typical?” student has with this activity?</li></ul></p>'],
+	pages: ['We are interested in the types of activites that you do in order foster both <strong>relative</strong> and <strong>absolute</strong> pitch in the classroom. In order better understand what you as a teacher do, we will now ask you to describe up to FIVE activities that you use to foster both relative and absolute pitch. We will collect this data by first asking you to descibe an exercise or activity that you either know of, use, or would use to foster this skill. After explaining it using a text-box, we will then ask you to rate the activity which you described on several dimensions. These include 1) how often do you practice this activity with students? 2) How effective do you think this activity is 3) How well do you think the ability to do it correctly reflects the skill in which it is fostering? Please note that if you cannot come up with an activity, you can just click through!'],
     show_clickable_nav: true
   }
 
+
+    var rp_activity_1 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+
+    var rp_activity_2 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+
+    var rp_activity_3 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+
+    var rp_activity_4 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+    
+
+    var rp_activity_5 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+    var rp_activity_rate_1 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var rp_activity_rate_2 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var rp_activity_rate_3 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    var rp_activity_rate_4 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    var rp_activity_rate_5 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    var ap_activity_1 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+
+    var ap_activity_2 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+
+    var ap_activity_3 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+
+    var ap_activity_4 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+    
+
+    var ap_activity_5 = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+  ],
+};
+
+
+    var ap_activity_rate_1 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var ap_activity_rate_2 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var ap_activity_rate_3 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    var ap_activity_rate_4 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    var ap_activity_rate_5 = {
+  type: 'survey-likert',
+    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    
     var thank_you = {
 	type: 'instructions',
 	pages: ['<p>Thank you so much for your time and effort in completing this survey. If you have any further questions regarding the survey, your data, or this research, please contact either Jenine Brown at EMAIL, Daphne Tan EMAIL, David John Baker EMAIL or Elizabeth Marvin EMAIL.</p>'],
@@ -190,8 +411,15 @@
   ],
 };
 
-    // Demography
+   /////////////////////////////////////////////////////////////////////
+   // SECTION III
+   //////////////////////////////////////////////////////////////
 
+    var section_3_banner = {
+	type: 'instructions',
+	pages: ['<p>SECTION III:</p><p>Demographic Questions</p>'],
+    show_clickable_nav: true
+  }
 
     var demo_intro_text = {
 	type: 'instructions',
@@ -224,7 +452,6 @@
     randomize_question_order: true
 };
 
-    // TODO: ADD ALL REQUIRED RESPONSES FOR EVERY FREE TEXT RESPONSE
     var years_teaching_music = {
 	type: 'survey-text',
 	questions: [
@@ -534,24 +761,41 @@ var aural_theory_parallel_pitch_cleff = {
   jsPsych.init({
       timeline: [
 	  intro_text,
-// RP Questions 
-	  rp_instructions_slider,
+// Section I  
+	  section_1_banner,
 	  aprp_page,
 	  rp_free_response, 
 	  ap_free_response,
 	  rp_instructions_slider_2,
-	  rp_people,
-	  rp_instructions_slider_3,
-	  ap_people,
-// RP to AP
+	  rpap_people,
 	  multi_response_text,
-	  section_activities,
-	  m_instructions_slider,
-// Inductive Questions
-	  section_two,
-	  ap_inductive,
-	  rp_inductive,
+// Section II  
+	  section_2_banner,
+	  section_2_instructions_a,
+
+	  rp_activity_1,
+	  rp_activity_rate_1,
+	  rp_activity_2,
+	  rp_activity_rate_2,
+	  rp_activity_3,
+	  rp_activity_rate_3,
+	  rp_activity_4,
+	  rp_activity_rate_4,
+	  rp_activity_5,
+	  rp_activity_rate_5,
+
+	  ap_activity_1,
+	  ap_activity_rate_1,
+	  ap_activity_2,
+	  ap_activity_rate_2,
+	  ap_activity_3,
+	  ap_activity_rate_3,
+	  ap_activity_4,
+	  ap_activity_rate_4,
+	  ap_activity_5,
+	  ap_activity_rate_5,
 // Demographic Questions
+	  section_3_banner,
 	  demo_intro_text,
 	  teaching_resp,
 	  years_teaching_music,
