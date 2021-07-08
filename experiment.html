@@ -48,7 +48,7 @@
 
   var multi_response_text = {
 	type: 'instructions',
-	pages: ['<p>You have now completed the first section of the survey. In the next part of the survey, you will be presented with several different types of activities that aural skills teachers (various levels?) have used when teaching aural skills. For each activity, you will complete a similar Agree/Disagree scale for each activity, except that you will be asked to rate each activity on several dimensions.</p><p>All questions pertain to your teaching of aural skills, be that high school, university, private?</p><p>For each question you will answer</p><ul><li>How often you practice this skill with the students you teach</li><li>The degree to which you believe this activity reflects relative pitch ability</li><li>The difficulty of teaching this activity?</li><li>The difficulty a “typical?” student has with this activity?</li></ul><p>Each item will be presented on its own page. If you are ready… press next?</p>'],
+	pages: ['<p>You have now completed the first section of the survey. Please take a moment to rest if you feel the need. Once you are ready, press Next to continue.</p>'],
     show_clickable_nav: true
   }
 
@@ -109,7 +109,7 @@
     
     var rpap_people = {
   type: 'survey-likert',
-    preamble: "<p>Below are statements about <strong>people</strong> with relative and absolute pitch. Using the slider, please indicate the degree to which you agree with each statement, where 1 means “I strongly disagree” and 7 means “I strongly agree.” Leaving the slider in the middle would indicate that you neither agree nor disagree with the statement. Remember that we are interested in what <strong><u>you</u></strong> think, based on your expertise and teaching experiences.</p>",
+    preamble: "<p>Below are statements about <strong>people</strong> with relative and absolute pitch. Using the slider, please indicate the degree to which you agree with each statement, where the left hand side of the scale corresponds to “I strongly disagree” and the right hand side of the scale corresponds to “I strongly agree.” Leaving the slider in the middle would indicate that you neither agree nor disagree with the statement. Remember that we are interested in what <strong><u>you</u></strong> think, based on your expertise and teaching experiences.</p>",
   questions: [
       // RP Questions 
       {prompt: "All trained musicians have <strong>relative</strong> pitch.", name: 're_people_al', labels: scale_7, required: true},
@@ -147,7 +147,7 @@
 
     var section_2_instructions_a = {
 	type: 'instructions',
-	pages: ['We are interested in the types of activites that you do in order foster both <strong>relative</strong> and <strong>absolute</strong> pitch in the classroom. In order better understand what you as a teacher do, we will now ask you to describe up to FIVE activities that you use to foster both relative and absolute pitch. We will collect this data by first asking you to descibe an exercise or activity that you either know of, use, or would use to foster this skill. After explaining it using a text-box, we will then ask you to rate the activity which you described on several dimensions. These include 1) how often do you practice this activity with students? 2) How effective do you think this activity is 3) How well do you think the ability to do it correctly reflects the skill in which it is fostering? Please note that if you cannot come up with an activity, you can just click through!'],
+	pages: ['<p>We are interested in the types of activites that you do in order foster both <strong>relative</strong> and <strong>absolute</strong> pitch in the classroom.</p><p>In order better understand what you as a teacher do, we will now ask you to describe up to FIVE activities that you use to foster both relative and absolute pitch.</p><p>We will collect this data by first asking you to descibe an exercise or activity that you either know of, use, or would use to foster this skill. After explaining it using a text-box, we will then ask you to rate the activity which you described on several dimensions.</p><p> These include <ol><li>How often do you practice this activity with students?</li><li>How effective do you think this activity is at fostering the skill?</li><li>How well do you think the ability to do it correctly reflects the skill in which it is fostering?</li></ol>Please note that if you cannot come up with five activities, you can just click through!</p>'],
     show_clickable_nav: true
   }
 
@@ -155,16 +155,15 @@
     var rp_activity_1 = {
   type: 'survey-text',
   questions: [
-    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+    {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong>? in the classroom.</p><p>This is the first of five responses you will be given regarding absolute pitch.</p>", rows: 10, columns: 70}
   ],
 };
-
 
 
     var rp_activity_2 = {
   type: 'survey-text',
   questions: [
-    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+    {prompt: "<TEMP>", rows: 10, columns: 70}
   ],
 };
 
@@ -173,7 +172,7 @@
     var rp_activity_3 = {
   type: 'survey-text',
   questions: [
-    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+    {prompt: "<TEMP>", rows: 10, columns: 70}
   ],
 };
 
@@ -182,7 +181,7 @@
     var rp_activity_4 = {
   type: 'survey-text',
   questions: [
-    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+    {prompt: "TEMP", rows: 10, columns: 70}
   ],
 };
 
@@ -191,19 +190,19 @@
     var rp_activity_5 = {
   type: 'survey-text',
   questions: [
-    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+    {prompt: "TEMP", rows: 10, columns: 70}
   ],
 };
 
 
     var rp_activity_rate_1 = {
   type: 'survey-likert',
-    preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p><p>If you did not provide an answer on the previous page, just click Next!</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'X', labels: scale_7, required: false},
+      {prompt: "I believe the skill I just described helps students foster <strong>relative pitch</strong>.", name: 'Y', labels: scale_7, required: false},
+      {prompt: "I believe the skill I just described is very representitive of <strong>relative pitch</strong>.", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
@@ -214,9 +213,9 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
@@ -227,9 +226,9 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
@@ -239,9 +238,9 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
@@ -251,17 +250,19 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
 
+	// TODO Possibly add new scale to require question to say you didn't provde an answer to make sure we get responses on all of them !
+
     var ap_activity_1 = {
   type: 'survey-text',
   questions: [
-    {prompt: "Text here to say exactly what the activity is", rows: 10, columns: 70}
+    {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong>? in the classroom.</p><p>This is the first of five responses you will be given regarding absolute pitch.</p>", rows: 10, columns: 70}
   ],
 };
 
@@ -307,9 +308,9 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
@@ -320,9 +321,9 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
@@ -333,9 +334,9 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
@@ -345,9 +346,9 @@
     preamble: "<p>List Questions here they need to rate for this.</p><p>Scales will also be changed per question.</p>",
   questions: [
       // RP Questions 
-      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: true},
-      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: true},
-      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: true},
+      {prompt: "I do this a lot", name: 'X', labels: scale_7, required: false},
+      {prompt: "This measures it well ", name: 'Y', labels: scale_7, required: false},
+      {prompt: "This reflects RP well", name: 'Z', labels: scale_7, required: false},
   ],
   randomize_question_order: false 
 };
