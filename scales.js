@@ -2,7 +2,11 @@
 
 var yes_no = ["Yes", "No"];
 
+var yes_no_na = ["Yes", "No", "Not Sure", "Not Applicable"];
+
 var scale_7 = ["Strongly Disagree", "","", "Neutral", "", "", "Strongly Agree"];
+
+var scale_7_na = ["Strongly Disagree", "","", "Neutral", "", "", "Strongly Agree", "Not Applicable"];
 
 var scale_priority_5 = ["A Very Low Priority", "", "Neither a High or Low Priority", "",  "A Very High Priority"];
     
