@@ -19,3 +19,5 @@ var ap_scale_7 = ["This is not an AP skill", "", "", "This skill partially foste
 var teach_scale_7 = ["This is an easy skill for students to learn", "", "", "Middle", "", "", "This is a difficult skill for students to learn", "NR"];
 
 var learn_scale_7 = ["This is an easy skill to teach students", "", "", "Mild Sauce", "", "", "This is difficult to teach", "NR"];
+
+var imp_scale = ["This is not important at all", "", "", "", "", "", "This skill extremely important", "NR"];

@@ -135,14 +135,14 @@
 
     var section_2_instructions_a = {
 	type: 'instructions',
-	pages: ['<p>We are interested in the types of activites that you do in order foster both <strong>relative</strong> and <strong>absolute</strong> pitch in the classroom.</p><p>In order to understand what you as a teacher do, we will now ask you to describe up to FIVE activities that you use to foster relative and FIVE activities that you use to foster absolute pitch.</p><p>We will collect this data by first asking you to descibe an exercise or activity that you either know of, use, or would use to foster this skill. After explaining it using a text-box, we will then ask you to rate the activity which you described on several dimensions.</p><p>Please note that if you cannot come up with five activities, you can just click through!</p>'],
+	pages: ['<p>We are interested in the types of activites that you do in order foster both <strong>relative</strong> and <strong>absolute</strong> pitch in the classroom.</p><p>In order to understand what you as a teacher do, we will now ask you to describe up to FIVE activities that you use to foster relative pitch and FIVE activities that you use to foster absolute pitch.</p><p>We will collect this data by first asking you to descibe an exercise or activity that you either know of, use, or would use to foster this skill. After explaining it using a text-box, we will then ask you to rate the activity which you described on several dimensions.</p><p>Please note that if you cannot come up with five activities, you can just click through!</p>'],
     show_clickable_nav: true
   }
     
     var rp_activity_1 = {
   type: 'survey-text',
   questions: [
-      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong> in the classroom.</p><p>This is the first of five responses you will be prompted to give regarding relative pitch.</p><p>We require you to at least provide one response using this page. We invite you to provide more activities on subsequent pages as your responses will inform perceptual tasks we hope to build at a later stage of this research. If you <strong>do not teach relative pitch</strong> in the classroom, please indicate that here.</p>", rows: 10, columns: 70 }
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong> in the classroom.</p><p>This is the first of five responses you will be prompted to give regarding relative pitch.</p><p>We require you to at least provide one response using this page. We invite you to provide more activities on subsequent pages as your responses will inform perceptual tasks we hope to build at a later stage of this research. </p>", rows: 10, columns: 70 }
   ],
 };
 
@@ -253,12 +253,52 @@
   }
 
 
+    var rp_important_1 = {
+  type: 'survey-likert',
+    preamble: "",
+  questions: [
+      // RP Questions 
+      {prompt: "How important do you think it is to teach <strong>relative pitch?</strong>", name: 'rp_ac_rate', labels: imp_scale},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var rp_important_2 = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['0% of the time', '100% of the time'],
+	prompt: "<p>Select the average percentage of time per class period you currently spend fostering <strong>relative pitch</strong> skills.</p>",
+	require_movement: true
+    };
+
+
+    var ap_important_1 = {
+  type: 'survey-likert',
+    preamble: "",
+  questions: [
+      // AP Questions 
+      {prompt: "How important do you think it is to teach <strong>absoulte</strong> pitch?", name: 'rp_ac_rate', labels: imp_scale},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var ap_important_2 = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['0% of the time', '100% of the time'],
+	prompt: "<p>Select the average percentage of time per class period you currently spend fostering <strong>absolute pitch</strong> skills.</p>",
+	require_movement: true
+    };
+
+
     //////////////////////
 
     var ap_activity_1 = {
   type: 'survey-text',
   questions: [
-      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong> in the classroom.</p><p>This is the first of five responses you will be given regarding absolute pitch.</p><p>We require you to at least provide one response using this page. We invite you to provide more activities on subsequent pages as your responses will inform perceptual tasks we hope to build at a later stage of this research. If you <strong>do not teach absolute pitch</strong> in the classroom, please indicate that here.</p>", rows: 10, columns: 70 }
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong> in the classroom.</p><p>This is the first of five responses you will be given regarding absolute pitch.</p><p>We require you to at least provide one response using this page. We invite you to provide more activities on subsequent pages as your responses will inform perceptual tasks we hope to build at a later stage of this research.</p>", rows: 10, columns: 70 }
   ],
 };
 
@@ -308,14 +348,15 @@
 	type: 'html-slider-response',
 	stimulus: '<p></p>',
 	labels: ['0% of the time', '100% of the time'],
-	prompt: "<p>What percentage of your overall <strong>aural skills</strong> teaching time do you spend on Western classical repertoire compared to all other musical styles?</p><p>Putting the slider to the far left would indicate you spend 0% of the time on Western classical reperitore. Moving the slider to the far right would indicate you spend 100% of your time on Western classical repertoire.</p>"
+	prompt: "<p>What percentage of your overall <strong>aural skills</strong> teaching time do you spend on Western classical repertoire compared to all other musical styles?</p><p>Putting the slider to the far left would indicate you spend 0% of the time on Western classical reperitore. Moving the slider to the far right would indicate you spend 100% of your time on Western classical repertoire.</p>",
+	require_movement: true
     };
 
 
     var intend_rep = {
   type: 'survey-text',
   questions: [
-      {prompt: "<p>What repertoire do you wish you could teach or intend to teach if given the opportunity?</p>", rows: 10, columns: 70}
+      {prompt: "<p>What repertoire do you wish you could teach or intend to teach in the aural skills classroom if given the opportunity?</p>", rows: 10, columns: 70 , required: true}
   ],
 };
 
@@ -330,7 +371,8 @@
 	type: 'html-slider-response',
 	stimulus: '<p></p>',
 	labels: ['0% of the time', '100% of the time'],
-	prompt: "<p>What percentage of your overall teaching time do you spend on activities that don’t depend on notation?</p>"
+	prompt: "<p>What percentage of your teaching time do you spend on activities that don’t depend on notation?</p>",
+	require_movement: true
     };
 
     ///
@@ -458,7 +500,7 @@
 	      "No Response"
 	  ], 
         horizontal: false,
-        required: false,
+        required: true,
         name: 'Colors'
       }], 
     randomize_question_order: true
@@ -467,7 +509,7 @@
     var years_teaching_music = {
 	type: 'survey-text',
 	questions: [
-	    {prompt: "How many years have you been teaching music in the classoom?", placeholder: "8", required: false}
+	    {prompt: "How many years have you been teaching music in the classoom?", placeholder: "8", required: true}
 	],
     };
 
@@ -521,7 +563,7 @@
     type: 'survey-multi-select',
     questions: [
       {
-        prompt: "If currently employed as a teacher, what rank do you hold?", 
+        prompt: "If currently employed as a teacher, what rank do you hold? Please choose one.", 
           options: [
 	      "K-12 School Teacher",
 	      "Graduate Student / Teaching Assistant",
@@ -555,7 +597,7 @@
     var years_taught_aural= {
 	type: 'survey-text',
 	questions: [
-	{prompt: "How many years of aural skills have you taught in your professional career?", placeholder: "12"}
+	    {prompt: "How many years of aural skills have you taught in your professional career?", placeholder: "12", required: true}
 	]};
    
     // TODO: Possible "moveable la"
@@ -658,7 +700,7 @@
     var aural_students_count = {
 	type: 'survey-text',
 	questions: [
-	{prompt: "How many students are typically enrolled in one of your aural skills classes (or sections)?", placeholder: "Enter a Number: 22"}
+	    {prompt: "How many students are typically enrolled in one of your aural skills classes (or sections)?", placeholder: "Enter a Number: 22", required: true}
 	]};
 
     var feedback = {
@@ -671,10 +713,10 @@ var aural_rpap_priority = {
   type: 'survey-likert',
     preamble: "",
   questions: [
-      {prompt: "How high a priority does your curriculum place in developing <strong>absolute</strong> pitch in your students?", name: 'often', labels: scale_priority_5},
-      {prompt: "How high a priority does your curriculum place in developing <strong>relative</strong> pitch in your students?", name: 'rp', labels: scale_priority_5},
-      {prompt: "How high a priority do <strong>you</strong> place in developing <strong>absolute</strong> pitch in your students?", name: 'often', labels: scale_priority_5},
-      {prompt: "How high a priority do <strong>you</strong> place in developing <strong>relative</strong> pitch in your students?", name: 'rp', labels: scale_priority_5}
+      {prompt: "How high a priority does your curriculum place in developing <strong>absolute</strong> pitch in your students?", name: 'often', labels: scale_priority_5, required: true},
+      {prompt: "How high a priority does your curriculum place in developing <strong>relative</strong> pitch in your students?", name: 'rp', labels: scale_priority_5, required: true},
+      {prompt: "How high a priority do <strong>you</strong> place in developing <strong>absolute</strong> pitch in your students?", name: 'often', labels: scale_priority_5, required: true},
+      {prompt: "How high a priority do <strong>you</strong> place in developing <strong>relative</strong> pitch in your students?", name: 'rp', labels: scale_priority_5, required: true}
   ],
   randomize_question_order: false 
 };
@@ -683,7 +725,7 @@ var aural_rpap_priority = {
 var aural_theory_parallel_pitch_cleff = {
   type: 'survey-multi-choice',
   questions: [
-    {prompt: "Does the Aural Skills program where you've most recently taught track semester-by-semester with the Theory curriculum?", name: 'theory_track', options: yes_no_na , required:false}, 
+    {prompt: "Does the Aural Skills program where you've most recently taught track semester-by-semester with the Theory curriculum?", name: 'theory_track', options: yes_no_na , required: true}, 
       {prompt: "Does the Aural Skills program where you've most recently taught emphasize pitch memory for a particular pitch (e.g., A440 or middle C)?", name: 'pitch_mem', options: yes_no_na, required: false},
     {prompt: "Does the Aural Skills program where you've most recently taught incorporate reading more than two C-clefs (e.g. for score transposition)?", name: 'score_transp', options: yes_no_na, required: false}
   ],
@@ -725,17 +767,17 @@ var aural_theory_parallel_pitch_cleff = {
     var current_number_majors = {
 	type: 'survey-text',
 	questions: [
-	{prompt: "Approximately how many music majors are enrolled in the music program where you've most recently taught? Please include both undergraduate and graduate students if your school offers both.", placeholder: "Enter a Number: 150"}]};
+	    {prompt: "Approximately how many music majors are enrolled in the music program where you've most recently taught? Please include both undergraduate and graduate students if your school offers both.", placeholder: "Enter a Number: 150"}], required: true};
     
     var state = {
 	type: 'survey-text',
 	questions: [
-	{prompt: "In what state or province do you teach?", placeholder: "North Dakota, Manitoba, Oaxaca"}]};
+	{prompt: "In what state or province do you teach? Leave blank if not applicable.", placeholder: "North Dakota, Manitoba, Oaxaca"}]};
 
     var country = {
 	type: 'survey-text',
 	questions: [
-	{prompt: "In what country do you teach?", placeholder: "America, Canada, Mexico"}]};
+	    {prompt: "In what country do you teach?", placeholder: "America, Canada, Mexico", required: true}]};
 
     var university = {
 	type: 'survey-text',
@@ -853,6 +895,11 @@ var aural_theory_parallel_pitch_cleff = {
 // Section II  
 	  section_2_banner,
 	  section_2_instructions_a,
+	  rp_important_1, 
+	  rp_important_2, 
+	  ap_important_1, 
+	  ap_important_2, 
+	  aural_rpap_priority,
 	  rp_activity_1,
 	  rp_activity_rate_1,
 	  rp_activity_2,
@@ -897,7 +944,6 @@ var aural_theory_parallel_pitch_cleff = {
 	  aural_system_using,
 	  aural_system_prefer,
 	  aural_students_count,
-	  aural_rpap_priority,
 	  aural_theory_parallel_pitch_cleff,
 	 // time_cap_intro, current_rep, future_rep, future_notation,
 // Institution and Faculty
@@ -913,7 +959,7 @@ var aural_theory_parallel_pitch_cleff = {
 	  thank_you
       ],
       show_progress_bar: true,
-    on_finish: function(){ jsPsych.data.displayData(); }
+    on_finish: function(){  } // jsPsych.data.displayData();
   });
 
   </script>
