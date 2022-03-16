@@ -1,0 +1,442 @@
+run_id,t_id,response
+1037,perc_class_time_ap,0
+1174,perc_class_time_ap,0
+122,perc_class_time_ap,3
+152,perc_class_time_ap,0
+166,perc_class_time_ap,8
+271,perc_class_time_ap,0
+324,perc_class_time_ap,21
+334,perc_class_time_ap,1
+472,perc_class_time_ap,0
+436,perc_class_time_ap,2
+532,perc_class_time_ap,0
+538,perc_class_time_ap,0
+553,perc_class_time_ap,7
+580,perc_class_time_ap,0
+714,perc_class_time_ap,0
+772,perc_class_time_ap,100
+795,perc_class_time_ap,0
+915,perc_class_time_ap,0
+961,perc_class_time_ap,0
+1037,perc_class_time_rp,30
+1174,perc_class_time_rp,49
+122,perc_class_time_rp,86
+152,perc_class_time_rp,100
+166,perc_class_time_rp,99
+271,perc_class_time_rp,84
+324,perc_class_time_rp,82
+334,perc_class_time_rp,66
+472,perc_class_time_rp,9
+436,perc_class_time_rp,80
+532,perc_class_time_rp,78
+538,perc_class_time_rp,85
+553,perc_class_time_rp,85
+580,perc_class_time_rp,60
+714,perc_class_time_rp,83
+772,perc_class_time_rp,100
+795,perc_class_time_rp,90
+915,perc_class_time_rp,58
+961,perc_class_time_rp,93
+122,inst_priority_ap_01,1
+122,inst_priority_rp_02,5
+122,you_priority_ap_03,1
+122,you_priority_rp_04,5
+152,inst_priority_ap_01,1
+152,inst_priority_rp_02,5
+152,you_priority_ap_03,1
+152,you_priority_rp_04,5
+166,inst_priority_ap_01,1
+166,inst_priority_rp_02,5
+166,you_priority_ap_03,1
+166,you_priority_rp_04,5
+271,inst_priority_ap_01,1
+271,inst_priority_rp_02,5
+271,you_priority_ap_03,1
+271,you_priority_rp_04,5
+436,inst_priority_ap_01,1
+436,inst_priority_rp_02,5
+436,you_priority_ap_03,1
+436,you_priority_rp_04,5
+532,inst_priority_ap_01,1
+532,inst_priority_rp_02,3
+532,you_priority_ap_03,1
+532,you_priority_rp_04,4
+553,inst_priority_ap_01,1
+553,inst_priority_rp_02,5
+553,you_priority_ap_03,2
+553,you_priority_rp_04,5
+580,inst_priority_ap_01,1
+580,inst_priority_rp_02,5
+580,you_priority_ap_03,1
+580,you_priority_rp_04,5
+714,inst_priority_ap_01,1
+714,inst_priority_rp_02,5
+714,you_priority_ap_03,1
+714,you_priority_rp_04,5
+772,inst_priority_ap_01,1
+772,inst_priority_rp_02,5
+772,you_priority_ap_03,1
+772,you_priority_rp_04,5
+795,inst_priority_ap_01,3
+795,inst_priority_rp_02,4
+795,you_priority_ap_03,1
+795,you_priority_rp_04,5
+961,inst_priority_ap_01,1
+961,inst_priority_rp_02,5
+961,you_priority_ap_03,1
+961,you_priority_rp_04,5
+122,AP Activity 1 use_skill_ap,1
+122,AP Activity 1 easy_teach_ap,1
+122,AP Activity 1 easy_learn_ap,1
+122,AP Activity 1 helps_foster_ap,6
+122,AP Activity 1 reps_absolute_ap,4
+122,AP Activity 2 use_skill_ap,NA
+122,AP Activity 2 easy_teach_ap,NA
+122,AP Activity 2 easy_learn_ap,NA
+122,AP Activity 2 helps_foster_ap,NA
+122,AP Activity 2 reps_absolute_ap,NA
+122,AP Activity 3 use_skill_ap,NA
+122,AP Activity 3 easy_teach_ap,NA
+122,AP Activity 3 easy_learn_ap,NA
+122,AP Activity 3 helps_foster_ap,NA
+122,AP Activity 3 reps_absolute_ap,NA
+122,AP Activity 4 use_skill_ap,NA
+122,AP Activity 4 easy_teach_ap,NA
+122,AP Activity 4 easy_learn_ap,NA
+122,AP Activity 4 helps_foster_ap,NA
+122,AP Activity 4 reps_absolute_ap,NA
+122,AP Activity 5 use_skill_ap,NA
+122,AP Activity 5 easy_teach_ap,NA
+122,AP Activity 5 easy_learn_ap,NA
+122,AP Activity 5 helps_foster_ap,NA
+122,AP Activity 5 reps_absolute_ap,NA
+271,AP Activity 6 use_skill_ap,9
+271,AP Activity 6 easy_teach_ap,9
+271,AP Activity 6 easy_learn_ap,9
+271,AP Activity 6 helps_foster_ap,9
+271,AP Activity 6 reps_absolute_ap,9
+271,AP Activity 7 use_skill_ap,9
+271,AP Activity 7 easy_teach_ap,9
+271,AP Activity 7 easy_learn_ap,9
+271,AP Activity 7 helps_foster_ap,9
+271,AP Activity 7 reps_absolute_ap,9
+271,AP Activity 8 use_skill_ap,9
+271,AP Activity 8 easy_teach_ap,9
+271,AP Activity 8 easy_learn_ap,9
+271,AP Activity 8 helps_foster_ap,9
+271,AP Activity 8 reps_absolute_ap,9
+271,AP Activity 9 use_skill_ap,9
+271,AP Activity 9 easy_teach_ap,9
+271,AP Activity 9 easy_learn_ap,9
+271,AP Activity 9 helps_foster_ap,9
+271,AP Activity 9 reps_absolute_ap,9
+271,AP Activity 10 use_skill_ap,9
+271,AP Activity 10 easy_teach_ap,9
+271,AP Activity 10 easy_learn_ap,9
+271,AP Activity 10 helps_foster_ap,9
+271,AP Activity 10 reps_absolute_ap,9
+436,AP Activity 11 use_skill_ap,7
+436,AP Activity 11 easy_teach_ap,5
+436,AP Activity 11 easy_learn_ap,3
+436,AP Activity 11 helps_foster_ap,3
+436,AP Activity 11 reps_absolute_ap,3
+436,AP Activity 12 use_skill_ap,5
+436,AP Activity 12 easy_teach_ap,5
+436,AP Activity 12 easy_learn_ap,4
+436,AP Activity 12 helps_foster_ap,3
+436,AP Activity 12 reps_absolute_ap,3
+436,AP Activity 13 use_skill_ap,7
+436,AP Activity 13 easy_teach_ap,5
+436,AP Activity 13 easy_learn_ap,4
+436,AP Activity 13 helps_foster_ap,3
+436,AP Activity 13 reps_absolute_ap,3
+436,AP Activity 14 use_skill_ap,3
+436,AP Activity 14 easy_teach_ap,5
+436,AP Activity 14 easy_learn_ap,4
+436,AP Activity 14 helps_foster_ap,3
+436,AP Activity 14 reps_absolute_ap,3
+436,AP Activity 15 use_skill_ap,1
+436,AP Activity 15 easy_teach_ap,2
+436,AP Activity 15 easy_learn_ap,1
+436,AP Activity 15 helps_foster_ap,4
+436,AP Activity 15 reps_absolute_ap,7
+553,AP Activity 16 use_skill_ap,4
+553,AP Activity 16 easy_teach_ap,3
+553,AP Activity 16 easy_learn_ap,3
+553,AP Activity 16 helps_foster_ap,4
+553,AP Activity 16 reps_absolute_ap,2
+553,AP Activity 17 use_skill_ap,NA
+553,AP Activity 17 easy_teach_ap,NA
+553,AP Activity 17 easy_learn_ap,NA
+553,AP Activity 17 helps_foster_ap,NA
+553,AP Activity 17 reps_absolute_ap,NA
+553,AP Activity 18 use_skill_ap,NA
+553,AP Activity 18 easy_teach_ap,NA
+553,AP Activity 18 easy_learn_ap,NA
+553,AP Activity 18 helps_foster_ap,NA
+553,AP Activity 18 reps_absolute_ap,NA
+553,AP Activity 19 use_skill_ap,NA
+553,AP Activity 19 easy_teach_ap,NA
+553,AP Activity 19 easy_learn_ap,NA
+553,AP Activity 19 helps_foster_ap,NA
+553,AP Activity 19 reps_absolute_ap,NA
+553,AP Activity 20 use_skill_ap,NA
+553,AP Activity 20 easy_teach_ap,NA
+553,AP Activity 20 easy_learn_ap,NA
+553,AP Activity 20 helps_foster_ap,NA
+553,AP Activity 20 reps_absolute_ap,NA
+961,AP Activity 21 use_skill_ap,8
+961,AP Activity 21 easy_teach_ap,8
+961,AP Activity 21 easy_learn_ap,8
+961,AP Activity 21 helps_foster_ap,8
+961,AP Activity 21 reps_absolute_ap,8
+961,AP Activity 22 use_skill_ap,NA
+961,AP Activity 22 easy_teach_ap,NA
+961,AP Activity 22 easy_learn_ap,NA
+961,AP Activity 22 helps_foster_ap,NA
+961,AP Activity 22 reps_absolute_ap,NA
+961,AP Activity 23 use_skill_ap,NA
+961,AP Activity 23 easy_teach_ap,NA
+961,AP Activity 23 easy_learn_ap,NA
+961,AP Activity 23 helps_foster_ap,NA
+961,AP Activity 23 reps_absolute_ap,NA
+961,AP Activity 24 use_skill_ap,NA
+961,AP Activity 24 easy_teach_ap,NA
+961,AP Activity 24 easy_learn_ap,NA
+961,AP Activity 24 helps_foster_ap,NA
+961,AP Activity 24 reps_absolute_ap,NA
+961,AP Activity 25 use_skill_ap,NA
+961,AP Activity 25 easy_teach_ap,NA
+961,AP Activity 25 easy_learn_ap,NA
+961,AP Activity 25 helps_foster_ap,NA
+961,AP Activity 25 reps_absolute_ap,NA
+122,RP Activity 1 use_skill_rp,8
+122,RP Activity 1 easy_teach_rp,8
+122,RP Activity 1 easy_learn_rp,5
+122,RP Activity 1 helps_foster_rp,8
+122,RP Activity 1 reps_relative_rp,7
+122,RP Activity 2 use_skill_rp,8
+122,RP Activity 2 easy_teach_rp,8
+122,RP Activity 2 easy_learn_rp,7
+122,RP Activity 2 helps_foster_rp,7
+122,RP Activity 2 reps_relative_rp,8
+122,RP Activity 3 use_skill_rp,6
+122,RP Activity 3 easy_teach_rp,6
+122,RP Activity 3 easy_learn_rp,4
+122,RP Activity 3 helps_foster_rp,7
+122,RP Activity 3 reps_relative_rp,7
+122,RP Activity 4 use_skill_rp,7
+122,RP Activity 4 easy_teach_rp,8
+122,RP Activity 4 easy_learn_rp,6
+122,RP Activity 4 helps_foster_rp,6
+122,RP Activity 4 reps_relative_rp,7
+122,RP Activity 5 use_skill_rp,6
+122,RP Activity 5 easy_teach_rp,3
+122,RP Activity 5 easy_learn_rp,3
+122,RP Activity 5 helps_foster_rp,7
+122,RP Activity 5 reps_relative_rp,6
+271,RP Activity 6 use_skill_rp,9
+271,RP Activity 6 easy_teach_rp,9
+271,RP Activity 6 easy_learn_rp,9
+271,RP Activity 6 helps_foster_rp,9
+271,RP Activity 6 reps_relative_rp,9
+271,RP Activity 7 use_skill_rp,9
+271,RP Activity 7 easy_teach_rp,9
+271,RP Activity 7 easy_learn_rp,9
+271,RP Activity 7 helps_foster_rp,9
+271,RP Activity 7 reps_relative_rp,9
+271,RP Activity 8 use_skill_rp,9
+271,RP Activity 8 easy_teach_rp,9
+271,RP Activity 8 easy_learn_rp,9
+271,RP Activity 8 helps_foster_rp,9
+271,RP Activity 8 reps_relative_rp,9
+271,RP Activity 9 use_skill_rp,9
+271,RP Activity 9 easy_teach_rp,9
+271,RP Activity 9 easy_learn_rp,9
+271,RP Activity 9 helps_foster_rp,9
+271,RP Activity 9 reps_relative_rp,9
+271,RP Activity 10 use_skill_rp,9
+271,RP Activity 10 easy_teach_rp,9
+271,RP Activity 10 easy_learn_rp,9
+271,RP Activity 10 helps_foster_rp,9
+271,RP Activity 10 reps_relative_rp,9
+436,RP Activity 11 use_skill_rp,7
+436,RP Activity 11 easy_teach_rp,5
+436,RP Activity 11 easy_learn_rp,4
+436,RP Activity 11 helps_foster_rp,7
+436,RP Activity 11 reps_relative_rp,6
+436,RP Activity 12 use_skill_rp,7
+436,RP Activity 12 easy_teach_rp,6
+436,RP Activity 12 easy_learn_rp,3
+436,RP Activity 12 helps_foster_rp,7
+436,RP Activity 12 reps_relative_rp,7
+436,RP Activity 13 use_skill_rp,5
+436,RP Activity 13 easy_teach_rp,6
+436,RP Activity 13 easy_learn_rp,6
+436,RP Activity 13 helps_foster_rp,5
+436,RP Activity 13 reps_relative_rp,4
+436,RP Activity 14 use_skill_rp,7
+436,RP Activity 14 easy_teach_rp,5
+436,RP Activity 14 easy_learn_rp,3
+436,RP Activity 14 helps_foster_rp,6
+436,RP Activity 14 reps_relative_rp,5
+436,RP Activity 15 use_skill_rp,2
+436,RP Activity 15 easy_teach_rp,4
+436,RP Activity 15 easy_learn_rp,3
+436,RP Activity 15 helps_foster_rp,4
+436,RP Activity 15 reps_relative_rp,3
+553,RP Activity 16 use_skill_rp,7
+553,RP Activity 16 easy_teach_rp,7
+553,RP Activity 16 easy_learn_rp,6
+553,RP Activity 16 helps_foster_rp,7
+553,RP Activity 16 reps_relative_rp,7
+553,RP Activity 17 use_skill_rp,7
+553,RP Activity 17 easy_teach_rp,7
+553,RP Activity 17 easy_learn_rp,6
+553,RP Activity 17 helps_foster_rp,7
+553,RP Activity 17 reps_relative_rp,7
+553,RP Activity 18 use_skill_rp,NA
+553,RP Activity 18 easy_teach_rp,NA
+553,RP Activity 18 easy_learn_rp,NA
+553,RP Activity 18 helps_foster_rp,NA
+553,RP Activity 18 reps_relative_rp,NA
+553,RP Activity 19 use_skill_rp,NA
+553,RP Activity 19 easy_teach_rp,NA
+553,RP Activity 19 easy_learn_rp,NA
+553,RP Activity 19 helps_foster_rp,NA
+553,RP Activity 19 reps_relative_rp,NA
+553,RP Activity 20 use_skill_rp,NA
+553,RP Activity 20 easy_teach_rp,NA
+553,RP Activity 20 easy_learn_rp,NA
+553,RP Activity 20 helps_foster_rp,NA
+553,RP Activity 20 reps_relative_rp,NA
+714,RP Activity 21 use_skill_rp,7
+714,RP Activity 21 easy_teach_rp,6
+714,RP Activity 21 easy_learn_rp,7
+714,RP Activity 21 helps_foster_rp,7
+714,RP Activity 21 reps_relative_rp,7
+714,RP Activity 22 use_skill_rp,6
+714,RP Activity 22 easy_teach_rp,6
+714,RP Activity 22 easy_learn_rp,6
+714,RP Activity 22 helps_foster_rp,6
+714,RP Activity 22 reps_relative_rp,6
+714,RP Activity 23 use_skill_rp,7
+714,RP Activity 23 easy_teach_rp,6
+714,RP Activity 23 easy_learn_rp,6
+714,RP Activity 23 helps_foster_rp,6
+714,RP Activity 23 reps_relative_rp,6
+714,RP Activity 24 use_skill_rp,7
+714,RP Activity 24 easy_teach_rp,6
+714,RP Activity 24 easy_learn_rp,6
+714,RP Activity 24 helps_foster_rp,6
+714,RP Activity 24 reps_relative_rp,6
+795,RP Activity 25 use_skill_rp,7
+795,RP Activity 25 easy_teach_rp,6
+795,RP Activity 25 easy_learn_rp,4
+795,RP Activity 25 helps_foster_rp,7
+795,RP Activity 25 reps_relative_rp,7
+795,RP Activity 26 use_skill_rp,7
+795,RP Activity 26 easy_teach_rp,6
+795,RP Activity 26 easy_learn_rp,4
+795,RP Activity 26 helps_foster_rp,7
+795,RP Activity 26 reps_relative_rp,7
+795,RP Activity 27 use_skill_rp,7
+795,RP Activity 27 easy_teach_rp,6
+795,RP Activity 27 easy_learn_rp,4
+795,RP Activity 27 helps_foster_rp,7
+795,RP Activity 27 reps_relative_rp,7
+795,RP Activity 28 use_skill_rp,9
+795,RP Activity 28 easy_teach_rp,9
+795,RP Activity 28 easy_learn_rp,9
+795,RP Activity 28 helps_foster_rp,9
+795,RP Activity 28 reps_relative_rp,9
+795,RP Activity 29 use_skill_rp,9
+795,RP Activity 29 easy_teach_rp,9
+795,RP Activity 29 easy_learn_rp,9
+795,RP Activity 29 helps_foster_rp,9
+795,RP Activity 29 reps_relative_rp,9
+961,RP Activity 30 use_skill_rp,8
+961,RP Activity 30 easy_teach_rp,8
+961,RP Activity 30 easy_learn_rp,8
+961,RP Activity 30 helps_foster_rp,8
+961,RP Activity 30 reps_relative_rp,8
+961,RP Activity 31 use_skill_rp,8
+961,RP Activity 31 easy_teach_rp,8
+961,RP Activity 31 easy_learn_rp,8
+961,RP Activity 31 helps_foster_rp,8
+961,RP Activity 31 reps_relative_rp,8
+961,RP Activity 32 use_skill_rp,NA
+961,RP Activity 32 easy_teach_rp,NA
+961,RP Activity 32 easy_learn_rp,NA
+961,RP Activity 32 helps_foster_rp,NA
+961,RP Activity 32 reps_relative_rp,NA
+961,RP Activity 33 use_skill_rp,NA
+961,RP Activity 33 easy_teach_rp,NA
+961,RP Activity 33 easy_learn_rp,NA
+961,RP Activity 33 helps_foster_rp,NA
+961,RP Activity 33 reps_relative_rp,NA
+961,RP Activity 34 use_skill_rp,NA
+961,RP Activity 34 easy_teach_rp,NA
+961,RP Activity 34 easy_learn_rp,NA
+961,RP Activity 34 helps_foster_rp,NA
+961,RP Activity 34 reps_relative_rp,NA
+122,RP Activity 1,"""Q0"":""Taking melodic dictation of diatonic music using scale degrees or solfege ""}"
+122,RP Activity 2,"""Q0"":""Hearing relationships between two or more pitches using call and response activities""}"
+122,RP Activity 3,"""Q0"":""Aurally Identifying harmonic functions of chords in a piece of music ""}"
+122,RP Activity 4,"""Q0"":""Singing arpeggiated triads and seventh chords within a key""}"
+122,RP Activity 5,"""Q0"":""Having students improvise with solfege in a key""}"
+166,RP Activity 6,"""Q0"":""Provide a Tonic pitch\nHear a neutral syllable melody. \nStudents sing back the melody coded in relation to the given tonic using whichever “movable” system the class uses. ""}"
+271,RP Activity 7,"""Q0"":""nr""}"
+271,RP Activity 8,"""Q0"":""}"
+271,RP Activity 9,"""Q0"":""}"
+271,RP Activity 10,"""Q0"":""}"
+271,RP Activity 11,"""Q0"":""}"
+436,RP Activity 12,"""Q0"":""Identifying scale degrees after established tonal reference. ""}"
+436,RP Activity 13,"""Q0"":""Melodic dictation after established tonal reference. ""}"
+436,RP Activity 14,"""Q0"":""Identifying isolated intervals""}"
+436,RP Activity 15,"""Q0"":""Identifying harmonic function after established tonal reference (no notation). ""}"
+436,RP Activity 16,"""Q0"":""Identifying triad or 7th chord quality (no reference). ""}"
+532,RP Activity 17,"""Q0"":""I try to get students to remember landmark pitches in a melody physically in their voices or mentally for dictation. Then relate the other pitches to that memorized pitch, using scale degrees if that works for the student. If not, intervals. Whatever helps the student hear the big picture and relate the melodic tones to the entire phrase structure. So, hearing a cadential note or set of notes and building back from there, for example.""}"
+553,RP Activity 18,"""Q0"":""I try to incorporate some improvisation into my teaching by giving a tonal center and have students create a melody line (on solfege) based on that given tonal reference.""}"
+553,RP Activity 19,"""Q0"":""Solfege patterns without notation. This can be in singing or in dictation""}"
+553,RP Activity 20,"""Q0"":""}"
+553,RP Activity 21,"""Q0"":""}"
+553,RP Activity 22,"""Q0"":""}"
+714,RP Activity 23,"""Q0"":""Training students to sing intervals from a given pitch""}"
+714,RP Activity 24,"""Q0"":""Having students sing triads as an arpeggiation""}"
+714,RP Activity 25,"""Q0"":""Singing back of small melodic fragments""}"
+795,RP Activity 26,"""Q0"":""Singing (or recognizing) intervals when given the first pitch as a reference point. \nSinging excursuses, including melodies.   \nDictation excursuses, tonal, and (if appropriate) atonal. ""}"
+795,RP Activity 27,"""Q0"":""Same as previous answer""}"
+795,RP Activity 28,"""Q0"":""Same answer""}"
+795,RP Activity 29,"""Q0"":""Sorry, but I don't see how these questions are different (we cannot look back at the previous questions without losing our data, right?)""}"
+795,RP Activity 30,"""Q0"":""Same question, same answer. ""}"
+961,RP Activity 31,"""Q0"":""Transposing a given melody on scale degrees""}"
+961,RP Activity 32,"""Q0"":""Sight-singing different melodies given a basis triad""}"
+961,RP Activity 33,"""Q0"":""}"
+961,RP Activity 34,"""Q0"":""}"
+961,RP Activity 35,"""Q0"":""}"
+122,AP Activity 1,"""Q0"":""Asking the class to try to sing a given pitch without any reference. ""}"
+122,AP Activity 2,"""Q0"":""}"
+122,AP Activity 3,"""Q0"":""}"
+122,AP Activity 4,"""Q0"":""}"
+122,AP Activity 5,"""Q0"":""}"
+271,AP Activity 6,"""Q0"":""nr""}"
+271,AP Activity 7,"""Q0"":""}"
+271,AP Activity 8,"""Q0"":""}"
+271,AP Activity 9,"""Q0"":""}"
+271,AP Activity 10,"""Q0"":""}"
+436,AP Activity 11,"""Q0"":""Identifying scale degrees after established tonal reference. ""}"
+436,AP Activity 12,"""Q0"":""Identifying intervals (isolated)""}"
+436,AP Activity 13,"""Q0"":""Melodic dictation""}"
+436,AP Activity 14,"""Q0"":""Identifying triad quality""}"
+436,AP Activity 15,"""Q0"":""Identify pitch name from isolated piano key or from musical excerpt. ""}"
+553,AP Activity 16,"""Q0"":""There are many musical selections that students can immediately sing back based on their ensemble experience or solo performing experience.I will ask them to sing a line from that piece to determine if there is one pitch that they can bring up quickly and with accuracy.""}"
+553,AP Activity 17,"""Q0"":""}"
+553,AP Activity 18,"""Q0"":""}"
+553,AP Activity 19,"""Q0"":""}"
+553,AP Activity 20,"""Q0"":""}"
+961,AP Activity 21,"""Q0"":""I don't know of any activities.""}"
+961,AP Activity 22,"""Q0"":""}"
+961,AP Activity 23,"""Q0"":""}"
+961,AP Activity 24,"""Q0"":""}"
+961,AP Activity 25,"""Q0"":""}"

@@ -1,0 +1,28 @@
+---
+title: "Relative and Absolute Pitch Data"
+output: 
+  flexdashboard::flex_dashboard:
+    storyboard: true
+---
+
+This dashboard is the current repository for the Relative and Absolute Pitch project between Eastman, Peabody, and the University of Amsterdam.
+
+For questions, please contact [Dave Baker](mailto:davidjohnbaker1@gmail.com)
+
+### Frame 1
+
+```{r}
+```
+
+*** 
+
+Some commentary about Frame 1.
+
+### Frame 2 {data-commentary-width=400}
+
+```{r}
+```
+
+*** 
+
+Some commentary about Frame 2.

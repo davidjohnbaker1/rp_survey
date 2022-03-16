@@ -1,0 +1,85 @@
+run_id,t_id,response
+122,majority_teaching,"{""Colors"":[""Music theory (Remedial Undergraduate, Written)"",""Music theory (Remedial Undergraduate, Aural)"",""Music theory (First Year Undergraduate, Written)"",""Music theory (First Year Undergraduate, Aural)"",""Music theory (First Year Undergraduate, combined Theory and Aural)"",""Music theory (Second Year Undergraduate, Written)"",""Music theory (Second Year Undergraduate, Aural)"",""Music theory (Second Year Undergraduate, combined Theory and Aural)"",""Collegiate private lessons (in music performance)"",""Music composition"",""Music courses for collegiate music majors not listed here"",""General education music courses for collegiate students""]}"
+436,majority_teaching,"{""Colors"":[""Music theory (First Year Undergraduate, Written)"",""Music theory (First Year Undergraduate, Aural)"",""Music theory (Second Year Undergraduate, Written)"",""Music theory (Second Year Undergraduate, Aural)"",""Music theory (Junior/Senior upper-level courses, Written)""]}"
+553,majority_teaching,"{""Colors"":[""Music theory (First Year Undergraduate, Written)"",""Music theory (First Year Undergraduate, Aural)"",""Music theory (Second Year Undergraduate, Written)"",""Music theory (Second Year Undergraduate, Aural)"",""Music courses for collegiate music majors not listed here""]}"
+961,majority_teaching,"{""Colors"":[""Music theory (First Year Undergraduate, Written)"",""Music theory (Second Year Undergraduate, Written)"",""Music theory (Junior/Senior upper-level courses, Written)"",""Music theory (Remedial Graduate, Written)""]}"
+122,years_teaching_music_classroom,19
+436,years_teaching_music_classroom,21
+553,years_teaching_music_classroom,20
+961,years_teaching_music_classroom,14
+122,highest_degree_earned,"{""Colors"":[""DMA in Composition""]}"
+436,highest_degree_earned,"{""Colors"":[""Ph.D. in Music Theory""]}"
+553,highest_degree_earned,"{""Colors"":[""Ph.D. in Music Theory""]}"
+961,highest_degree_earned,"{""Colors"":[""Ph.D. in Music Theory""]}"
+122,years_since_graduating, 11
+436,years_since_graduating,21
+553,years_since_graduating,20
+961,years_since_graduating,8
+122,describe_institution,"{""Colors"":[""Public institution"",""Conservatory-style professional music school (within a university)"",""Music Department within a university""]}"
+436,describe_institution,"{""Colors"":[""Public institution"",""Conservatory-style professional music school (within a university)"",""NASM-accredited music program""]}"
+553,describe_institution,"{""Colors"":[""Public institution"",""Music Department within a university"",""NASM-accredited music program""]}"
+961,describe_institution,"{""Colors"":[""Conservatory-style professional music school (within a university)""]}"
+122,describe_teaching_role,"{""Colors"":""Full-Time Tenured""}"
+436,describe_teaching_role,"{""Colors"":""Full-Time Tenured""}"
+553,describe_teaching_role,"{""Colors"":""Full-Time Tenured""}"
+961,describe_teaching_role,"{""Colors"":""Full-Time Tenured""}"
+122,describe_own_rp_sense,74
+436,describe_own_rp_sense,100
+553,describe_own_rp_sense,91
+961,describe_own_rp_sense,98
+122,describe_own_ap_sense,99
+436,describe_own_ap_sense,12
+553,describe_own_ap_sense,24
+961,describe_own_ap_sense,92
+122,describe_years_aural_taught,"{""Q0"":""16""}"
+436,describe_years_aural_taught,"{""Q0"":""21""}"
+553,describe_years_aural_taught,"{""Q0"":""22""}"
+961,describe_years_aural_taught,"{""Q0"":""3""}"
+122,system_learned_student,"{""Colors"":[""Scale-degree numbers without inflections"",""Moveable-Do (La-based minor)"",""Moveable-Do (Do-based minor)"",""Curwen or Kodaly hand symbols"",""Letter names""]}"
+436,system_learned_student,"{""Colors"":[""Fixed-Do without inflections""]}"
+553,system_learned_student,"{""Colors"":[""Moveable-Do (Do-based minor)""]}"
+961,system_learned_student,"{""Colors"":[""Fixed-Do without inflections""]}"
+122,where_learn_student,"{""Q0"":""Many different places. Different institutions used different systems. ""}"
+436,where_learn_student,"{""Q0"":""Richmond, IN USA""}"
+553,where_learn_student,"{""Q0"":""Raleigh, NC""}"
+961,where_learn_student,"{""Q0"":""Juilliard, MSM, Boston University""}"
+122,what_system_prefer,"{""Colors"":[""Moveable-Do (Do-based minor)""]}"
+436,what_system_prefer,"{""Colors"":[""Scale-degree numbers without inflections"",""Moveable-Do (Do-based minor)""]}"
+553,what_system_prefer,"{""Colors"":[""Moveable-Do (La-based minor)"",""Moveable-Do (Do-based minor)"",""Letter names""]}"
+122,what_system_current_inst,"{""Colors"":[""Moveable-Do (Do-based minor)""]}"
+436,what_system_current_inst,"{""Colors"":[""Scale-degree numbers with inflections"",""Scale-degree numbers without inflections"",""Moveable-Do (La-based minor)"",""Moveable-Do (Do-based minor)"",""Curwen or Kodaly hand symbols""]}"
+553,what_system_current_inst,"{""Colors"":[""Moveable-Do (Do-based minor)""]}"
+122,num_students_per_class,"{""Q0"":""3""}"
+436,num_students_per_class,"{""Q0"":""12""}"
+553,num_students_per_class,"{""Q0"":""18""}"
+122,theory_track,Yes
+122,pitch_memory,No
+122,score_transposition,Yes
+436,theory_track,Yes
+436,pitch_memory,No
+436,score_transposition,No
+553,theory_track,No
+553,pitch_memory,No
+553,score_transposition,No
+122,describe_institution,"{""Colors"":[""Public institution"",""Conservatory-style professional music school (within a university)"",""Music Department within a university""]}"
+436,describe_institution,"{""Colors"":[""Public institution"",""Conservatory-style professional music school (within a university)"",""NASM-accredited music program""]}"
+553,describe_institution,"{""Colors"":[""Public institution"",""Music Department within a university"",""NASM-accredited music program""]}"
+961,describe_institution,"{""Colors"":[""Conservatory-style professional music school (within a university)""]}"
+122,estimated_school_size,4
+436,estimated_school_size,80
+553,estimated_school_size,400
+122,inst_degree_offer,"{""Colors"":[""Associate's degree (AA)""]}"
+436,inst_degree_offer,"{""Colors"":[""Undergraduate music minor"",""Associate's degree (AA)"",""Bachelor of Arts (BA)"",""Bachelor of Music (BM)""]}"
+553,inst_degree_offer,"{""Colors"":[""Bachelor of Music (BM)"",""Masters (MM)""]}"
+122,aural_skill_teacher_rank,"{""Colors"":[""Full-time tenured""]}"
+436,aural_skill_teacher_rank,"{""Colors"":[""Full-time non-tenure eligible"",""Full-time tenure eligible""]}"
+553,aural_skill_teacher_rank,"{""Colors"":[""Full-time tenure eligible"",""Full-time tenured""]}"
+122,aural_skill_teacher_degree,"{""Colors"":[""Graduate degree in music theory or composition""]}"
+436,aural_skill_teacher_degree,"{""Colors"":[""Graduate degree in performance"",""Graduate degree in music theory or composition"",""Graduate degree in music education""]}"
+553,aural_skill_teacher_degree,"{""Colors"":[""Graduate degree in music theory or composition""]}"
+122,school_country,United States 
+436,school_country,USA
+553,school_country,United States
+122,school_state,WA
+436,school_state,Georgia
+553,school_state,North Carolina
