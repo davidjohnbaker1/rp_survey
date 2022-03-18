@@ -1,93 +1,421 @@
 run_id,t_id,response
-100,personal_rp_def,Poooop\n
-1037,personal_rp_def,"Relative pitch is the ability to identify intervals, scale degrees, etc. once given a reference tone. Unlike absolute pitch, it can be learned (I've seen people experiment with trying to memorize a reference tone like A440 but I haven't seen it work)."
-1149,personal_rp_def,Not applicable
-1174,personal_rp_def,N/A
-117,personal_rp_def,The ability to identify or produce tones using a given reference pitch. 
-122,personal_rp_def,Not applicable 
-138,personal_rp_def,Not applicable
-149,personal_rp_def,Relative pitch may be knowing the physical sensation or function used to sing a particular pitch.
-152,personal_rp_def,the ability to perceive and produce scale-degree hierarchies relative to a tonic pitch.
-160,personal_rp_def,A sense of relationship between pitches within a tonal system
-163,personal_rp_def,"Being able to relate pitches to each other, and likely good tonal memory. "
-176,personal_rp_def,"NA"
-166,personal_rp_def,The ability to produce and label pitches in relation to a reference point (audiated or given). 
-271,personal_rp_def,not applicable
-266,personal_rp_def,Not applicable
-324,personal_rp_def,N.A.
-306,personal_rp_def,"The ability to perceive the relationships between notes irrespective of absolute identity. Above all, it is the ability to orient any note to a tonal center."
-329,personal_rp_def,"The ability to perceive the relationships between notes. Above all, it is the ability to orient a note to a tonal center (e.g., assign a scale degree to a note)."
-334,personal_rp_def,not applicable
-472,personal_rp_def,N/A
-450,personal_rp_def,"NA"
-436,personal_rp_def,"NA"
-532,personal_rp_def,"1) The ability to identify a pitch based on a previously heard pitch\n2) The ability to remember/memorize a pitch because a piece begins on it, climaxes on it, or ends on it if the work is performed by the listener/pitch-rememberer often. (e.g. I can always remember D5 because I love to perform an aria that begins on D5.) \n3) The ability to memorize a pitch, especially A440, because of tuning instruments. One can then find other pitches around that memorized pitch. \n4) I don't have absolute pitch, but I have a hard time hearing and transposed versions of songs with which I'm familiar. (I don't know how this might relate to your study but it's a thing!)"
-538,personal_rp_def,Not applicable
-448,personal_rp_def,Not Applicable
-553,personal_rp_def,N/A
-580,personal_rp_def,N/A
-618,personal_rp_def,N/A
-64,personal_rp_def,fasdfas
-714,personal_rp_def,Being able to distinguish a pitch when given a reference tone
-772,personal_rp_def,Not Applicable
-78,personal_rp_def,hello dave
-827,personal_rp_def,Not applicable 
-915,personal_rp_def,Not applicable
-961,personal_rp_def,"The ability to produce, recognize, or label (if applicable) a pitch, given a reference pitch."
-927,personal_rp_def,"hopefully, something you won't lose with age. :) "
-97,personal_rp_def,"the ability to recognize musical function and, in some cases, be able to identify/produce pitches in relation to a remembered reference tone (usually middle C)"
-84,personal_rp_def,this is dave trying to sort the text 
-100,personal_ap_def,Ppooooooop
-1037,personal_ap_def,Absolute pitch is the ability to identify a pitch when heard.
-1149,personal_ap_def,Not applicable
-1174,personal_ap_def,N/A
-117,personal_ap_def,The ability to identify or produce tones from a remembered reference source. 
-122,personal_ap_def,Not applicable 
-138,personal_ap_def,Not applicable
-149,personal_ap_def,Absolute pitch is the ability to identify a pitch with no reference.
-152,personal_ap_def,"the ability to produce or identify specific pitches or pitch classes without the use of a reference tone. People may possess this to varying degrees (i.e., they may be limited by range, instrument, text, or other musical features)."
-160,personal_ap_def,A sense of pitch class that exists even without a reference pitch
-163,personal_ap_def,The ability  to hear and label keys and pitches without a reference pitch. 
-176,personal_ap_def,"NA"
-166,personal_ap_def,Being able to accurately produce and label pitches without a given reference pitch. 
-271,personal_ap_def,not applicable
-266,personal_ap_def,not applicable
-324,personal_ap_def,"I tried to fill in definitions that clearly defined one AP or RP, and for those that don't define for instance AP, but APs are able to achieve easily, I simply put neutral. My neutral answers doesn't mean these don't apply to AP people, but that whether they are able to do the task or not has no relation to whether they have AP or not."
-306,personal_ap_def,The ability to identify the name of note without any context whatsoever.
-329,personal_ap_def,The ability to identify a note by ear without any context.
-334,personal_ap_def,not applicable
-472,personal_ap_def,N/A
-450,personal_ap_def,"NA"
-436,personal_ap_def,"NA"
-538,personal_ap_def,not applicable\n
-448,personal_ap_def,Not Applicable
-553,personal_ap_def,the ability to recreate or to identify a pitch without any reference tone.
-580,personal_ap_def,N/A
-618,personal_ap_def,N/A
-64,personal_ap_def,asdfasdfasdf
-714,personal_ap_def,The ability to distinguish any pitch without a reference tone
-772,personal_ap_def,Not Applicable
-78,personal_ap_def,hello dave 2
-827,personal_ap_def,Not applicable 
-915,personal_ap_def,Not applicable
-961,personal_ap_def,The ability to audiate pitches without a reference.
-927,personal_ap_def,n/a
-97,personal_ap_def,The ability to produce/identify notes and keys without any reference tones
-84,personal_ap_def,booga booga 
-122,rep_list_free_response,"As much variety as possible. In addition to examples I provide, which include “art music” (dumb name), jazz, country, pop, hip-hop, and rock, I ask my students to use examples the select. "
-271,rep_list_free_response,nr
-436,rep_list_free_response,"Classical era excerpts (Haydn, Mozart, Beethoven), Romantic era excerpts (Schubert, Brahms, Tchaikovsky), Pop-rock music"
-553,rep_list_free_response,"Musical theater, student created melodies and progressions, jazz, folk music, songs that all students know such as Somewhere Over the Rainbow or the university fight song."
-961,rep_list_free_response,I don't teach aural skills
-122,rep_list_intend_response,I don’t know 
-436,rep_list_intend_response,International folk songs
-553,rep_list_intend_response,I've worked diligently over the past decade to integrate a variety. I would like to add more musical theater as it is always embraced by the students.
-961,rep_list_intend_response,Repertoire that doesn't have a basis in notation 
-122,no_notation_list,Using other notation systems I have devised and also student derived systems. I also use sight singing activities but I don’t know whether you are considering that a separate class. 
-436,no_notation_list,"Identifying scale degrees (isolated, based on tonal reference), triad or 7th chord quality, scale degrees (brief melody with no notation), harmonic function (no notation)"
-553,no_notation_list,"Singing of pitch patterns with solfege only, lots of improvisation with hand signs"
-961,no_notation_list,N/A
-122,non_notation_frequency,52
-436,non_notation_frequency,50
-553,non_notation_frequency,63
-961,non_notation_frequency,28
+1011,personal_rp_def,The only thing I might add is that relative pitch is a skill that can be acquired over time and with practice.
+1079,personal_rp_def,the ability to identify scale degrees/solfege and produce/sing/play on instrument pitches in relation to a given key or tonality. 
+1061,personal_rp_def,I would say that relative pitch involves the ability to determine a note (or set of notes) from a given reference tone or key.   The determination can be active (producing a pitch) or passive (recognizing or labeling a pitch) 
+1071,personal_rp_def,n/a
+1081,personal_rp_def,Not Applicable
+1095,personal_rp_def,the ability to identify the functional tonic of a passage AND to identify the scale-degree functions of other pitches in relation to the tonic. 
+1129,personal_rp_def,N/A
+1207,personal_rp_def,N/A
+1139,personal_rp_def,"NA"
+1194,personal_rp_def,not applicable
+1307,personal_rp_def,Not Applicable
+1446,personal_rp_def,Not Applicable.
+1501,personal_rp_def,Not Applicable.
+15,personal_rp_def,dasfdas
+1480,personal_rp_def,Relative pitch can be subdivided into fixed pitch and initial pitch.Neither needs any reference sound to name the pitch.
+1521,personal_rp_def,Not Applicable
+1588,personal_rp_def,Not Applicable
+1665,personal_rp_def,No opinion.
+1616,personal_rp_def,comparing pitch and faster transposition
+1677,personal_rp_def,an ability can know or produce the interval or the scale level of certain tonality.
+1675,personal_rp_def,Not Applicable
+1707,personal_rp_def,Not Applicable
+1678,personal_rp_def,Not Applicable.\n
+1729,personal_rp_def,Not Applicable
+1727,personal_rp_def,Not Applicable
+1706,personal_rp_def,"Relative pitch is a self-constructed system, having relative pitch may have the ability to understand music in a deeper level. "
+216,personal_rp_def,Not applicable
+226,personal_rp_def,Not Applicable
+285,personal_rp_def,Not Applicable
+295,personal_rp_def,Not Applicable
+303,personal_rp_def,na
+288,personal_rp_def,N/A
+291,personal_rp_def,Not Applicable
+319,personal_rp_def,"I'd say that none of the individual definitions offered entirely captures the concept. Recognizing intervals, say, is probably something that someone with decent relative pitch (or perfect pitch + some minimal training) can do. But it doesn't seem right to say that recognizing intervals therefore _is_ relative/perfect pitch. And mutatis mutandis for the rest. I was also a little unclear on what you meant by a remembered reference tone. Do you mean, e.g., after hearing where A 440 is in the morning's first rehearsal, then retaining for the rest of the day (I used to be able to do that, when I was playing a lot more--though I can't anymore); I'd call that relative pitch. Do you mean knowing where A 440 is all the time (still a reference tone, just one that doesn't need to be refreshed). That sounds like perfect pitch to me."
+32,personal_rp_def,Not Applicable
+313,personal_rp_def,"NA"
+366,personal_rp_def,Not Applicable
+360,personal_rp_def,I had a hard time deciding that absolute and relative pitch were exact opposites.
+371,personal_rp_def,Not Applicable
+386,personal_rp_def,a learned ability to perceive relations among pitches
+427,personal_rp_def,"the ability to recognize a frequently (at least 3 days, i.e. from Friday to Monday) performed pitch such as concert B-flat for concert bandos. "
+395,personal_rp_def,"the ability to understand that two melodies (or any two bits of music) are equivalent - not the same - when they are transposed. Likewise, in tonal music, it is the ability to identify Roman numerals and scale degrees (solfege) within a tonal key, and to hear and produce (through singing) given intervals, scales, and melodies and harmonies within a key. Relative pitch enables singing melodies in a key even if the given starting pitch isn't what is written on the page. Relative pitch shows the equivalency relationship between two sets of music. "
+44,personal_rp_def,"the ability to identify and/or label the intervallic relationship between pitches, but not their note names (unless given a reference pitch)"
+401,personal_rp_def,something one can learn with practice
+466,personal_rp_def,"Relative pitch is the ability to accurately recognize and produce specific pitches in relation to other relevant pitch structures (be they reference tones, tonalities, etc.)."
+453,personal_rp_def,N/A
+489,personal_rp_def,n/a
+486,personal_rp_def,the application of theoretical constructs about pitch to practiced perceptions of pitch relationships.
+511,personal_rp_def,Not Applicable
+502,personal_rp_def,Not Applicable
+545,personal_rp_def,the ability to determine the relationship of a test pitch to a reference pitch via sonic identification.
+593,personal_rp_def,"perception of pitches through their relationships to one other, rather than in terms of an internalized sense of absolute pitch chroma."
+598,personal_rp_def,"the ability to produce, identify, and label pitches accurately with reference to some previously known pitch. For some this involves a reference pitch (such as A440) upon which they can rely as needed, while for others this involves hearing a tone for which they have the label, and working with that to identify and produce other tones."
+556,personal_rp_def,"NA"
+617,personal_rp_def,"...well, absolute pitch encompasses everything relative pitch is and more."
+621,personal_rp_def,N/A
+670,personal_rp_def,"It is the ability to accurately hear, produce, and label musical sounds in relation to other previously identified musical sounds."
+747,personal_rp_def,not applicable
+824,personal_rp_def,Relative pitch is the ability to think of two or more tones at once and thus mentally compare their intervallic distance.
+695,personal_rp_def,"NA"
+769,personal_rp_def,N/A
+887,personal_rp_def,"This is an essential question, I struggled with so many of these questions because of the need for definition of the descriptors.  For example, what does 'identify', 'correct', 'produce' mean in the context of absolute and relative.  Sorry, as I know many of these terms come from Richard Parncutt and Daniel J. Levitin work in this field but I still struggle. I think if we get clarity on these descriptors then we can move towards definitions.\n\nI've not been terribly helpful I know, so here is my go at a definition.\n\nRelative pitch is the musical ability to recognise a pitch or tone as belonging to a tonality and to understand and reproduce the distance between intervallic and harmonic steps without necessarily identifying the exact frequency and its associated note name.  For example, the musician with relative pitch can produce a major second interval without knowing what the first or second note is in reference to a particular key area of tonality. \n\n\n\n\n\n"
+830,personal_rp_def,not applicable
+900,personal_rp_def,Not Applicable\n
+896,personal_rp_def,"NA"
+974,personal_rp_def,hard to define because it means different things to different people. \n…a condition that includes the ability to find the starting note of the next track on a recording because of having heard the recording before.
+989,personal_rp_def,Not Applicable
+954,personal_rp_def,"ability to hear/sing (a) pitch(es)/short melodic segments in key - when tonality is established, they can hear function of the pitch in given key (if they are well trained with movable do solfege, they identify the pitch with solfege). Strong relative pitch allows listeners to hear quality and function of chords, but they do better in a context of tonality."
+922,personal_rp_def,N/A
+1011,personal_ap_def,Not Applicable
+1061,personal_ap_def,"Absolute pitch includes the ability to determine a note (or group of notes) without a prior reference point.  The determination can be active (producing a pitch) or passive, that is...labeling or identifying (aurally) a pitch."
+1071,personal_ap_def,n/a
+1081,personal_ap_def,Absolute pitch is the ability to identify pitches within 12-tone equal temperament based on A=440 without an audible reference tone.  
+112,personal_ap_def,Not applicable
+1095,personal_ap_def,the ability to give letter names to pitches based on long-term memory. Working from memory of a single reference pitch is a weaker form of absolute pitch. Being able to produce a pitch on request given its letter name is a stronger form of absolute pitch. 
+1129,personal_ap_def,N/A
+1207,personal_ap_def,N/A
+1139,personal_ap_def,"NA"
+1194,personal_ap_def,not applicable
+1307,personal_ap_def,Not Applicable
+1446,personal_ap_def,Not Applicable
+1501,personal_ap_def,Not Applicable.
+15,personal_ap_def,asdfasdf
+1480,personal_ap_def,Absolute pitch is the ability to name a pitch without external help.
+1521,personal_ap_def,very good for player
+1588,personal_ap_def,Not Applicable
+1665,personal_ap_def,No opinion
+1616,personal_ap_def,the ability to accurately identify pitch
+1677,personal_ap_def,"an ability who can know or produce the pitch of one note , interval or chord."
+1675,personal_ap_def,Not Applicable
+1707,personal_ap_def,Not Applicable
+1678,personal_ap_def,Not Applicable.
+1729,personal_ap_def,Not Applicable
+1727,personal_ap_def,Not Applicable
+1706,personal_ap_def,"People with absolute pitch tends to lack the ability to perceive music has a whole, especially in understanding music theory.  "
+216,personal_ap_def,Not applicable
+226,personal_ap_def,Not Applicable
+285,personal_ap_def,Not Applicable
+295,personal_ap_def,Not Applicable
+303,personal_ap_def,na
+288,personal_ap_def,N/A
+291,personal_ap_def,Not Applicable
+319,personal_ap_def,Most of what I wrote in the previous field about relative pitch applies here too.
+32,personal_ap_def,Not Applicable
+313,personal_ap_def,"NA"
+366,personal_ap_def,Not Applicable
+360,personal_ap_def,Not Applicable
+371,personal_ap_def,Not Applicable
+386,personal_ap_def,an innate ability to remember pitches
+395,personal_ap_def,"Absolute pitch is the ability to identify the exact pitch level, usually in relation to 12 TET, of a given pitch. Depending on the person, it may be identifiable through timbre, synesthesia, vocal placement, or other mental tools. Each person who can access absolute pitch does so differently. "
+44,personal_ap_def,the ability to identify a pitch without any reference pitch given.
+401,personal_ap_def,"something one is given, through exposure at a key period of development and education."
+466,personal_ap_def,Absolute pitch is the ability to accurately recognize and produce specific pitches without needing any reference to other pitch structures.
+453,personal_ap_def,N/A
+489,personal_ap_def,"the ability to produce a pitch without a reference tone or the ability to identify the pitch of a sine wave without a reference tone.\n\nWhen I was in college, I thought I had absolute pitch because I could instantly identify pitches and chords on the piano and other instruments with whose timbre I was quite familiar. When our aural skills professor played something in one key but told us it was in another key, I had to mentally transpose to get the right notes.\n\nBut in the late 1980s and early 1990s I participated in two studies at the University of Illinois on absolute pitch, and I was told by both researchers that, because I was unable to identify tones produced as sine waves, I had only very good relative pitch. Without the upper partials I couldn't do it. I am now in my 60s, and I have more trouble identifying exact pitches than I used to: often I am a half-step off, and sometimes (especially with wind music) I have no clue. I suspect this is due to high-frequency hearing loss.\n\nI know the ability to produce tones without a reference pitch exists, because a member of a choir I directed could do it, but I never could. I think we need more words to describe the various stages of absolute pitch: (1) being able to produce a tone on command; (2) identifying a sine tone on command; (3) identifying tones from instruments with familiar timbres; etc."
+486,personal_ap_def,"the application of theoretical constructs (pitch names, frequency designations, etc) to perceptions of singular pitches."
+511,personal_ap_def,Not Applicable
+502,personal_ap_def,Not Applicable
+540,personal_ap_def,Please see my statement regarding relative pitch.
+545,personal_ap_def,the ability to identify a pitch categorically without the use of a reference pitch.
+593,personal_ap_def,"perception of pitches in terms of an internalized sense of pitch chroma, such that the chroma of every pitch is clear and distinctive for the perceiver."
+598,personal_ap_def,"The ability to produce, identify, and label any tone without any external reference, neither provided immediately prior nor some time prior. This ability transcends timbral, registral, and temporal variation.  "
+556,personal_ap_def,"NA"
+617,personal_ap_def,Not Applicable
+621,personal_ap_def,n?A
+670,personal_ap_def,"It is the ability to hear, produce, and label musical sounds without reference to other previously known musical sounds."
+747,personal_ap_def,not applicable
+824,personal_ap_def,"The ability to recognize or produce a named pitch without mental comparisons, thought, or hesitation, in the way that people who can see colors recognize that a stop sign is red."
+815,personal_ap_def,"something that you are born with or an ability that is developed when the brain is malleable to do develop it...somewhere up to around age 10. I don't believe you can develop this ability as an adult, once the age window is closed. Some adults who believe they acquired it as an adult may not realize they already had this skill and think they developed it as an adult. I know I banged around a tuning fork as an adult hoping to develop that pitch memory/recognition skill, and well....it never happened!"
+695,personal_ap_def,"NA"
+769,personal_ap_def,N/A
+841,personal_ap_def,n/a
+887,personal_ap_def,"So, I would therefore reframe this from the first definition\n\nAbsolute pitch is the musical ability to recognise a pitch or tone as belonging to a tonality and to understand and reproduce the distance between intervallic and harmonic steps and identify the exact frequency and its associated note name.  For example, the musician with absolute pitch can produce a major second interval and know what frequency and associated note name they are presenting. "
+830,personal_ap_def,not applicable
+900,personal_ap_def,Not Applicable
+896,personal_ap_def,"NA"
+974,personal_ap_def,not applicable
+989,personal_ap_def,Not Applicable
+954,personal_ap_def,"Ability to identify pitches without any reference.  Those with strong absolute pitch cannot hear the function of the pitch, they hear pitch with letter names even tonality is established.  They cannot hear function of chords in key (they need to spell pitches before identifying the chords "
+922,personal_ap_def,N/A
+1011,rep_list_free_response,"original melodies, melodies found in published (public domain) pieces, original harmonic progressions in SATB style, Bach chorales, original rhythms, Classical-era piano sonatas, etc."
+1079,rep_list_free_response,"pop/rock music, some folk, classical (i.e., galant, romantic, baroque - including some Bach chorales), early jazz."
+1061,rep_list_free_response,"Singing----Fixed-do solfege, using graded materials.   Folk songs.  Bach chorales. Singing of intervals.  Take a musical example with a melody and a bass line ---sing one part and play the other.  Dictation in one and two parts.  Chordal dictation, using chord progressions and chorales.   "
+1071,rep_list_free_response,I don't currently teach aural skills. I teach a Fundamentals class. 
+1081,rep_list_free_response,"world music folk songs, chorale-style melodies, pre-composed original melodies, melodies in different tuning systems, "
+1095,rep_list_free_response,Folk songs\nWestern art music
+1129,rep_list_free_response,"folk songs, popular songs, chorales, excerpts from common-practice period repertoire"
+1207,rep_list_free_response,Most of the repertoire of the current curriculum is drawn from Karpinski's Anthology. Some popular music is added.
+1139,rep_list_free_response,"Bach chorales\nRenaissance choral works\nBach fugues\nBeethoven sonatas\nClassical symphonies, such as Mozart, Haydn etc.\nSchubert songs"
+1194,rep_list_free_response,"canonic and noncanonic (pieces by women, persons of color, etc.) baroque, classical, and romantic music; and equally lots of popular musics (pop, rock, jazz standards, broadway, folk, americana, country, R&B) especially post 1980 hits."
+1307,rep_list_free_response,"Hymn tunes, chorales, string quartets, symphonies, slow movements of pieces, solo etudes, folk songs, popular songs, electronic dance music with strong bass lines.  "
+1446,rep_list_free_response,Chinese folk songs with pentatonic scales.\nThe textbooks of Solfege from China Conservatory of Music/ Shanghai Conservatory of Music/ Central Conservatory of Music.\nSolfege des solfeges.\npolyphony of Игорь Владимирович Способин.\n\n
+1501,rep_list_free_response,France Solfeggio，Sposobin.
+15,rep_list_free_response,asdfasdf
+1480,rep_list_free_response,"Classical,pop,jazz,folk"
+1521,rep_list_free_response,classic
+1588,rep_list_free_response,中国音乐学院视唱练耳分级教程 中国五声调式民歌与经典旋律
+1665,rep_list_free_response,"folk songs, Bach chorales"
+1616,rep_list_free_response,"folk songs ,classical song,jazz,popular song"
+1677,rep_list_free_response,Chinese folk songs - Yao nationality Dance music
+1675,rep_list_free_response,folk songs，classical chorales，jazz
+1707,rep_list_free_response,"Vocal music, String Quartet, children's songs, folk songs"
+1678,rep_list_free_response,"folk songs，chorales（Bach，Mozart，Bruckner etc.）,classical music works，jazz"
+1729,rep_list_free_response,Bach chorales
+1727,rep_list_free_response,mozart
+1706,rep_list_free_response,"Mozart, requium\nMessiaen, quartet for the end of time\nWestern Art Song"
+173,rep_list_free_response,"Folk songs, Bach chorales, standard repertoire from the Western classical canon"
+216,rep_list_free_response,"folk songs, popular songs, Bach chorales, composed chord progressions, melodic excerpts from a broad range of repertoire."
+226,rep_list_free_response,Use a mixture of melodies and harmonic progressions from various styles of music.
+295,rep_list_free_response,"LOTS of art song (especially 19th-c German), some jazz tunes, a lot of Renaissance through 19th-c choral music, and a smattering of gospel tunes for hearing/singing harmony in backing vocals."
+303,rep_list_free_response,Any and all repertoire that uses pitched material!
+291,rep_list_free_response,popular music
+319,rep_list_free_response,I don't teach aural skills.
+32,rep_list_free_response,"Lots of different repertoire, from Gregorian chant for work on modes to jazz and 20th century material (like Bartok) "
+313,rep_list_free_response,"There is no type of repertoire that I don't use. I have used traditional music from all over the world, I use South and North Indian classical music, I use classical repertoire (all genres), I use jazz, I use popular music, I use Broadway, I have used some North American indigenous music (but with care that I am not using/sharing sacred or other music that the communities in question are not open to sharing). I don't use all of these in every semester, but over the course of a year my students have met at least one example in most of these categories. "
+366,rep_list_free_response,"anthology repertoire (specifically Ottman sight-singing text)\npopular music from several genres\ncustomized and improvised melodies, rhythms, and chord progressions"
+360,rep_list_free_response,"Bach chorales, Schubert Lieder, Negro spirituals, folk songs"
+371,rep_list_free_response,"classical music, pop music, my own made-up melodies"
+386,rep_list_free_response,Melodia; Modus Novus; SATB texture (Bach; Franc; Stravinsky; Webern)
+427,rep_list_free_response,"Whatever is in the book, so folk songs and Bach chorales. "
+395,rep_list_free_response,"Chorales, Mozart, Beethoven, Haydn, Pop songs, Broadway songs, Gospel, the students bring their own examples sometimes. "
+401,rep_list_free_response,"music from Karpinski anthology, improvisation, popular music (current top 10 and from the past 50 years), folk music"
+466,rep_list_free_response,"Folk songs, lieder, mélodie, art song, music theater, popular songs, jazz standards (from lead sheets), classical repertoire (solo, orchestral, chamber), Bach chorales."
+489,rep_list_free_response,"I have never taught aural skills, just first-year written theory."
+486,rep_list_free_response,"European-originating art and folk music, afro-diasporic music (jazz, blues, rock, rap, hiphop, bluegrass, etc.), Karnatic ragas, Peking opera patterns."
+502,rep_list_free_response,"Folk songs, elementary music education repertoire, bespoke compositions in references (Ottman-Rogers)."
+540,rep_list_free_response,Mostly I use selections from Cengage's Music for Sight-Singing and Music for Ear-Training.
+545,rep_list_free_response,"Bach chorales, simplifications of chorales, melodic fragments, melodic singing"
+593,rep_list_free_response,"Notated and recorded, conventionally tonal Western art music from the eighteenth, nineteenth, and twentieth centuries; excerpts from recordings of tonal Western popular music from the twentieth and twenty-first centuries; a small number of excerpts from non-Western folk and art musics."
+598,rep_list_free_response,"I've never been in a position of sufficient seniority, when teaching aural skills classes, to choose my own repertoire."
+556,rep_list_free_response,Country Western; film/TV music (especially short excerpts); 2-voice Bach  chorales (BWV 439-507); classical;   
+617,rep_list_free_response,"Melodies from common practice symphonies, folk songs, things like Happy Birthday, etc."
+621,rep_list_free_response,Bach chorales and more
+670,rep_list_free_response,Examples used in the Cleland-Dobrea-Grindahl aural skills text.
+747,rep_list_free_response,"Mostly original melodies and harmonic examples, occasionally based on small-c classical melodies explored later in the class period."
+824,rep_list_free_response,"Ottman/Rogers, Haydn divertimenti, Renaissance bicinia and motets, chorales, Bach inventions, counterpoint examples from Salzer & Schachter's _Counterpoint in Composition_."
+815,rep_list_free_response,all of the above. I use an Anthology that mixes many different source materials
+695,rep_list_free_response,"tonal: classical melodies, folk songs, pop tunes\nmodal melodies and scales\nsymmetrical scales\n"
+769,rep_list_free_response,"Folk songs, Bach chorales, Tunes in Dr. Karpinski;s Anthology of Sight Singing"
+841,rep_list_free_response,"I'm a TA and my instructors mostly decide for me\n\nbut...\n\ntonal: Ottman/Rogers and 18th-century string quartets\npost-tonal: Modus Novus and lieder by Berg and Webern, or sometimes Mamlok etc"
+887,rep_list_free_response,"From all musics, it is important that the music used are from outside as well as within Western European Art Musics, further musics should be selected that the group being taught identify with."
+900,rep_list_free_response,"popular music, movie themes, western classical repertoire."
+896,rep_list_free_response,"Wide variety of melodies, mostly from SS textbooks."
+974,rep_list_free_response,"pop tunes, classical rep (Mozart, Beethoven, Schubert), and constructed examples"
+989,rep_list_free_response,"I am developing a database of folk songs from all over the world. Music ed is our largest degree, so we sing the folk songs in sight singing, harmonize them and perform sing-and-play exercises with them in piano class, and the students play them on instruments in their methods classes and teach them in elementary methods. We also use melodies from other sources, including classical, jazz, and faculty-composed melodies."
+954,rep_list_free_response,"Familiar tunes, Christmas tunes.  Motives and themes from standard repertoire. "
+922,rep_list_free_response,"Folk songs, common practice music, pop/rock, film and TV scores"
+1011,rep_list_intend_response,rock/pop
+1079,rep_list_intend_response,more jazz perhaps?
+1061,rep_list_intend_response,More sight-singing and examples from the repertoire (as opposed to an aural skills text book)
+1071,rep_list_intend_response,n/a
+1081,rep_list_intend_response,more repertoire in diverse tuning systems
+112,rep_list_intend_response,"I'd love for our material to be as relevant as possible for our students, so I want to draw on more of the music they already know and like. (That obviously varies widely, depending on the student.) I also want to challenge them to appreciate music that is not in their cultural bubble. To some extent, I can meet both needs to some degree by surveying the class about their tastes at the start, and by integrating my own experience and taste.\n\nWe are in the process of shifting our curriculum to reflect more popular music and to ensure a wide diversity of voices.\n\nIf I had the opportunity, I would like to be able to reach beyond pitch and rhythm based requirements for aural skills. But, I do find them necessary for musicianship, and many students seem to need the entire sequence just to attain some basic fluency with those skills."
+1095,rep_list_intend_response,NR
+1129,rep_list_intend_response,world musics
+1207,rep_list_intend_response,More popular music\nMore music from others part of the world than the West 
+1139,rep_list_intend_response,Chinese classcial music
+1194,rep_list_intend_response,"I'd like to open up rep to incorporate more non-Western musics, and I am going to need to learn more before I am able to do that as effectively as I have integrated Western popular musics into my teaching."
+1307,rep_list_intend_response,"Popular songs, especially the rhythms of hip-hop, metal, and electronic dance music. "
+1446,rep_list_intend_response,modern and contemporary music from China
+1501,rep_list_intend_response,Art song，Multi-part chorus.
+15,rep_list_intend_response,asdfasdf
+1480,rep_list_intend_response,"Any repertoire can be taught,depending on what is taught and how it is taught."
+1521,rep_list_intend_response,good for singing
+1588,rep_list_intend_response,中国传统民间音乐曲目
+1665,rep_list_intend_response,"Chopin Mazurka, Beethoven Piano Sonatas"
+1616,rep_list_intend_response,mainly classical music such as Schubert and Schumann's art song 
+1677,rep_list_intend_response,Western classical music
+1675,rep_list_intend_response,add Modern and contemporary works
+1707,rep_list_intend_response,"Opera, movie music, jazz, pop music"
+1678,rep_list_intend_response,Musical works of all periods
+1729,rep_list_intend_response,\nclassical music   folk music
+1727,rep_list_intend_response,Moazrt、Haydn
+1706,rep_list_intend_response,"I have taught everything that I wished to use in a classroom, unless it is music that I don't know"
+173,rep_list_intend_response,Less Western-centric music
+216,rep_list_intend_response,Any and all repertoire which helps build in students the aural skills they need to be successful in THEIR chosen musical path in subsequent years.
+226,rep_list_intend_response,What I currently use.
+285,rep_list_intend_response,"I would love it if there were a Karpinski-style text that focused on pop/rock as much as on Western classical; when I have the time, I plan on figuring out how to shift the focus of my class accordingly."
+295,rep_list_intend_response,"Much more early-atonal (or very late tonal) repertoire, particularly music that uses collectional kind of compositional formations."
+303,rep_list_intend_response,Pop
+288,rep_list_intend_response,I'm pretty happy with our repertoire selections at the moment.
+291,rep_list_intend_response,more popular music
+319,rep_list_intend_response,"I'd be really curious to see what happened if you made teaching maqamat the main focus. Of course, most of our students would scream. But I bet this would be really great ear training--perhaps they'd then be able to get their microtones right?"
+32,rep_list_intend_response,"I would want to highlight works by underrepresented composers that have the same pedagogical effect as a Bach chorale or Schubert melody, but are less popular and introduce students to a wider variety of repertoire"
+313,rep_list_intend_response,Iranian and other Middle Eastern music. This is not a musical tradition I use a lot (microtones and alternative tuning systems make it harder to use in a Western classical school/curriculum. Gamelan poses a similar challenge.
+366,rep_list_intend_response,"More indigenous repertoire, especially in non 12-TET systems"
+360,rep_list_intend_response,"Jazz, gospel, Latino music"
+371,rep_list_intend_response,"more pop music, jazz\n"
+386,rep_list_intend_response,None in particular.
+427,rep_list_intend_response,"More Polish music, music by nineteenth-century women. "
+395,rep_list_intend_response,Music the students use in life. 
+44,rep_list_intend_response,"Jazz charts, non-equal—tempered music"
+401,rep_list_intend_response,"I am happy with what I am teaching, although I would love to allow more opportunities for students to bring music in that we could analyze in some way together."
+466,rep_list_intend_response,More popular music and jazz.
+453,rep_list_intend_response,jazz
+489,rep_list_intend_response,"Our aural skills instructor uses national anthems quite effectively, as they often contain triadic motives or melodies that can readily be related to a triad."
+486,rep_list_intend_response,"Indonesian gamelan, maqam, mariachi, South American dance styles."
+502,rep_list_intend_response,N/A
+545,rep_list_intend_response,I'm given the opportunity to use any appropriate repertoire(s).
+593,rep_list_intend_response,"I want to teach more Western popular music and more non-Western musics, although I believe that some styles of the latter should not be taught by instructors who do not have thorough expertise and/or personal connections with the music. I believe that much more research is necessary to support aural skills instruction in Western popular music and especially non-Western musics."
+598,rep_list_intend_response,"I would probably use Motown, because the melodic content is quite varied and sophisticated and rhythmically interesting"
+556,rep_list_intend_response,I have complete freedom over what rep I use -- so this question does not apply to me.
+617,rep_list_intend_response,"Video game music, punk rock"
+621,rep_list_intend_response,n/a
+670,rep_list_intend_response,I would like to include more non-Western repertoire.
+747,rep_list_intend_response,None comes to mind
+824,rep_list_intend_response,More early classical music and modern classical music.
+695,rep_list_intend_response,I am satisfied with my repertoire
+769,rep_list_intend_response,N/A
+841,rep_list_intend_response,"not sure, I don't have the same expertise in other rep"
+887,rep_list_intend_response,I am given the opportunity!  Rather luckily I am the module leader.
+830,rep_list_intend_response,Anything--have not been teaching for years...
+900,rep_list_intend_response,20th century music
+896,rep_list_intend_response,"Most of what I use is fairly generic or stylistically non-descript. I am using more pop and jazz influenced style in harmonic work, and some in melody."
+974,rep_list_intend_response,I'm trying to diversity the repertoire beyond the Western classical repertoire.
+989,rep_list_intend_response,"I am continually looking for more sources, although I try to use mostly melodies that support the theory curriculum. We have put in a lot of work to align theory, sight singing, and keyboard curricula. The theory core is western classical, with an option to continue with jazz theory afterwards."
+954,rep_list_intend_response,Singing and dictating motives and themes from standard repertoire.  Popular tunes with various 7th chords.\n
+922,rep_list_intend_response,The same rep I am currently teaching. I don't have an issue with what I'm doing.
+1011,no_notation_list,"singing scale degrees as indicated using solfege hand signs, singing scale degrees as indicated by pointing to solfege syllables written on the board"
+1079,no_notation_list,"There are many: pitch matching, distinguish higher/lower, distinguish same/different, singing major scales, singing from solfege, melodic echo (without solfege), singing the tonic of pieces of pop/classical, rhythmic echo, Scale degree ID (e.g., play a progression then play a note in the scale), singing minor scales, singing sequentials, singing chord arpeggiations from RN/FB progressions, melodic echo (with solfege), Chord ID (RNs and bass notes in solfege),  singing guidetones along with pieces of pop/classical, improvisation, melodic dictation (using proto-notation). \n\n"
+1061,no_notation_list,"Singing intervals, once given a reference point.   Aural identification of intervals.  Certain rhythm excersices ---a sort of call and response.   Or using two people to teach two against three, for example.  "
+1071,no_notation_list,"Choir Builders (looping a four measure four part harmonization of a pop song on solfege); Solfege Echo Chain Singing Game; Add on Scale (Do, Do Re Do, Do Re Mi Re Do etc); Add-On Scale with rests on given syllables; "
+1081,no_notation_list,"call and response singing, melodic improvisation, singing arpeggiated chord progressions,  melodic dictation with solfege instead of staff writing. "
+112,no_notation_list,"I actually usually do most in-class dictations with solfege only (and sometimes rhythm notation or protonotation.) Harmonic dictations are done with bass in solfege, then soprano and roman numerals. No staff.\n\nI also use handsigns for a significant portion of each class, both singing and short melodic dictation."
+1095,no_notation_list,Every one of those listed earlier. Notation is an independent issue. I don't try to teach relative (or absolute) pitch with the complication of notation at first. 
+1129,no_notation_list,"melody dictation using solfege, repetition of short melodies or singing in canon to develop memory"
+1207,no_notation_list,Improvising\nHarmonic Dictation using our bodies - I would have to explain it\nEcho drills\n
+1139,no_notation_list,Canon singing\nSentence improvisation\nimprovisation over a bass pattern\nimprovise fuga answers
+1307,no_notation_list,"Identifying or singing back Movable-Do solfege.\nIdentifying or singing back Roman numerals or chord function labels (T-PD-D). \nIdentifying chord quality (major, minor, Mm7, half-diminished, etc.)\nIdentifying cadences by ear.\nIdentifying formal sections of pieces. \nSpeaking back rhythms on Takadimi or clapping them. \nIdentifying the meter of pieces through conducting while listening. "
+1446,no_notation_list,"I will play several melodies or rhythmic patterns, allowing my students to imitate the content with singing or clapping."
+1501,no_notation_list,No watch music and sing.
+15,no_notation_list,asdfasdf
+1480,no_notation_list,improvise 
+1521,no_notation_list,sing in remember
+1588,no_notation_list,模仿
+1665,no_notation_list,Model singing
+1616,no_notation_list,imitate singing
+1677,no_notation_list,Melody model singing
+1675,no_notation_list,imitate the rhythm
+1707,no_notation_list,Impromptu singing melody
+1678,no_notation_list,imitate the tongs、intervals、melodies
+1729,no_notation_list,背记旋律，快速背记节奏。不看谱模唱旋律
+1727,no_notation_list,lisenning and singing which I play;singing and sighting 
+1706,no_notation_list,"Multi-voice sight-singing; students sing a section of music one by one, the next student start from the end of the previous student"
+173,no_notation_list,"Dalcroze-inspired activities that involve moving, singing, clapping, etc. without any reference to notation."
+216,no_notation_list,I do quite a bit of work around working with pitch in a scale/key context without relying on notation -- scale degree numbers etc.
+226,no_notation_list,Sing- Back activities - students sing back melodies in sol-fege.
+285,no_notation_list,"Sing-backs, improvisation, solfege/takadimi-only dictation/transcription"
+295,no_notation_list,"Virtually none of my warmups involve staff notation, and I have a set of arpeggiation exercises that I have students memorize"
+288,no_notation_list,- Call/response melodies\n- Call/response rhythms\n- Longer memorization/sing-back activities\n- Melodic transcription with scale syllables\n- Harmonic dictation with Roman numerals
+291,no_notation_list,all of them.
+319,no_notation_list,"Again, I only teach written theory. But I think improvised counterpoint exercises would be great here. (Some, e.g., faux-bourdon techniques, would obviously involve some notation--to sing on the book, I guess you do need a book.)"
+32,no_notation_list,"Sight-singing, interval practice, listening for musical forms/cadences/modulations "
+366,no_notation_list,"transcription of popular music: melodies using solfege, harmonies using Roman numerals\nplaying and singing from lead sheets\nstyle identification\nformal analysis\ninstrument identification\ntimbre identification and replication (using synthesizers)\nidentification of production elements (filters, effects, reverb)"
+360,no_notation_list,"singing intervals, chords, scale degrees, melodies"
+371,no_notation_list,"singing a heard melody with solfege but not writing it down;  identify keys to which a melody modulates by Roman numerals (modulating to V, for example);  identifying and conducting asymmetrical meters from recordings;  improvisation;  singing from solfege or hand symbol cues rather than from notation"
+386,no_notation_list,Aural analysis of all kinds.
+427,no_notation_list,Drinking coffee? 
+395,no_notation_list,Intervals\nHarmonic progressions\nSinging back melodies heard\nChord progressions in popular and Broadway songs
+44,no_notation_list,"Solfege exercises, repeating melodies by ear"
+466,no_notation_list,Form ID and discussion; dictation and sight-singing from/using functional notation; harmonic dictation (using RNs and/or chord symbols).
+489,no_notation_list,"Not applicable, since I don't teach the subject."
+486,no_notation_list,"Kolkattu rhythmic performances, ensemble performances learned by ear and using Nashville numbering system, singing just-tuned intervals to a drone, Pauline Oliveros Deep Listening activities, improvisations based on given scale types, call and response exercises."
+511,no_notation_list,Improvised melodies\nImprovisation along to a chord progression\nsinging melodies back on solfege\nListening to chord progressions and describing them in Roman numerals
+502,no_notation_list,"Singbacks, I play something on piano, student sings it back with or without solfege. SWIPA (sing what I point at), I point at solfege on the board and students sing that note. Audiation, having students actively imagine specific sounds/pitches."
+540,no_notation_list,"Playing intervals and asking students to identify them; playing chord progressions and asking students to identify each harmony's Roman numeral analysis; playing a chord progression with non-standard triadic harmonies and asking students to think about and discuss what harmonic function (tonic, dominant, subdominant) the mystery chords feel like they are fulfilling."
+545,no_notation_list,"Scale degree dictation, transcribing length of note via length of pen stroke."
+593,no_notation_list,"Singing with movable-do solfège syllables using Curwen/Kodaly hand signs; identifying movable-do solfège syllables by ear; melodic dictation using Gary Karpinski's protonotation; singing and dictation using Daniel Stevens' do/ti test; recognizing rhythmic patterns such as tresillo, double tresillo, and son clave by ear; singing using scale-degree cipher notation."
+556,no_notation_list,"1. Sing-along movies (music videos) \n---Melodic:  Sing the solfege provided on screen in sync with the music\n---Harmonic: Sing the guide tones on the first play through; then sing the complete chord arpeggios on the repetition.  (On screen labels start with only guide tones; add arpeggios; arpeggios + Roman numerals; and finally only Roman numerals to associate the sound of a harmony with its RN.)\n2. Singing dictation (with unlabeled sing-along movies)\n---Melodic: Given the starting label for a melody, provide the labels for the rest of the phrase (or complete melody)\n---Harmonic: Chord changes labeled on movie as #1, #2, #3, etc. Students sing guide tones the first time through and then chord arpeggios the second time. "
+617,no_notation_list,Point to solfège syllables and have them sing the pitch (I play them into a key beforehand).
+621,no_notation_list,n/a
+670,no_notation_list,Identification of pitches as scale degrees.\nIdentification of phrase structure.\nIdentification of discrete structures.\nIdentification of form.\nReading of Nashville number charts.\nImprovisation.
+747,no_notation_list,Singbacks of short melodic examples; rhythmic dictation.
+824,no_notation_list,"Almost all the vocal drills using scale degrees, including singing back of melodies played on the piano, singing familiar tunes, scale patterns, and chord arpeggiations with scale degrees."
+815,no_notation_list,-Singing an improvised short excerpt and asking students to sing it back in solfege.\n- playing an unfamiliar tonal tune and stopping in the middle of a phrase and asking what scale degree I stopped on\n- the ones I mentioned in my relative pitch development activities\n
+695,no_notation_list,"conducting \ndescription/listening activities such as aural ID of form, timbre, texture, instrumentation, etc.\nmusical memory activities\nmelodic improv activities"
+769,no_notation_list,"Protonotation in dictation, error detection and sight singing at the rudimentary level."
+841,no_notation_list,post-tonal trichord dictation: just interval-class numbers and prime form numbers\ntonal dictation: identifying paradigms by scale degree numbers\nanything where students sing back what I play
+887,no_notation_list,"Many of my activity are about embodiment which include triangulating the concept with its name with the body.  So, conducting with a wand to get a sense of Harry Potter identified Time Signatures as an example.  I have lots of these and would be happy to contribute at a later stage."
+830,no_notation_list,Some of the exercises mentioned in Part One.
+900,no_notation_list,1.Which is the higher?\n2 How many notes in the chord can you hear?\n3  Questions related to timbre.\n4 Questions related to texture.\n5 Questions related to dynamics.\n6 questions related to structure.
+896,no_notation_list,"Lots of work with solfege and takadimi syllables. Call and response, improvisation, circle singing, pass the motive. Lots of dictation in first year with answers only in solfege and rhythm syllables."
+974,no_notation_list,hmmmm... maybe form?
+989,no_notation_list,"Improvisation exercises, and I start dictation with notating rhythm and solfege rather than staff notation."
+954,no_notation_list,Listen and sing back with solfege without notation - memorization practice.
+922,no_notation_list,Aural recognition of harmonic progressions using Roman numerals.
+1011,non_notation_frequency,5
+1079,non_notation_frequency,73
+1061,non_notation_frequency,14
+1071,non_notation_frequency,50
+1081,non_notation_frequency,61
+112,non_notation_frequency,79
+1095,non_notation_frequency,34
+1129,non_notation_frequency,22
+1207,non_notation_frequency,27
+1139,non_notation_frequency,35
+1194,non_notation_frequency,75
+1307,non_notation_frequency,45
+1446,non_notation_frequency,68
+1501,non_notation_frequency,52
+15,non_notation_frequency,16
+1480,non_notation_frequency,65
+1521,non_notation_frequency,76
+1588,non_notation_frequency,39
+1665,non_notation_frequency,60
+1616,non_notation_frequency,64
+1677,non_notation_frequency,21
+1675,non_notation_frequency,15
+1707,non_notation_frequency,23
+1678,non_notation_frequency,50
+1729,non_notation_frequency,53
+1727,non_notation_frequency,65
+1706,non_notation_frequency,72
+173,non_notation_frequency,69
+216,non_notation_frequency,21
+226,non_notation_frequency,9
+285,non_notation_frequency,64
+295,non_notation_frequency,27
+303,non_notation_frequency,17
+288,non_notation_frequency,33
+291,non_notation_frequency,99
+319,non_notation_frequency,50
+32,non_notation_frequency,32
+313,non_notation_frequency,50
+366,non_notation_frequency,32
+360,non_notation_frequency,26
+371,non_notation_frequency,35
+386,non_notation_frequency,71
+427,non_notation_frequency,0
+395,non_notation_frequency,50
+44,non_notation_frequency,19
+401,non_notation_frequency,91
+466,non_notation_frequency,29
+453,non_notation_frequency,54
+489,non_notation_frequency,50
+486,non_notation_frequency,74
+511,non_notation_frequency,41
+502,non_notation_frequency,48
+540,non_notation_frequency,22
+545,non_notation_frequency,19
+593,non_notation_frequency,28
+598,non_notation_frequency,17
+556,non_notation_frequency,54
+617,non_notation_frequency,5
+621,non_notation_frequency,15
+670,non_notation_frequency,73
+747,non_notation_frequency,18
+824,non_notation_frequency,60
+815,non_notation_frequency,67
+695,non_notation_frequency,25
+769,non_notation_frequency,12
+841,non_notation_frequency,37
+887,non_notation_frequency,50
+830,non_notation_frequency,35
+900,non_notation_frequency,42
+896,non_notation_frequency,50
+974,non_notation_frequency,14
+989,non_notation_frequency,30
+954,non_notation_frequency,13
+922,non_notation_frequency,36

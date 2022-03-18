@@ -1,28 +1,672 @@
 ---
 title: "Relative and Absolute Pitch Data"
+output_dir: docs
 output: 
   flexdashboard::flex_dashboard:
     storyboard: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 This dashboard is the current repository for the Relative and Absolute Pitch project between Eastman, Peabody, and the University of Amsterdam.
 
-For questions, please contact [Dave Baker](mailto:davidjohnbaker1@gmail.com)
+For questions, please contact [Dave Baker](mailto:davidjohnbaker1@gmail.com).
 
-### Frame 1
+The current ordering reflects the questions as they are asked on the survey.
+
 
 ```{r}
+#----------------------------------------------------------------------
+library(dplyr)
+library(magrittr)
+library(readr)
+library(ggplot2)
+library(ggridges)
+library(stringr)
+library(tidyr)
+library(viridis)
+#----------------------------------------------------------------------
+source("R/cleaning_functions.R")
+source("R/assemble_functions.R")
+source("R/create_tables.R")
+#----------------------------------------------------------------------
+
+activity_table <- read_csv("data/cleaned_tables/activity_table.csv")
+text_response_table <- read_csv("data/cleaned_tables/text_response_table.csv")
+demographic_table <- read_csv("data/cleaned_tables/demographic_table.csv")
+
+
+demo_key <- read_csv("data/demokey.csv")
+
+def_table <- create_definition_table(df)
+
+demo_key <- demo_key %>%
+  rename(t_id = Key)
+
+def_table_2 <- def_table %>%
+  left_join(demo_key)
+
+
+```
+
+### Definitions of Absolute and Relative Pitch 
+
+```{r, fig.width=10, fig.height=7}
+
+agreement_plot <- def_table_2 %>%
+  filter(response != 8) %>%
+  filter(Question != is.na(Question)) %>%
+  mutate(APRP = case_when(
+    APRP == "ap" ~ "Absolute Pitch",
+    APRP == "rp" ~ "Relative Pitch",
+  )) %>%
+  ggplot(aes(y = reorder(Question, response), x = response, fill = APRP)) +
+  geom_density_ridges2() +
+  scale_x_continuous(limits = c(0,7), breaks = seq(1,7,1)) +
+  labs(title = "Agreeing on Definitions of \nAbsolute and Relative Pitch",
+       subtitle = "N = 42",
+       y = "Question",
+       x = "Density",
+       fill = "Question Bank") +
+  theme_bw() +
+  viridis::scale_fill_viridis(discrete = TRUE, begin = .1, end = .8)
+
+agreement_plot
+   
 ```
 
 *** 
 
-Some commentary about Frame 1.
+The first main plot here plots the general agreement and disagreement with each of the definitions of absolute and relative pitch.
+Answers of "No Response" have been removed.
 
-### Frame 2 {data-commentary-width=400}
+The answers are ordered in terms of the average response per question.
+Answers at the top and bottom show the most grouping.
+
+Eventually, the plan for this analysis is to PCA/Factor Analyse this data in order to see if both the AP/RP factors emerge as a dimension as well as the verbs.
+
+
+### Relative Pitch Is... {data-commentary-width=400}
 
 ```{r}
+df %>% 
+  filter(trial_index == 3) %>%
+  select(run_id, response ) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  filter(response != "NA") %>%
+  filter(response != "not*.$") %>%
+  filter(response != "na") %>%
+  filter(response != "Not Applicable") %>%
+  filter(response != "not applicable") %>%
+  knitr::kable()
+
 ```
 
 *** 
 
-Some commentary about Frame 2.
+These are responses to the question:
+
+>  Relative pitch is...
+
+### Template
+
+```{r}
+df %>% 
+  filter(trial_index == 4) %>%
+  select(run_id, response ) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  filter(response != "NA") %>%
+  filter(response != "not*.$") %>%
+  filter(response != "na") %>%
+  filter(response != "Not Applicable") %>%
+  filter(response != "not applicable") %>%
+  knitr::kable()
+```
+
+*** 
+
+Reponse to:
+
+>  Absolute pitch is...
+
+### People With Absolute Pitch 
+
+```{r, fig.width=10, fig.height= 7 }
+
+people_table <- create_people_table(df)
+people_key <- read_csv("PeopleTable2.csv")
+
+people_key <- people_key %>%
+  rename(t_id = key) %>%
+  mutate(t_id = str_remove_all(t_id, "\'"))
+
+people_plot <- people_table %>%
+  left_join(people_key, by = "t_id") %>%
+  filter(response != 8) %>%
+  filter(Question != is.na(Question)) %>%
+  mutate(APRP = case_when(
+    APRP == "ap" ~ "Absolute Pitch",
+    APRP == "rp" ~ "Relative Pitch"
+  )) %>%
+  ggplot(aes(y = reorder(Question, response), x = response, fill = APRP)) +
+  geom_density_ridges2() +
+  scale_x_continuous(limits = c(0,7), breaks = seq(1,7,1)) +
+  labs(title = "Agreeing on Definitions of People\n with Absolute and Relative Pitch",
+       subtitle = "N = 42",
+       y = "Question",
+       x = "Density",
+       fill = "Question Bank") +
+  theme_bw() +
+  viridis::scale_fill_viridis(discrete = TRUE, begin = .1, end = .8)
+
+people_plot
+
+   
+
+```
+
+*** 
+
+People plot notes. 
+
+### Time Fostering RP in Classroom 
+
+```{r}
+aprp_time_est_plot <- activity_table %>%
+  filter(t_id %in% c("perc_class_time_ap", "perc_class_time_rp")) %>%
+  mutate(response = as.numeric(response)) %>%
+  mutate(t_id = case_when(
+    t_id == "perc_class_time_ap" ~ "Absolute Pitch",
+    t_id == "perc_class_time_rp" ~ "Relative Pitch"
+  )) %>%
+  ggplot(aes(response, fill = t_id)) +
+  geom_histogram(bins = 40) +
+  facet_wrap(~t_id, nrow = 2) +
+  theme_bw() +
+  viridis::scale_fill_viridis(discrete = TRUE, begin = .1, end = .8) +
+  labs(title = "Classroom Time Devoted to \nAbsolute Pitch vs Relative Pitch in the Classroom",
+       x = "Estimated Percentage of Time",
+       y = "Frequency Count in Survey",
+       fill = "Question Bank")
+
+aprp_time_est_plot
+
+```
+
+*** 
+
+AP RP in Classroom 
+
+### APRP Priority 
+
+```{r}
+activity_table %>%
+  mutate(priority_bool = str_detect(t_id, "priority")) %>%
+  filter(priority_bool == TRUE) %>%
+  separate(col = t_id, into = c("who","priority","aprp","num"),sep = "_") %>%
+  mutate(who = case_when(
+    who == "inst" ~ "Institution",
+    who == "you" ~ "You"
+  )) %>%
+  mutate(APRP = case_when(
+    aprp == "ap" ~ "Absolute Pitch",
+    aprp == "rp" ~ "Relative Pitch"
+  )) %>%
+  mutate(q_id = paste(who,"prioritises", APRP,"?")) %>%
+  mutate(response = as.numeric(response)) %>%
+  ggplot(aes(x = response)) +
+  geom_histogram() +
+  facet_wrap(~q_id) +
+  theme_bw() + 
+  labs(title = "Who prioriti[sz]es what?",
+       x = "Low Priority             <<                                                                 >>          High Priority")
+  
+```
+
+*** 
+
+Nothing out of the ordinary here. 
+
+
+### Fostering Relative Pitch Activities 
+
+```{r}
+
+df %>% 
+  filter(trial_index %in% c(12,14,16,18,20)) %>%
+  select(run_id, response) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  knitr::kable()
+
+
+
+```
+
+*** 
+
+TODO: Join on Difficulty Level for Single Activities 
+TODO: Check Import Code, some answers lost because csv import error!
+
+
+### Fostering Absolute Pitch Activities 
+
+```{r}
+df %>% 
+  filter(trial_index %in% c(25, 27, 29, 31, 33)) %>%
+  select(run_id, response) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  knitr::kable()
+```
+
+*** 
+
+Ap Responses, same as checking CVS import for TODO
+
+
+### Repertoire 
+
+
+
+```{r}
+
+text_response_table %>%
+  filter(t_id == "rep_list_free_response") %>%
+  select(run_id, response) %>%
+  knitr::kable()
+
+```
+
+*** 
+
+> Please list examples of repertoire you use in your aural skills teaching (folk songs, Bach chorales, jazz, etc.).
+
+
+### Template
+
+```{r}
+text_response_table %>%
+  filter(t_id == "rep_list_intend_response") %>%
+  select(run_id, response) %>%
+  knitr::kable()
+```
+
+*** 
+
+Intended Response
+
+
+### Template
+
+```{r}
+
+text_response_table %>%
+  filter(t_id == "no_notation_list") %>%
+  select(run_id, response) %>%
+  knitr::kable()
+```
+
+*** 
+
+No Notation List 
+
+### Percent Time Western Classical Rep 
+
+```{r}
+df %>%
+  filter(trial_index == 34) %>%
+  select(run_id, response) %>%
+  mutate(response = as.numeric(response)) %>%
+  ggplot(aes(x = response)) +
+  geom_histogram() +
+  theme_bw() +
+  labs(title = "Percent of Time On Classical Rep")
+   
+
+
+```
+
+*** 
+
+Consider Facet Wrapping this on location (for Shiny!)
+
+
+### Don't Depend on Notation 
+
+```{r}
+df %>%
+  filter(trial_index == 37) %>%
+  select(run_id, response) %>%
+  mutate(response = as.numeric(response)) %>%
+  ggplot(aes(x = response)) +
+  geom_histogram() +
+  theme_bw() +
+  labs(title = "Percent of Time Don't Depend on Notation") 
+
+```
+
+*** 
+
+Consider Facet Wrapping this on location (for Shiny!)
+
+### Majority of Teaching Responsibilties
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 40)  %>%
+  knitr::kable()
+
+```
+
+*** 
+
+text
+
+### Years Teaching Music Theory Classroom 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 41)  %>%
+  knitr::kable()
+
+```
+
+*** 
+
+text
+
+### Higest Degree
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 42) %>%
+  knitr::kable()
+
+```
+
+*** 
+
+text
+
+
+### Years Since Graduating with Highest Degree
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 43) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+
+### Type Most Recent Degree Inst
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 44) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### Best Described Role
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 45) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### Own AP Ability 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 46) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### Own RP Ability 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 47) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### Years Taught Professional Career
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 49) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### System Learned Student
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 50) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### Country Learned Student 
+
+```{r}
+
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 51) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### Prefer to Teach  
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 52) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### System Teach @ Current Inst 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 53) %>%
+  knitr::kable()
+```
+
+*** 
+
+text
+
+### Num Students / Class
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 54) %>%
+  knitr::kable()
+```
+
+*** 
+
+> How many students are typically enrolled in one of your aural skills classes (or sections)?
+
+### Misc Tracking
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 55) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+### Misc Tracking
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 55) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+### Current Inst Type
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 56) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+### Number of Music Majors 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 57) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+### Degrees Offered 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 58) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+### Rank Aural Teachers
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 59) %>%
+  knitr::kable()
+```
+
+*** 
+asdf 
+
+### Highest Degree Aural 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 60) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+### Country Teach 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 61) %>%
+  knitr::kable()
+```
+
+*** 
+asdf
+
+### State
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 62) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+
+### Feedback 
+
+```{r}
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 63) %>%
+  knitr::kable()
+```
+
+*** 
+
+asdf
+
+
