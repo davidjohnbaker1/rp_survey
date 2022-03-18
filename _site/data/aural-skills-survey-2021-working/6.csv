@@ -1,0 +1,2 @@
+run_id,condition,view_history,rt,trial_type,trial_index,time_elapsed,internal_node_id,recorded_at,ip,user_agent,device,browser,browser_version,platform,platform_version
+6,1,"[{""page_index"":0,""viewing_time"":6537},{""page_index"":1,""viewing_time"":1531},{""page_index"":2,""viewing_time"":2073},{""page_index"":3,""viewing_time"":1078}]",11220,instructions,0,11230,0.0-0.0,"2021-07-09 21:50:21",73.173.53.236,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0",Macintosh,Firefox,89.0,"OS X",10.15

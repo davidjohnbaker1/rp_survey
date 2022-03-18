@@ -1,0 +1,15 @@
+Question, key, APRP
+All trained musicians have relative pitch., 're_people_al_1', rp
+People with relative pitch have difficulty completing aural skills tasks with a non-A440 standard., 'rp_impaired_2', rp
+People with relative pitch default to functional labels to complete aural skills tasks., 'rp_override_3', rp
+All trained musicians who don’t have absolute pitch have relative pitch., 'rp_trained_ap_4', ap
+All individuals with normal audiology and no tone deafness have relative pitch., 'rp_tonedeaf_5', rp
+All individuals with normal hearing who don't have absolute pitch have relative pitch., 'rp_normal_6', ap
+Some people have better relative pitch than others., 'rp_better_others_7', rp
+All trained musicians have absolute pitch., 'ap_people_all_8', ap
+People with absolute pitch have difficulty completing aural skills tasks with a non-A440 standard., 'ap_impaired_9', ap
+People with absolute pitch default to labeling pitches to complete aural skills tasks., 'ap_override_10', ap
+All trained musicians who don’t have relative pitch have absolute pitch., 'ap_trained_ap_11', rp
+All individuals with normal audiology and no tone deafness have absolute pitch., 'ap_tonedeaf_12', ap
+All individuals with normal hearing who don't have relative pitch have absolute pitch., 'ap_normal_13', ap
+Some people have better absolute pitch than others., 'ap_better_others_14', ap

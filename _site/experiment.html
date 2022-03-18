@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jspsych.js"></script>
+    <script src="scales.js"></script>
+    <script src="plugins/jspsych-instructions.js"></script> 
+    <script src="plugins/jspsych-survey-likert.js"></script> 
+    <script src="plugins/jspsych-survey-text.js"></script> 
+    <script src="plugins/jspsych-survey-multi-select.js"></script> 
+    <script src="plugins/jspsych-survey-multi-choice.js"></script> 
+    <script src="plugins/jspsych-html-slider-response.js"></script> 
+    <link rel="stylesheet" href="css/jspsych.css">
+    <style>
+</style>
+
+  </head>
+  <body></body>
+  <script>
+
+    //--------------------------
+   // POST MVP
+
+    // TODO: TRY TO PUT ALL DEMOGRAPHICS ON THE SAME PAGE !!
+    // TODO: ADD Free Text Response for Other Option 
+
+    // FIXED ID Tag Problem
+    // Cognition.run Header
+
+    // Introduction
+
+    var intro_text = {
+	type: 'instructions',
+	pages: ['<p><div class="row"><div class="column"><img src="img/eastman.jpg" alt="Eastman" style="width:100%"></div><div class="column"><img src="img/johnhopkins.png" alt="John Hopkins" style="width:100%"></div><div class="column"><img src="img/utoronto2.png" alt="University of Toronto" style="width:100%"></div><div class="column"><img src="img/goldsmiths2.png" alt="Goldsmiths" style="width:100%"></div></div></p><p><strong>Music Instructors’ Views on Relative Pitch and Absolute Pitch</strong></p><p>Principal Investigators<ul><li>Dr. David John Baker (Goldsmiths, University of London, david.baker@gold.ac.uk)</li><li>Dr. Jenine Brown (Peabody Institute, Johns Hopkins University, jenine.brown@jhu.edu)</li><li>Dr. Elizabeth West Marvin (Eastman School of Music, University of Rochester, bmarvin@esm.rochester.edu)</li><li>Dr. Daphne Tan (University of Toronto, daphne.tan@utoronto.ca)</li></ul></p><p><strong>Introduction</strong></p><p>You are invited to participate in a survey about relative pitch and absolute pitch (also known as “perfect pitch”) conducted by David John Baker, Jenine Brown, Elizabeth West Marvin, and Daphne Tan. Participants must be 18 years or older and have experience teaching music. The survey is designed to help our research team learn more about how music instructors view relative pitch and absolute pitch, including how they define these concepts and foster them in teaching. Your participation is entirely voluntary and there is no compensation.</p><p>Before continuing, please read the information below. It contains details to help you decide whether to participate. If you have questions about why the research is being done, what you will be asked to do, the possible risks and benefits, your rights as a volunteer, and anything else about the research that is not clear, you may write to any of the researchers listed above. When all your questions have been answered, you can decide if you want to be in this study. By clicking “Next” at the bottom of the screen and continuing with the survey, you agree to participate in this study.</p><p><strong>Number of People Taking the Survey</strong></p><p>We anticipate that 80-100 volunteers will take the survey.</p><p><strong>Procedure for the Survey</strong></p><p>This survey will include both multiple-choice and free-response questions. We anticipate that it will take between 20–30 minutes to complete, depending on how much information you choose to write in the free-response questions.</p><p><strong>Risks</strong></p><p>There is a possible risk of privacy. All survey data will be collected anonymously, and we will not collect any personal information except what is useful to help us understand the results (e.g., types of classes you teach, general location [country, province/state]). However, it is possible that your responses may provide clues about your identity. Also, if you choose to comment, like, or follow this recruitment message on social media, you will be publicly identified with the study. A breach of confidentiality is also a possible risk. Breach of confidentiality means that it is possible that individuals not associated with this research may accidentally gain access to information that personally identifies participants. Appropriate safeguards are set in place to minimize a breach of confidentiality (e.g., data will be encrypted), but no researcher can ever guarantee that this sort of breach will not occur.</p><p><strong>Benefits</strong></p><p>There is no direct benefit to taking part in this study. However, you may enjoy reflecting on relative pitch and absolute pitch in relation to your teaching activities. The results of the study may also help improve aural skills instruction.</p><p><strong>Confidentiality</strong></p>The survey is anonymous, and your name will not be associated with your responses. Only Drs. Baker, Brown, Marvin, and Tan will have access to your anonymous responses. Any study records that potentially identify you will be kept confidential to the extent possible by law, though we cannot guarantee absolute confidentiality. When study results are presented at professional conferences or published in professional journals, your name will not be used, and only aggregated data will be reported.</p><p><strong>Voluntary Participation & Withdrawal</strong></p>Your decision to participate in this study is voluntary. You may choose to stop taking the survey at any time. Your responses to the questions in the study are completely anonymous and participation cannot be withdrawn after responses have been collected, as we will be unable to determine whose data is whose.</p><p>In order to ensure a high degree of internal integrity to our data, we have designated many of the questions on this survey as required (so that you don\'t forget to answer them).</p><p>If there is a required question you do not wish to respond to, we have provided a "No Response" or "NR" option in order for you to acknowledge you have seen the question, but do not wish to respond.</p><p>We ask that you complete this survey only one time. If your connection is disrupted during the survey, you will need to start the survey again. When you reach the final screen, your data will be saved.</p><p>If you have questions about the research study itself, please contact the principal investigators listed above. If you have questions about your rights as a research participant or to discuss problems or concerns about a research study, or to obtain information or offer input, contact the University of Toronto Office of Research Ethics at ethics.review@utoronto.ca or 416-946-3273. Human Protocol Number 41566.</p><p>By clicking “Next” and continuing with the survey, you agree to participate in this study.</p>',
+		'<p>Thank you for agreeing to participate in this survey. As noted before, the survey will take about 30 minutes of your time.</p><p>We have a wide range of questions in this survey that include both questions about your beliefs about absolute and relative pitch as well as your educational and teaching background.</p><p>Throughout the course of the survey, you will complete <strong>THREE</strong> sections. Please note that the way the survey is designed, you will not be able to go back and change your answers and closing the browser will delete your data.</p><p><ol><li>The <strong>first section</strong> will ask you to indicate the degree to which you agree with several assertions about both relative and absolute pitch.</li><li>The <strong>second section</strong> will ask you to describe activities that you use in your own teaching regarding relative and absolute pitch.</li><li>The <strong>third section</strong> will ask you questions about your background so we can better contextualize your answers.</li></ol></p><p>We welcome all opinions and experiences on the topic; we ask that you do not consult outside sources while completing the survey. We want you to respond based on your own experiences and the beliefs you hold now (rather than looking up a definition).</p><p>A progress bar will be displayed at the top of the page so you have an idea of how far you are into the survey. Please note that although we have divided the survey into three sections, they are not all of equal length. The first section is the longest.</p><p>If you are ready to begin, please press Next.</p>','<p>Please note that you will <strong>not be able to go backwards once you have progressed through a section</strong>.</p>'],
+    show_clickable_nav: true
+  }
+
+
+  var multi_response_text = {
+	type: 'instructions',
+	pages: ['<p>You have now completed the first section of the survey. Please take a moment to rest if you feel the need. Once you are ready, press Next to continue.</p>'],
+    show_clickable_nav: true
+  }
+
+    // RP + AP Belief  Questions 
+
+    var section_1_banner = {
+	type: 'instructions',
+	pages: ['<p>SECTION I:</p><p>Definitions of <strong>Relative</strong> and <strong>Absolute</strong> Pitch.</p>'],
+    show_clickable_nav: true
+  }
+
+    var rp_instructions_slider_2 = {
+	type: 'instructions',
+	pages: ['<p>We will now ask you questions about <strong>people</strong> with absolute and relative pitch.</p>'],
+    show_clickable_nav: true
+  }
+
+
+    var aprp_page = {
+  type: 'survey-likert',
+    preamble: "<p>Below are several possible definitions of <strong>relative pitch</strong> and <strong>absolute pitch</strong>. Using the seven point scale below, please indicate the degree to which you agree with each definition. The left hand side will always correspond with “I strongly disagree” and the right hand scale will correspond with “I strongly agree.” Selecting the middle of the scale would indicate that you neither agree nor disagree with the definition.</p><p>Remember that we are interested in what <strong>you</strong> think, based on your expertise and teaching experiences. We encourage you to use the full range of the rating scale.</p><p><u>Selecting NR (No Response) would indicate that you do not wish to respond to this question</u>.</p><p><i>If none of these definitions matches your own personal definitions, you will have the chance to provide your own on the next page</i>.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> scale degrees with reference to a tonality.", name: 'rp_ref_tonal_01', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> scale degrees with reference to a tonality.", name: 'rp_produce_tonality_02', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>recognize</u> if a song is played in the correct key without relying on a reference tone.", name: 'ap_ref_tonal_03', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> the interval between two tones.", name: 'rp_id_interval_04', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> the interval between two tones.", name: 'rp_produce_interval_05', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>label</u> a musical tone with a note name using a reference tone.", name: 'rp_name_relation_06', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>perceive</u> transposed melodies as 'the same'.", name: 'rp_perceive_same_07', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> a pitch in relation to a single, remembered pitch (e.g., A440 or Middle C).", name: 'rp_id_44_08', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> a pitch in relation to a single, remembered pitch (e.g. A440 or Middle C).", name: 'rp_produce_440_09', labels: scale_7, required: true},
+   //   {prompt: "<strong>Relative</strong> pitch is the ability to <u>identify</u> a note without relying on reference tone.", name: 'rp_id_abref_10', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>label</u> a note with a note name without relying on reference tone.", name: 'rp_name_abref_10', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>produce</u> a note without relying on reference tone.", name: 'rp_produce_abref_11', labels: scale_7, required: true},
+      {prompt: "<strong>Relative</strong> pitch is the ability to <u>remember</u> a recently heard note or group of notes.", name: 'rp_remember_group_12', labels: scale_7, required: true},
+      {prompt: "One can lose <strong>relative</strong> pitch.", name: 'rp_lose_13', labels: scale_7, required: true},
+      {prompt: "At some point, good <strong>relative</strong> pitch becomes <strong>absolute</strong> pitch.", name: 'rp_to_ap_14', labels: scale_7, required: true},
+      // AP Questions
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> scale degrees with reference to a tonality.", name: 'ap_ref_tonal_15', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>recognize</u> if a song is played in the correct key without relying on a reference tone.", name: 'ap_ref_tonal_16', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> scale degrees with reference to a tonality.", name: 'ap_produce_tonality_17', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> the interval between two tones.", name: 'ap_id_interval_18', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> the interval between two tones.", name: 'ap_produce_interval_19', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>label</u> a musical tone with a note name using a reference tone.", name: 'ap_name_relation_20', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>perceive</u> transposed melodies as 'the same'.", name: 'ap_perceive_same_21', labels: scale_7, required: true},
+      {prompt: "At some point, good <strong>absolute</strong> pitch becomes <strong>relative</strong> pitch.", name: 'ap_to_rp_22', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> a pitch in relation to a single, remembered pitch (e.g., A440 or Middle C).", name: 'ap_id_440_23', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> a pitch in relation to a single, remembered pitch (e.g., A440 or Middle C).", name: 'ap_produce_440_24', labels: scale_7, required: true},
+    //  {prompt: "<strong>Absolute</strong> pitch is the ability to <u>identify</u> a note without relying on reference tone.", name: 'ap_id_abref', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>label</u> a note with a note name without relying on reference tone.", name: 'ap_name_abref_25', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>produce</u> a note without relying on reference tone.", name: 'ap_produce_abref_26', labels: scale_7, required: true},
+      {prompt: "<strong>Absolute</strong> pitch is the ability to <u>remember</u> a recently heard note or group of notes.", name: 'ap_remember_group_27', labels: scale_7, required: true},
+      {prompt: "One can lose <strong>absolute </strong>pitch.", name: 'ap_lose_28', labels: scale_7, required: true}
+  ],
+	randomize_question_order: true
+};
+    
+    var rpap_people = {
+  type: 'survey-likert',
+    preamble: "<p>Below are statements about <strong>people</strong> with relative and absolute pitch. Using the scale, please indicate the degree to which you agree with each statement, where the left hand side of the scale corresponds to 'I strongly disagree' and the right hand side of the scale corresponds to 'I strongly agree.' A selection in the middle would indicate that you neither agree nor disagree with the statement. Remember that we are interested in what <strong><u>you</u></strong> think, based on your expertise and teaching experiences.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "All trained musicians have <strong>relative</strong> pitch.", name: 're_people_al_1', labels: scale_7, required: true},
+      {prompt: "People with <strong>relative</strong> pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'rp_impaired_2', labels: scale_7, required: true},
+      {prompt: "People with <strong>relative</strong> pitch default to functional labels to complete aural skills tasks.", name: 'rp_override_3', labels: scale_7, required: true},
+      {prompt: "All trained musicians who don’t have <strong>absolute</strong> pitch have <strong>relative</strong> pitch.", name: 'rp_trained_ap_4', labels: scale_7, required: true},
+      {prompt: "All individuals with normal audiology and no tone deafness have <strong>relative</strong> pitch.", name: 'rp_tonedeaf_5', labels: scale_7, required: true},
+      {prompt: "All individuals with normal hearing who don't have <strong>absolute</strong> pitch have <strong>relative</strong> pitch.", name: 'rp_normal_6', labels: scale_7, required: true},
+      {prompt: "Some people have better <strong>relative</strong> pitch than others.", name: 'rp_better_others_7', labels: scale_7, required: true},
+      // Added AP Questions
+      {prompt: "All trained musicians have <strong>absolute</strong> pitch.", name: 'ap_people_all_8', labels: scale_7, required: true},
+      {prompt: "People with <strong>absolute</strong> pitch have difficulty completing aural skills tasks with a non-A440 standard.", name: 'ap_impaired_9', labels: scale_7, required: true},
+      {prompt: "People with <strong>absolute</strong> pitch default to labeling pitches to complete aural skills tasks.", name: 'ap_override_10', labels: scale_7, required: true},
+      {prompt: "All trained musicians who don’t have <strong>relative</strong> pitch have <strong>absolute</strong> pitch.", name: 'ap_trained_ap_11', labels: scale_7, required: true},
+      {prompt: "All individuals with normal audiology and no tone deafness have <strong>absolute</strong> pitch.", name: 'ap_tonedeaf_12', labels: scale_7, required: true},
+      {prompt: "All individuals with normal hearing who don't have <strong>relative</strong> pitch have <strong>absolute</strong> pitch.", name: 'ap_normal_13', labels: scale_7, required: true},
+      {prompt: "Some people have better <strong>absolute</strong> pitch than others.", name: 'ap_better_others_14', labels: scale_7, required: true},
+      
+  ],
+  randomize_question_order: true 
+};
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    // SECTION II: Teaching Absolute and Relative Pitch  
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    
+
+
+    var section_2_banner = {
+	type: 'instructions',
+	pages: ['<p>SECTION II:</p><p>Classroom <strong>Relative</strong> and <strong>Absolute</strong> Pitch Activities.</p>'],
+    show_clickable_nav: true
+  }
+
+    var section_2_instructions_a = {
+	type: 'instructions',
+	pages: ['<p>We are interested in the types of activities that you do in order foster both <strong>relative</strong> and <strong>absolute</strong> pitch in the classroom.</p><p>In order to understand what you as a teacher do, we will now ask you to describe up to FIVE activities that you use to foster relative pitch and FIVE activities that you use to foster absolute pitch.</p><p>We will collect this data by first asking you to describe an exercise or activity that you either know of, use, or would use to foster this skill. After explaining it using a text-box, we will then ask you to rate the activity which you described on several dimensions.</p><p>Please note that if you cannot come up with five activities, you can just click through!</p>'],
+    show_clickable_nav: true
+  }
+    
+    var rp_activity_1 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong> in the classroom.</p><p>This is the first of five activities you will be prompted to give regarding <strong>relative</strong> pitch.</p><p>We require you to provide  at least one activity using this page, and we will ask you to provide more activities on subsequent pages (although no response will be required for subsequent activities).</p><p>Please describe the activity below. The next slide will ask you to rate the which you described on several dimensions.</p><p>Your response will inform perceptual tasks we hope to build at a later stage of this research.</p>", rows: 10, columns: 70, required: true }
+  ],
+};
+
+    var rp_activity_2 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong> in the classroom.</p><p>This is the <strong>second</strong> of five responses you will have the opportunity to provide about relative pitch.</p>", rows: 10, columns: 70 }
+  ],
+};
+
+    var rp_activity_3 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong> in the classroom.</p><p>This is the <strong>third</strong> of five responses you will have the opportunity to provide about relative pitch.</p>", rows: 10, columns: 70}
+  ],
+};
+
+    var rp_activity_4 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong> in the classroom.</p><p>This is the <strong>fourth</strong> of five responses you will have the opportunity to provide about relative pitch.</p>", rows: 10, columns: 70}
+  ],
+};
+
+    var rp_activity_5 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>relative pitch</strong> in the classroom.</p><p>This is the <strong>fifth and final<strong> of five responses you will have the opportunity to provide about relative pitch.</p>", rows: 10, columns: 70}
+  ],
+};
+
+    var rp_activity_rate_1 = {
+  type: 'survey-likert',
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'use_skill_freq_01', labels: scale_7_na, required: true},
+      {prompt: "I find this skill easy to teach.", name: 'easy_teach_02', labels: scale_7_na, required: true},
+      {prompt: "The students I teach find this skill easy to learn.", name: 'easy_to_learn_03', labels: scale_7_na, required: true},
+      {prompt: "I believe the skill I just described helps students foster <strong>relative pitch</strong>.", name: 'helps_relative_04', labels: scale_7_na, required: true},
+      {prompt: "I believe the skill I just described is very representative of <strong>relative pitch</strong>.", name: 'reps_relative_05', labels: scale_7_na, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    var rp_activity_rate_2 = {
+  type: 'survey-likert',
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p><p>If you did not provide an answer on the previous page, just click Continue!</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'use_skill_freq_01', labels: scale_7_na, required: false},
+      {prompt: "I find this skill easy to teach.", name: 'easy_teach_02', labels: scale_7_na, required: false},
+      {prompt: "The students I teach find this skill easy to learn.", name: 'easy_to_learn_03', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described helps students foster <strong>relative pitch</strong>.", name: 'helps_relative_04', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described is very representative of <strong>relative pitch</strong>.", name: 'reps_relative_05', labels: scale_7_na, required: false},
+  ],
+  randomize_question_order: false 
+};
+
+    var rp_activity_rate_3 = {
+  type: 'survey-likert',
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p><p>If you did not provide an answer on the previous page, just click Continue!</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'use_skill_freq_01', labels: scale_7_na, required: false},
+      {prompt: "I find this skill easy to teach.", name: 'easy_teach_02', labels: scale_7_na, required: false},
+      {prompt: "The students I teach find this skill easy to learn.", name: 'easy_to_learn_03', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described helps students foster <strong>relative pitch</strong>.", name: 'helps_relative_04', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described is very representative of <strong>relative pitch</strong>.", name: 'reps_relative_05', labels: scale_7_na, required: false},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var rp_activity_rate_4 = {
+  type: 'survey-likert',
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p><p>If you did not provide an answer on the previous page, just click Continue!</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'use_skill_freq_01', labels: scale_7_na, required: false},
+      {prompt: "I find this skill easy to teach.", name: 'easy_teach_02', labels: scale_7_na, required: false},
+      {prompt: "The students I teach find this skill easy to learn.", name: 'easy_to_learn_03', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described helps students foster <strong>relative pitch</strong>.", name: 'helps_relative_04', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described is very representative of <strong>relative pitch</strong>.", name: 'reps_relative_05', labels: scale_7_na, required: false},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var rp_activity_rate_5 = {
+  type: 'survey-likert',
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p><p>If you did not provide an answer on the previous page, just click Continue!</p>",
+  questions: [
+      // RP Questions 
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'use_skill_freq_01', labels: scale_7_na, required: false},
+      {prompt: "I find this skill easy to teach.", name: 'easy_teach_02', labels: scale_7_na, required: false},
+      {prompt: "The students I teach find this skill easy to learn.", name: 'easy_to_learn_03', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described helps students foster <strong>relative pitch</strong>.", name: 'helps_relative_04', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described is very representative of <strong>relative pitch</strong>.", name: 'reps_relative_05', labels: scale_7_na, required: false},
+  ],
+  randomize_question_order: false 
+};
+
+    var section_2_instructions_b = {
+	type: 'instructions',
+	pages: ['<p>We will now ask you to complete the same task but for <strong>absolute pitch</strong>.</p>'],
+    show_clickable_nav: true
+  }
+
+
+    var rp_important_1 = {
+  type: 'survey-likert',
+    preamble: "",
+  questions: [
+      // RP Questions 
+      {prompt: "How important do you think it is to teach <strong>relative pitch?</strong>", name: 'imp_teach_rp_01', labels: imp_scale},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var rp_important_2 = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['0% of the time', '100% of the time'],
+	prompt: "<p>Select the average percentage of time per class period you currently spend fostering <strong>relative pitch</strong> skills.</p>",
+	require_movement: true
+    };
+
+
+    var ap_important_1 = {
+  type: 'survey-likert',
+    preamble: "",
+  questions: [
+      // AP Questions 
+      {prompt: "How important do you think it is to teach <strong>absolute</strong> pitch?", name: 'imp_teach_abs_01', labels: imp_scale},
+  ],
+  randomize_question_order: false 
+};
+
+
+    var ap_important_2 = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['0% of the time', '100% of the time'],
+	prompt: "<p>Select the average percentage of time per class period you currently spend fostering <strong>absolute pitch</strong> skills.</p>",
+	require_movement: true
+    };
+
+
+    //////////////////////
+
+    var ap_activity_1 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong> in the classroom.</p><p>This is the first of five activities you will be prompted to give regarding <strong>absolute</strong> pitch.</p><p>We require you to provide at least one activity using this page, and we will ask you to provide more activities on subsequent pages (although no response will be required for subsequent activities).</p><p>Please describe the activity below. The next slide will ask you to rate the activity which you described on several dimensions.</p><p>Your response will inform perceptual tasks we hope to build at a later stage of this research.</p>", rows: 10, columns: 70, required: true }
+  ],
+};
+
+    var ap_activity_2 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong> in the classroom.</p><p>This is the <strong>second</strong> of five responses you will have the opportunity to provide about absolute pitch.</p>", rows: 10, columns: 70 }
+  ],
+};
+
+    var ap_activity_3 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong> in the classroom.</p><p>This is the <strong>third</strong> of five responses you will have the opportunity to provide about absolute pitch.</p>", rows: 10, columns: 70}
+  ],
+};
+
+    var ap_activity_4 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong> in the classroom.</p><p>This is the <strong>fourth</strong> of five responses you will have the opportunity to provide about absolute pitch.</p>", rows: 10, columns: 70}
+  ],
+};
+
+    var ap_activity_5 = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster <strong>absolute pitch</strong> in the classroom.</p><p>This is the <strong>fifth and final<strong> of five responses you will have the opportunity to provide about absolute pitch.</p>", rows: 10, columns: 70}
+  ],
+};
+
+    var section_2_instructions_c = {
+	type: 'instructions',
+	pages: ['<p>The next five questions will ask you about your current aural skills classroom teaching.</p>'],
+    show_clickable_nav: true
+  }
+
+// Repitoire
+   
+    var rep_prep = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Please list examples of repertoire you use in your aural skills teaching (folk songs, Bach chorales, jazz, etc.).</p>", rows: 10, columns: 70, required : true}
+  ],
+};
+    var rep_freq = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['0% of the time', '100% of the time'],
+	prompt: "<p>What percentage of your overall <strong>aural skills</strong> teaching time do you spend on Western classical repertoire compared to all other musical styles?</p><p>Putting the slider to the far left would indicate you spend 0% of the time on Western classical repertoire. Moving the slider to the far right would indicate you spend 100% of your time on Western classical repertoire.</p>",
+	require_movement: true
+    };
+
+
+    var intend_rep = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>What repertoire do you wish you could teach or intend to teach in the aural skills classroom if given the opportunity?</p>", rows: 10, columns: 70 , required: true}
+  ],
+};
+
+    var  no_notation = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>Please list any activities you do in the aural skills classroom that don’t involve musical staff notation.</p>", required: true, rows: 10, columns: 70}
+  ],
+};
+
+    var nonotation_freq = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['0% of the time', '100% of the time'],
+	prompt: "<p>What percentage of your teaching time in the aural skills classroom do you spend on activities that don't depend on notation?</p>",
+	require_movement: true
+    };
+
+    ///
+
+    var ap_activity_rate_1 = {
+  type: 'survey-likert',
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p>",
+  questions: [
+      // AP Questions 
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'teach_freq_ap_01', labels: scale_7_na, required: true},
+      {prompt: "I find this skill easy to teach.", name: 'easy_teach_02', labels: scale_7_na, required: true},
+      {prompt: "The students I teach find this skill easy to learn.", name: 'eash_learn_03', labels: scale_7_na, required: true},
+      {prompt: "I believe the skill I just described helps students foster <strong>absolute pitch</strong>.", name: 'foster_ap_04', labels: scale_7_na, required: true},
+      {prompt: "I believe the skill I just described is very representative of <strong>absolute pitch</strong>.", name: 'represent_ap_05', labels: scale_7_na, required: true},
+  ],
+  randomize_question_order: false 
+};
+
+    var ap_activity_rate_2 = {
+  type: 'survey-likert',
+    preamble: "<p>Considering the activity you just described, please indicate the degree that you agree with the following statements.</p><p>If you did not provide an answer on the previous page, just click Continue!</p>",
+  questions: [
+      // AP Questions 
+      {prompt: "I use this skill frequently in my own classroom teaching.", name: 'teach_freq_ap_01', labels: scale_7_na, required: false},
+      {prompt: "I find this skill easy to teach.", name: 'easy_teach_02', labels: scale_7_na, required: false},
+      {prompt: "The students I teach find this skill easy to learn.", name: 'eash_learn_03', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described helps students foster <strong>absolute pitch</strong>.", name: 'foster_ap_04', labels: scale_7_na, required: false},
+      {prompt: "I believe the skill I just described is very representative of <strong>absolute pitch</strong>.", name: 'represent_ap_05', labels: scale_7_na, required: false},
+  ],
+  randomize_question_order: false 
+};
+
+
+    
+    var thank_you = {
+	type: 'instructions',
+	pages: ['<p>Thank you so much for your time and effort in completing this survey. If you have any further questions regarding the survey, your data, or this research, please contact either Jenine Brown at jenine.brown@jhu.edu, Daphne Tan daphne.tan@utoronto.ca, David John Baker david.baker@gold.ac.uk or Elizabeth Marvin bmarvin@esm.rochester.edu.</p>'],
+    show_clickable_nav: true
+  }
+    
+    var section_two = {
+	type: 'instructions',
+	pages: ['<p>Section two start here.</p>','<p>Explanation of getting task here for next thing here.</p>'],
+    show_clickable_nav: true
+  }
+
+    // Free Response
+
+    var rp_free_response = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>If you felt that none of the definitions of <strong>relative pitch</strong> on the page before were sufficient, please provide your own definition in the space below.</p><p>You are required to fill in some text. If you were happy with the definitions before, please just write Not Applicable.</p><p>Relative pitch is...</p>", rows: 10, columns: 70, required: true}
+  ],
+};
+
+ var ap_free_response = {
+  type: 'survey-text',
+  questions: [
+      {prompt: "<p>If you felt that none of the definitions of <strong>absolute pitch</strong> were sufficient, please provide your own definition in the space below.</p><p>You are required to fill in some text. If you were happy with the definitions before, please just write Not Applicable.</p><p>Absolute pitch is...</p>", rows: 10, columns: 70, required: true}
+  ],
+};
+
+    // five fields to do this, then click the ones that you do 
+    // NEED TO DO BESPOKE THING HERE 
+    // (look to see if this can be put onto one screen???) 
+
+ var ap_inductive = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Please list up to five ways that <strong>absolute pitch</strong> skills can be fostered in the classroom. Then please rate the extent to which you do this activity in the classroom.", rows: 10, columns: 70}
+  ],
+};
+
+ var rp_inductive = {
+  type: 'survey-text',
+  questions: [
+    {prompt: "Please list up to five ways that <strong>relative pitch</strong> skills can be fostered in the classroom. Then please rate the extent to which you do this activity in the classroom.", rows: 10, columns: 70}
+  ],
+};
+
+   /////////////////////////////////////////////////////////////////////
+   // SECTION III
+   //////////////////////////////////////////////////////////////
+
+
+
+    var section_3_banner = {
+	type: 'instructions',
+	pages: ['<p>SECTION III:</p><p>Demographic Questions</p>'],
+    show_clickable_nav: true
+  }
+
+    var demo_intro_text = {
+	type: 'instructions',
+	pages: ['The <strong>third</strong> and final section of this survey will ask you questions about your background and teaching experience. These questions will be used to contextualize the answers that you have already provided.'],
+    show_clickable_nav: true
+  }
+
+    var teaching_resp = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "What activities represent the majority of your teaching responsibilities? Choose all that apply.", 
+          options: [
+	      "Music theory (Remedial Undergraduate, Written)",
+	      "Music theory (Remedial Undergraduate, Aural)",
+	      "Music theory (First Year Undergraduate, Written)",
+	      "Music theory (First Year Undergraduate, Aural)",
+	      "Music theory (First Year Undergraduate, combined Theory and Aural)",
+	      "Music theory (Second Year Undergraduate, Written)",
+	      "Music theory (Second Year Undergraduate, Aural)",
+	      "Music theory (Second Year Undergraduate, combined Theory and Aural)",
+	      "Music theory (Junior/Senior upper-level courses, Written)",
+	      "Music theory (Junior/Senior upper-level courses, Aural)",
+	      "Music theory (Remedial Graduate, Written)",
+	      "Music theory (Remedial Graduate , Aural)",
+	      "Music theory (Graduate, Written)",
+	      "Music theory (Graduate , Aural)",
+	      "Collegiate private lessons (in music performance)",
+	      "Music composition",
+	      "Music courses for collegiate music majors not listed here",
+	      "General education music courses for collegiate students",
+	      "High school orchestra",
+	      "High school choir",
+	      "High school music theory",
+	      "High school AP Music Theory",
+	      "Pre-High School Classroom Music",
+	      "Pre-University Level private lessons (music performance)",
+	      "I do not currently teach",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: true
+};
+
+    var years_teaching_music = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "How many years have you been teaching music in the classroom?", placeholder: "8", required: true}
+	],
+    };
+
+    var recent_degree = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "Please list the highest ranked degree you have earned.", 
+          options: [
+	      "High School Diploma",
+	      "Bachelor’s in music",
+	      "Master’s in music",
+	      "DMA in Performance", 
+	      "DMA in Composition", 
+	      "DMA in Theory/Composition", 
+	      "Ph.D. in Music Theory",
+	      "Ph.D. in Composition",
+	      "Ph.D. in Musicology",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false 
+};
+
+    var recent_degree_type = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "<p>From what type of institution was your most recent degree?</p><p><strong>Choose all that apply.</strong></p>", 
+          options: [
+	      "Private institution",
+	      "Public institution",
+	      "Conservatory-style professional music school (stand-alone)",
+	      "Conservatory-style professional music school (within a university)",
+	      "Music Department within a liberal arts college", 
+	      "Music Department within a university",
+	      "NASM-accredited music program",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+
+    var professor_job_rank = {
+    type: 'survey-multi-choice',
+    questions: [
+      {
+        prompt: "<p>What teaching role best describes you? Please choose one.</p><p>The red asterisk denotes this question requires an answer.</p>", 
+          options: [
+	      "K-12 School Teacher",
+	      "Graduate Student / Teaching Assistant",
+	      "Part-Time Adjunct",
+	      "Full-Time Non-Tenure Eligible",
+	      "Full-Time Tenure Eligible",
+	      "Full-Time Tenured",
+	      "I am not currently employed as a teacher",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+    var years_since_degree = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "<p>If you are a current student, just write 'Current Student'. For everyone else: </p><p>About how many <strong>years</strong> has it been since graduating with your highest earned degree?</p><p>Write 'No Response' if you don't wish to answer.<p/>", placeholder: "12", required: true}
+	]};
+   
+// Aural Skills Questions 
+
+    var aural_teach_intro_text = {
+	type: 'instructions',
+	pages: ['The next set of questions will ask several questions about your own teaching history.'],
+    show_clickable_nav: true
+  }
+
+    var years_taught_aural= {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "How many years of aural skills have you taught in your professional career?", placeholder: "12", required: true}
+	]};
+   
+    // TODO: Possible "moveable la"
+    
+    var aural_system_learned = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "What system did you learn <strong>when you were a student</strong>? Select all that apply.", 
+          options: [
+
+	      "Scale-degree numbers with inflections",
+	      "Scale-degree numbers without inflections",
+	      "Moveable-Do (La-based minor)",
+	      "Moveable-Do (Do-based minor)",
+	      "Fixed-Do with inflections ",
+	      "Fixed-Do without inflections",
+	      "Curwen or Kodaly hand symbols",
+	      "Letter names",
+	      "German letter names",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+    var aural_system_prefer_teach = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "What system <strong>do you prefer</strong> to teach? Select all that apply.", 
+          options: [
+
+	      "Scale-degree numbers with inflections",
+	      "Scale-degree numbers without inflections",
+	      "Moveable-Do (La-based minor)",
+	      "Moveable-Do (Do-based minor)",
+	      "Fixed-Do with inflections ",
+	      "Fixed-Do without inflections",
+	      "Curwen or Kodaly hand symbols",
+	      "Letter names",
+	      "German letter names",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+
+
+    var do_you_have_ap_slider = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['Poor Absolute Pitch', 'Excellent Absolute Pitch'],
+	prompt: "<p>I would characterize my own sense of absolute pitch as:</p>",
+	require_movement: true
+    };
+    
+
+    var do_you_have_rp_slider = {
+	type: 'html-slider-response',
+	stimulus: '<p></p>',
+	labels: ['Poor Relative Pitch', 'Excellent Relative Pitch'],
+	prompt: "<p>I would characterize my own sense of relative pitch as:</p>",
+	require_movement: true
+    };
+
+    
+    var aural_system_student = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "When you first learned, what system was taught to you? Select all that apply.", 
+          options: [
+	      "Scale-degree numbers with inflections",
+	      "Scale-degree numbers without inflections",
+	      "Moveable-Do (La-based minor)",
+	      "Moveable-Do (Do-based minor)",
+	      "Fixed-Do with inflections",
+	      "Fixed-Do without inflections",
+	      "Curwen or Kodaly hand symbols",
+	      "Letter names",
+	      "German letter names",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+    var aural_system_using = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "What system do you primarily teach at your institution? Select all that apply.", 
+          options: [
+	      "Scale-degree numbers with inflections",
+	      "Scale-degree numbers without inflections",
+	      "Moveable-Do (La-based minor)",
+	      "Moveable-Do (Do-based minor)",
+	      "Fixed-Do with inflections",
+	      "Fixed-Do without inflections",
+	      "Curwen or Kodaly hand symbols",
+	      "Letter names",
+	      "German letter names",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+    var aural_system_prefer = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "What system do you personally prefer? Select all that apply.", 
+          options: [
+	      "Scale-degree numbers with inflections",
+	      "Scale-degree numbers without inflections",
+	      "Moveable-Do (La-based minor)",
+	      "Moveable-Do (Do-based minor)",
+	      "Fixed-Do with inflections",
+	      "Fixed-Do without inflections",
+	      "Curwen or Kodaly hand symbols",
+	      "Letter names",
+	      "German letter names",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+    var aural_system_location = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "Where were you when you learned this system as a student?", placeholder: "City, State, Country", required: true}
+	]};
+
+    var aural_students_count = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "How many students are typically enrolled in one of your aural skills classes (or sections)?", placeholder: "Enter a Number: 22", required: true}
+	]};
+
+    var feedback = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "Do you have any feedback you would like to provide on this survey?", placeholder: "Type your response here.", rows: 20, columns: 70}
+	]};
+
+var aural_rpap_priority = {
+  type: 'survey-likert',
+    preamble: "",
+  questions: [
+      {prompt: "How high a priority does your institution's curriculum place in developing <strong>absolute</strong> pitch in your students?", name: 'inst_priority_ap_01', labels: scale_priority_5, required: true},
+      {prompt: "How high a priority does your institution's curriculum place in developing <strong>relative</strong> pitch in your students?", name: 'inst_priority_rp_02', labels: scale_priority_5, required: true},
+      {prompt: "How high a priority do <strong>you</strong> place in developing <strong>absolute</strong> pitch in your students?", name: 'you_priority_ap_03', labels: scale_priority_5, required: true},
+      {prompt: "How high a priority do <strong>you</strong> place in developing <strong>relative</strong> pitch in your students?", name: 'you_priority_rp_04', labels: scale_priority_5, required: true}
+  ],
+  randomize_question_order: false 
+};
+
+// TODO: Remove Asterisk
+var aural_theory_parallel_pitch_cleff = {
+  type: 'survey-multi-choice',
+    preamble : "The red asterisk denotes a response is required for this question.", 
+  questions: [
+    {prompt: "Does the Aural Skills program where you've most recently taught track semester-by-semester with the Theory curriculum?", name: 'theory_track_01', options: yes_no_na , required: true}, 
+      {prompt: "Does the Aural Skills program where you've most recently taught emphasize pitch memory for a particular pitch (e.g., A440 or middle C)?", name: 'pitch_mem_02', options: yes_no_na, required: true},
+    {prompt: "Does the Aural Skills program where you've most recently taught incorporate reading more than two C-clefs (e.g. for score transposition)?", name: 'score_transp_03', options: yes_no_na, required: true}
+  ],
+};
+
+    // Institution and Faculty
+    var aural_teach_intro_text = {
+	type: 'instructions',
+	pages: ['The next set of questions will ask about your current teaching responsibilities.'],
+    show_clickable_nav: true
+  }
+
+    var current_institution = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "In what type of institution do you teach? Choose all that apply.", 
+          options: [
+	      "Private college or university",
+	      "Public college or university",
+	      "Conservatory-style professional music school (stand-alone)",
+	      "Conservatory-style professional music school (within a university)",
+	      "Music Department within a liberal arts college",
+	      "Music Department within a university",
+	      "NASM-accredited music program",
+	      "Community College (2-year)",
+	      "Community Music School",
+	      "Private school (pre-college)",
+	      "Public school (pre-college)",
+	      "I do not currently teach",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+    var current_number_majors = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "Approximately how many music majors are enrolled in the music program where you've most recently taught? Please include both undergraduate and graduate students if your school offers both. If you don't wish to provide a response, write 'No Response'.", placeholder: "Enter a Number: 150", required: true}] };
+    
+    var state = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "In what state or province do you teach? Leave blank if not applicable.", placeholder: "North Dakota, Manitoba, Oaxaca", required: false}]};
+
+    var country = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "In what country do you teach?", placeholder: "United States, Canada, Mexico", required: true}]};
+
+    var university = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "What is the name of your university?", placeholder: "The Juilliard State University of Canada", required: true}]};
+
+    var current_degrees_offered = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "Please list the degrees/programs your current or most recent music program offers.  Choose all that apply:", 
+          options: [
+              "My school does not offer any music degree credentials",
+	      "Certificate (e.g. Recording Arts, Songwriting)",
+	      "AP Music Theory Classes",
+	      "Undergraduate music minor",
+	      "Associate's degree (AA)",
+	      "Bachelor of Arts (BA)",
+	      "Bachelor of Music (BM)",
+	      "Masters (MA)",
+	      "Masters (MM)",
+	      "Performer's Certificate/Graduate Performance Diploma",
+	      "Doctorate (DMA or DM)",
+	      "Doctorate (Ph.D.)",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+    
+
+    var current_degree_rank = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "What rank do most aural skills teachers hold at your institution? Choose all that apply.", 
+          options: [
+	      "Graduate student (teaching assistants)",
+	      "Part-time adjuncts",
+	      "Full-time non-tenure eligible",
+	      "Full-time tenure eligible",
+	      "Full-time tenured",
+	      "No Response"
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+
+
+    var current_degree_aural = {
+    type: 'survey-multi-select',
+    questions: [
+      {
+        prompt: "What is the highest degree that MOST aural skills teachers have at your institution? Choose all that apply.", 
+          options: [
+	      "Undergraduate degree in performance",
+	      "Undergraduate degree in music theory or composition",
+	      "Undergraduate degree in music education",
+	      "Graduate degree in performance",
+	      "Graduate degree in music theory or composition",
+	      "Graduate degree in music education",
+	      "No Response"
+	      
+	  ], 
+        horizontal: false,
+        required: true,
+        name: 'Colors'
+      }], 
+    randomize_question_order: false };
+/*
+    var time_cap_intro = {
+	type: 'instructions',
+	pages: ['The last few questions will ask you to reflect on your current and future pedagogy in aural skills. We encourage you to think <strong>big picture</strong> when it comes to providing these answers.'],
+    show_clickable_nav: true
+  }
+
+    var current_rep = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "<p>What kind of repitoire have you used in the past three years to teach aural skills?</p><p>Please be as specific as possible in terms of genres, composers, styles, and eras of music.</p><p>Please do not use this answer to note what you would like to use, we ask that question next.</p><p>Feel free to write as much as possible, we are interested in the content of your responses, not that anything is grammatically correct.</p>", placeholder: "Enter a Number: 22", rows: 20, columns: 70}
+	]};
+
+    var future_rep = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "<p>What kind of repitoire do you hope to use to teach aural skills over the course of the next three years?</p><p>Please be as specific as possible in terms of genres, composers, styles, and eras of music.</p><p>Feel free to write as much as possible, we are interested in the content of your responses, not that anything is grammatically correct.</p>", placeholder: "Enter a Number: 22", rows: 20, columns: 70}
+	]};
+
+    var future_notation = {
+	type: 'survey-text',
+	questions: [
+	    {prompt: "<p>How important is it for your students to learn how what they are hearing maps on to Western musical notation?</p>", placeholder: "Enter a Number: 22", rows: 20, columns: 70}
+	]};
+	*/
+
+    //////////////
+    // Experiment Go 
+
+  jsPsych.init({
+      timeline: [
+	  intro_text,
+// Section I  
+	  section_1_banner,
+	  aprp_page,
+	  rp_free_response, 
+	  ap_free_response,
+	  rp_instructions_slider_2,
+	  rpap_people,
+	  multi_response_text,
+// Section II  
+	  section_2_banner,
+	  // section_2_instructions_a,
+	  //rp_important_1, 
+	  rp_important_2, 
+	 // ap_important_1, 
+	  ap_important_2, 
+	  aural_rpap_priority,
+	  rp_activity_1,
+	  rp_activity_rate_1,
+	  rp_activity_2,
+	  rp_activity_rate_2,
+	  rp_activity_3,
+	  rp_activity_rate_3,
+	  rp_activity_4,
+	  rp_activity_rate_4,
+	  rp_activity_5,
+	  rp_activity_rate_5,
+	  section_2_instructions_b,
+	  ap_activity_1,
+	  ap_activity_rate_1,
+	  ap_activity_2,
+	  ap_activity_rate_2,
+	  ap_activity_3,
+	  ap_activity_rate_2,
+	  ap_activity_4,
+	  ap_activity_rate_2,
+	  ap_activity_5,
+	  ap_activity_rate_2,
+// Rep
+	  rep_prep,
+	  rep_freq,
+	  intend_rep,
+	  no_notation,
+	  nonotation_freq,
+// Demographic Questions
+	  section_3_banner,
+	  demo_intro_text,
+	  teaching_resp,
+	  years_teaching_music,
+	  recent_degree,
+	  years_since_degree,
+	  recent_degree_type,
+	  professor_job_rank,
+// Aural Skills Questions 
+	  do_you_have_ap_slider,
+	  do_you_have_rp_slider,
+	  aural_teach_intro_text,
+	  years_taught_aural,
+	  aural_system_learned,
+	  aural_system_location,
+	  aural_system_prefer_teach,
+	  aural_system_using,
+//	  aural_system_prefer,
+	  aural_students_count,
+	  aural_theory_parallel_pitch_cleff,
+	 // time_cap_intro, current_rep, future_rep, future_notation,
+// Institution and Faculty
+	  current_institution,
+	  current_number_majors,
+	  current_degrees_offered,
+	  current_degree_rank,
+	  current_degree_aural,
+	  country,
+	  state,
+//	  university,
+	  feedback,
+	  thank_you
+      ],
+      show_progress_bar: true,
+    on_finish: function(){  } // jsPsych.data.displayData();
+  });
+
+  </script>
+</html>

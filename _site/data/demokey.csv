@@ -1,0 +1,30 @@
+Question,Key,APRP
+Relative pitch is the ability to identify scale degrees with reference to a tonality.,rp_ref_tonal_01,rp
+Relative pitch is the ability to produce scale degrees with reference to a tonality.,rp_produce_tonality_02,rp
+Relative pitch is the ability to recognize if a song is played in the correct key without relying on a reference tone.,ap_ref_tonal_03,rp
+Relative pitch is the ability to identify the interval between two tones.,rp_id_interval_04,rp
+Relative pitch is the ability to produce the interval between two tones.,rp_produce_interval_05,rp
+Relative pitch is the ability to label a musical tone with a note name using a reference tone.,rp_name_relation_06,rp
+Relative pitch is the ability to perceive transposed melodies as the same.,rp_perceive_same_07,rp
+Relative pitch is the ability to identify a pitch in relation to a single remembered pitch (e.g.  A440 or Middle C).,rp_id_44_08,rp
+Relative pitch is the ability to produce a pitch in relation to a single remembered pitch (e.g. A440 or Middle C).,rp_produce_440_09,rp
+Relative pitch is the ability to label a note with a note name without relying on reference tone.,rp_name_abref_10,rp
+Relative pitch is the ability to produce a note without relying on reference tone.,rp_produce_abref_11,rp
+Relative pitch is the ability to remember a recently heard note or group of notes.,rp_remember_group_12,rp
+One can lose relative pitch.,rp_lose_13,rp
+At some point good relative pitch becomes absolute pitch.,"rp_to_ap_14
+",rp
+Absolute pitch is the ability to identify scale degrees with reference to a tonality.,ap_ref_tonal_15,ap
+Absolute pitch is the ability to recognize if a song is played in the correct key without relying on a reference tone.,ap_ref_tonal_16,ap
+Absolute pitch is the ability to produce scale degrees with reference to a tonality.,ap_produce_tonality_17,ap
+Absolute pitch is the ability to identify the interval between two tones.,ap_id_interval_18,ap
+Absolute pitch is the ability to produce the interval between two tones.,ap_produce_interval_19,ap
+Absolute pitch is the ability to label a musical tone with a note name using a reference tone.,ap_name_relation_20,ap
+Absolute pitch is the ability to perceive transposed melodies as the same.,ap_perceive_same_21,ap
+At some point good absolute pitch becomes pitch.,ap_to_rp_22,ap
+"Absolute pitch is the ability to identify a pitch in relation to a single remembered pitch (e.g., A440 or Middle C).",ap_id_440_23,ap
+"Absolute pitch is the ability to produce a pitch in relation to a single remembered pitch (e.g., A440 or Middle C).",ap_produce_440_24,ap
+Absolute pitch is the ability to label a note with a note name without relying on reference tone.,ap_name_abref_25,ap
+Absolute pitch is the ability to produce a note without relying on reference tone.,ap_produce_abref_26,ap
+Absolute pitch is the ability to remember a recently heard note or group of notes.,ap_remember_group_27,ap
+One can lose absolute pitch.,ap_lose_28,ap
