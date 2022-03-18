@@ -109,7 +109,7 @@ These are responses to the question:
 
 >  Relative pitch is...
 
-### Template
+### Absolute Pitch is... 
 
 ```{r}
 df %>% 
