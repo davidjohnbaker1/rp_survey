@@ -51,6 +51,7 @@ def_table_2 <- def_table %>%
 
 ### Definitions of Absolute and Relative Pitch 
 
+
 ```{r, fig.width=10, fig.height=7}
 
 agreement_plot <- def_table_2 %>%
@@ -76,6 +77,18 @@ agreement_plot
 ```
 
 *** 
+
+**Question**
+
+Below are several possible definitions of relative pitch and absolute pitch. Using the seven point scale below, please indicate the degree to which you agree with each definition. The left hand side will always correspond with “I strongly disagree” and the right hand scale will correspond with “I strongly agree.” Selecting the middle of the scale would indicate that you neither agree nor disagree with the definition.
+
+Remember that we are interested in what you think, based on your expertise and teaching experiences. We encourage you to use the full range of the rating scale.
+
+Selecting NR (No Response) would indicate that you do not wish to respond to this question.
+
+If none of these definitions matches your own personal definitions, you will have the chance to provide your own on the next page.
+
+**Comments**
 
 The first main plot here plots the general agreement and disagreement with each of the definitions of absolute and relative pitch.
 Answers of "No Response" have been removed.
@@ -105,9 +118,12 @@ df %>%
 
 *** 
 
-These are responses to the question:
+If you felt that none of the definitions of relative pitch on the page before were sufficient, please provide your own definition in the space below.
 
->  Relative pitch is...
+You are required to fill in some text. If you were happy with the definitions before, please just write Not Applicable.
+
+Relative pitch is...
+
 
 ### Absolute Pitch is... 
 
@@ -127,9 +143,11 @@ df %>%
 
 *** 
 
-Reponse to:
+If you felt that none of the definitions of absolute pitch were sufficient, please provide your own definition in the space below.
 
->  Absolute pitch is...
+You are required to fill in some text. If you were happy with the definitions before, please just write Not Applicable.
+
+Absolute pitch is...
 
 ### People With Absolute Pitch 
 
@@ -169,9 +187,13 @@ people_plot
 
 *** 
 
-People plot notes. 
+**Question**
 
-### Time Fostering RP in Classroom 
+Below are statements about people with relative and absolute pitch. Using the scale, please indicate the degree to which you agree with each statement, where the left hand side of the scale corresponds to 'I strongly disagree' and the right hand side of the scale corresponds to 'I strongly agree.' A selection in the middle would indicate that you neither agree nor disagree with the statement. Remember that we are interested in what you think, based on your expertise and teaching experiences.
+
+**Comments**
+
+### Select the average percentage of time per class period you currently spend fostering relative + absolute pitch skills.
 
 ```{r}
 aprp_time_est_plot <- activity_table %>%
@@ -197,9 +219,13 @@ aprp_time_est_plot
 
 *** 
 
+**Notes**
+
+This is presented as two questions, merged for one panel for analysis. 
+
 AP RP in Classroom 
 
-### APRP Priority 
+### How high a priority does your instituation/you put on relative/absolute pitch?
 
 ```{r}
 activity_table %>%
@@ -227,10 +253,15 @@ activity_table %>%
 
 *** 
 
-Nothing out of the ordinary here. 
+- How high a priority does your institution's curriculum place in developing absolute pitch in your students?
+- How high a priority does your institution's curriculum place in developing relative pitch in your students?
+- How high a priority do you place in developing absolute pitch in your students?
+- How high a priority do you place in developing relative pitch in your students?
+
+**Notes**
 
 
-### Fostering Relative Pitch Activities 
+### Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster relative pitch in the classroom.
 
 ```{r}
 
@@ -241,17 +272,29 @@ df %>%
   mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
 
-
-
 ```
 
 *** 
+
+**Question**
+
+Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster relative pitch in the classroom.
+
+This is the first of five activities you will be prompted to give regarding relative pitch.
+
+We require you to provide at least one activity using this page, and we will ask you to provide more activities on subsequent pages (although no response will be required for subsequent activities).
+
+Please describe the activity below. The next slide will ask you to rate the which you described on several dimensions.
+
+Your response will inform perceptual tasks we hope to build at a later stage of this research.
+
+**Notes**
 
 TODO: Join on Difficulty Level for Single Activities 
 TODO: Check Import Code, some answers lost because csv import error!
 
 
-### Fostering Absolute Pitch Activities 
+### Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster absolute pitch in the classroom.
 
 ```{r}
 df %>% 
@@ -264,11 +307,23 @@ df %>%
 
 *** 
 
-Ap Responses, same as checking CVS import for TODO
+**Question**
 
+Use the text box below to describe a classroom activity you either use, know of, or can imagine that could be used to foster absolute pitch in the classroom.
 
-### Repertoire 
+This is the first of five activities you will be prompted to give regarding absolute pitch.
 
+We require you to provide at least one activity using this page, and we will ask you to provide more activities on subsequent pages (although no response will be required for subsequent activities).
+
+Please describe the activity below. The next slide will ask you to rate the activity which you described on several dimensions.
+
+Your response will inform perceptual tasks we hope to build at a later stage of this research.
+
+**Notes**
+
+TODO Make same merged table as in RP parallel question. 
+
+### Please list examples of repertoire you use in your aural skills teaching (folk songs, Bach chorales, jazz, etc.).
 
 
 ```{r}
@@ -282,38 +337,7 @@ text_response_table %>%
 
 *** 
 
-> Please list examples of repertoire you use in your aural skills teaching (folk songs, Bach chorales, jazz, etc.).
-
-
-### Template
-
-```{r}
-text_response_table %>%
-  filter(t_id == "rep_list_intend_response") %>%
-  select(run_id, response) %>%
-  knitr::kable()
-```
-
-*** 
-
-Intended Response
-
-
-### Template
-
-```{r}
-
-text_response_table %>%
-  filter(t_id == "no_notation_list") %>%
-  select(run_id, response) %>%
-  knitr::kable()
-```
-
-*** 
-
-No Notation List 
-
-### Percent Time Western Classical Rep 
+### What percentage of your overall aural skills teaching time do you spend on Western classical repertoire compared to all other musical styles?
 
 ```{r}
 df %>%
@@ -331,10 +355,41 @@ df %>%
 
 *** 
 
-Consider Facet Wrapping this on location (for Shiny!)
+**Question**
+
+What percentage of your overall aural skills teaching time do you spend on Western classical repertoire compared to all other musical styles?
+
+Putting the slider to the far left would indicate you spend 0% of the time on Western classical repertoire. Moving the slider to the far right would indicate you spend 100% of your time on Western classical repertoire.
+
+**Notes**
 
 
-### Don't Depend on Notation 
+### What repertoire do you wish you could teach or intend to teach in the aural skills classroom if given the opportunity?
+
+```{r}
+text_response_table %>%
+  filter(t_id == "rep_list_intend_response") %>%
+  select(run_id, response) %>%
+  knitr::kable()
+```
+
+*** 
+
+### Please list any activities you do in the aural skills classroom that don’t involve musical staff notation.
+
+```{r}
+text_response_table %>%
+  filter(t_id == "no_notation_list") %>%
+  select(run_id, response) %>%
+  knitr::kable()
+```
+
+*** 
+
+
+
+### What percentage of your teaching time in the aural skills classroom do you spend on activities that don't depend on notation?
+
 
 ```{r}
 df %>%
@@ -350,43 +405,67 @@ df %>%
 
 *** 
 
-Consider Facet Wrapping this on location (for Shiny!)
 
-### Majority of Teaching Responsibilties
+
+### What activities represent the majority of your teaching responsibilities? Choose all that apply.
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
-  filter(trial_index == 40)  %>%
-  knitr::kable()
+  filter(trial_index == 40) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\]\\}$"))
+  
 
+# df %>%
+#   select(run_id, trial_index, response) %>%
+#   filter(trial_index == 40)  %>%
+#   knitr::kable()
 ```
 
 *** 
 
 text
 
-### Years Teaching Music Theory Classroom 
+### How many years have you been teaching music in the classroom?
+
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 41)  %>%
-  knitr::kable()
-
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  mutate(response = as.numeric(response)) %>%
+  mutate(median_years = median(response, na.rm = TRUE)) %>%
+  ggplot(aes(x = response)) +
+  geom_histogram() +
+  geom_vline(xintercept = 19) +
+  labs(title = "How many years have you been teaching music in the classroom?",
+       subtitle = "Median @ 19 Years") +
+  theme_bw()
+  
 ```
 
 *** 
 
-text
+- Obvious 85 outlier for 85 years of teaching! 
 
-### Higest Degree
+### Please list the highest ranked degree you have earned.
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 42) %>%
-  knitr::kable()
+    mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  count(response) %>%
+  ggplot(aes(x = reorder(response,n), y = n)) +
+  geom_histogram(stat = "identity") +
+  theme_bw() +
+  coord_flip() +
+  labs(title = "Please list the highest ranked degree you have earned.")
+  
 
 ```
 
@@ -394,13 +473,14 @@ df %>%
 
 text
 
-
-### Years Since Graduating with Highest Degree
+### About how many years has it been since graduating with your highest earned degree?
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 43) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
 ```
 
@@ -409,72 +489,104 @@ df %>%
 text
 
 
-### Type Most Recent Degree Inst
+### From what type of institution was your most recent degree?
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 44) %>%
-  knitr::kable()
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$"))
+
 ```
 
 *** 
 
 text
 
-### Best Described Role
+### What teaching role best describes you? Please choose one.
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 45) %>%
-  knitr::kable()
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"$")) %>%
+  count(response) %>%
+  ggplot(aes(x = reorder(response,n), y = n)) +
+  geom_histogram(stat = "identity") +
+  theme_bw() +
+  coord_flip() +
+  labs(title = "What teaching role best describes you? Please choose one")
+         
 ```
 
 *** 
 
 text
 
-### Own AP Ability 
+### I would characterize my own sense of absolute pitch as:
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 46) %>%
-  knitr::kable()
+  mutate(response = as.numeric(response)) %>%
+  ggplot(aes(x = response)) +
+  geom_histogram() +
+  labs(title = "I would characterize my own sense of absolute pitch as:") +
+  theme_bw()
+  
 ```
 
 *** 
 
 text
 
-### Own RP Ability 
+### I would characterize my own sense of relative pitch as:
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 47) %>%
-  knitr::kable()
+  mutate(response = as.numeric(response)) %>%
+  ggplot(aes(x = response)) +
+  geom_histogram() +
+  labs(title = "I would characterize my own sense of relative pitch as:") +
+  theme_bw()
+  
 ```
 
 *** 
 
 text
 
-### Years Taught Professional Career
+### How many years of aural skills have you taught in your professional career?
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 49) %>%
-  knitr::kable()
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  mutate(response = str_remove_all(response, "\ years")) %>%
+  mutate(response = str_remove_all(response, "asdf")) %>%
+  mutate(response = as.numeric(response)) %>%
+  ggplot(aes(x = response)) +
+  geom_histogram() +
+  theme_bw() +
+  labs(title = "How many years of aural skills have you taught in your professional career?")
+  
+  
+  
 ```
 
 *** 
 
 text
 
-### System Learned Student
+### What system did you learn when you were a student? Select all that apply.
 
 ```{r}
 df %>%
@@ -487,13 +599,15 @@ df %>%
 
 text
 
-### Country Learned Student 
+### Where were you when you learned this system as a student?
 
 ```{r}
 
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 51) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
 ```
 
@@ -501,46 +615,55 @@ df %>%
 
 text
 
-### Prefer to Teach  
+### What system do you prefer to teach? Select all that apply.
+
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 52) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
   knitr::kable()
+
 ```
 
 *** 
 
 text
 
-### System Teach @ Current Inst 
+### What system do you primarily teach at your institution? Select all that apply.
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 53) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
   knitr::kable()
+
 ```
 
 *** 
 
 text
 
-### Num Students / Class
+### How many students are typically enrolled in one of your aural skills classes (or sections)?
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 54) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
+
 ```
 
 *** 
 
-> How many students are typically enrolled in one of your aural skills classes (or sections)?
 
-### Misc Tracking
+### Tracking, Pitch Memory, Clefts 
 
 ```{r}
 df %>%
@@ -553,20 +676,12 @@ df %>%
 
 asdf
 
-### Misc Tracking
-
-```{r}
-df %>%
-  select(run_id, trial_index, response) %>%
-  filter(trial_index == 55) %>%
-  knitr::kable()
-```
 
 *** 
 
 asdf
 
-### Current Inst Type
+### In what type of institution do you teach? Choose all that apply.
 
 ```{r}
 df %>%
@@ -579,7 +694,7 @@ df %>%
 
 asdf
 
-### Number of Music Majors 
+### Approximately how many music majors are enrolled in the music program where you've most recently taught?
 
 ```{r}
 df %>%
@@ -590,9 +705,9 @@ df %>%
 
 *** 
 
-asdf
+Approximately how many music majors are enrolled in the music program where you've most recently taught? Please include both undergraduate and graduate students if your school offers both. If you don't wish to provide a response, write 'No Response'.
 
-### Degrees Offered 
+### Please list the degrees/programs your current or most recent music program offers. Choose all that apply:
 
 ```{r}
 df %>%
@@ -605,7 +720,7 @@ df %>%
 
 asdf
 
-### Rank Aural Teachers
+### What rank do most aural skills teachers hold at your institution? Choose all that apply.
 
 ```{r}
 df %>%
@@ -617,7 +732,8 @@ df %>%
 *** 
 asdf 
 
-### Highest Degree Aural 
+### What is the highest degree that MOST aural skills teachers have at your institution? Choose all that apply.
+
 
 ```{r}
 df %>%
@@ -630,24 +746,30 @@ df %>%
 
 asdf
 
-### Country Teach 
+### In what country do you teach?
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 61) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
+
 ```
 
 *** 
 asdf
 
-### State
+### In what state or province do you teach? Leave blank if not applicable.
+
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 62) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
 ```
 
@@ -656,12 +778,14 @@ df %>%
 asdf
 
 
-### Feedback 
+### Do you have any feedback you would like to provide on this survey?
 
 ```{r}
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 63) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
 ```
 
@@ -669,4 +793,17 @@ df %>%
 
 asdf
 
+
+### Response Map 
+
+```{r}
+# Import Spreadsheet with States
+
+
+
+```
+
+*** 
+
+asdf
 
