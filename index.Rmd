@@ -14,6 +14,7 @@ For questions, please contact [Dave Baker](mailto:davidjohnbaker1@gmail.com).
 
 The current ordering reflects the questions as they are asked on the survey.
 
+The total survey comprises $N = 73$ responses, when conditioned on location, some data only represent a single individual for an entire region or state. 
 
 ```{r}
 #----------------------------------------------------------------------
@@ -23,6 +24,7 @@ library(readr)
 library(ggplot2)
 library(ggridges)
 library(stringr)
+library(usmap)
 library(tidyr)
 library(viridis)
 #----------------------------------------------------------------------
@@ -31,14 +33,36 @@ source("R/assemble_functions.R")
 source("R/create_tables.R")
 #----------------------------------------------------------------------
 
+
+# Import Data For Analysis 
+
 activity_table <- read_csv("data/cleaned_tables/activity_table.csv")
 text_response_table <- read_csv("data/cleaned_tables/text_response_table.csv")
 demographic_table <- read_csv("data/cleaned_tables/demographic_table.csv")
-
-
 demo_key <- read_csv("data/demokey.csv")
+states <- read.csv("data/temp_states - Sheet1.csv") %>% mutate(run_id = as.character(run_id))
+
+# Remove Participants 
+
+participants_to_exclude <- c(15)
+
+'%!in%' <- function(x,y)!('%in%'(x,y))
+
+
+activity_table <- activity_table %>%
+  filter(run_id %!in% participants_to_exclude)
+
+text_response_table <- text_response_table %>%
+  filter(run_id %!in% participants_to_exclude)
+
+demographic_table <- demographic_table %>%
+  filter(run_id %!in% participants_to_exclude)
+
+df <- df %>%
+  filter(run_id %!in% participants_to_exclude)
 
 def_table <- create_definition_table(df)
+
 
 demo_key <- demo_key %>%
   rename(t_id = Key)
@@ -46,8 +70,66 @@ demo_key <- demo_key %>%
 def_table_2 <- def_table %>%
   left_join(demo_key)
 
+state_list <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 51) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) 
+
+# write.csv(state_list, "data/state_list.csv")
+
+solfa_learned_table <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 50) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response))
+
+solf_systems <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 50) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  select(response) %>%
+  distinct() 
+
+solf_systems$solfa_group <- c("Moveable","Moveable","Moveable","Fixed",
+                              "Moveable","Moveable","Moveable","Fixed","No Response","Moveable")
+
+
+usa_map_solfa <- solfa_learned_table %>%
+  left_join(states) %>%
+  left_join(solf_systems) %>%
+  filter(countr ==  "USA") %>%
+  select(solfa_group, state) %>%
+  group_by(state) %>%
+  count(solfa_group)
+
+usa_map_solfa[usa_map_solfa$solfa_group == "No Response",] <- NA
+
+total_n_survey <- demographic_table %>%
+  pull(run_id) %>%
+  unique() %>%
+  length()
+
 
 ```
+
+### Abstract 
+
+What does it mean for an individual to possess relative pitch (RP)? Do aural skills instructors agree on a single definition? How do they teach and assess RP in the classroom? Unlike absolute pitch (AP), which is the ability to produce or label a musical pitch without reference to an external standard (Marvin 2017), RP has no clearly agreed upon definition in the music-cognition and theory pedagogy literature: working definitions seem to capture some but not all aspects of this ability (Karpinski, 2000; Leipold et al., 2019; Levitin & Rogers, 2005; Marvin, 2007). Further while scholars have studied the prevalence (Ward, 1999 ), psychometric testing (Bermudez & Zatorre, 2009)), and neurophysiological mechanisms (Brauchli et al., 2019) of AP, RP has yet to receive such research attention.
+
+Our research goal is twofold. The first is to disentangle beliefs about RP and AP in order to arrive at an empirical, inductive understanding of pitch-based skills. The second is to study the demographic, professional, and pedagogical factors that are associated with pedagogies of relative and absolute pitch. In order to accomplish this, we share data from a survey that asks music teachers (N = 42, ongoing) for definitions of RP and AP (e.g., Figure 1), classroom activities that foster them (e.g., Figure 2), and pedagogical beliefs about each (e.g., Figure 3). The survey also attempts to learn whether these attitudes are shaped by participants’ musical background and/or past teaching experiences (e.g., Figure 4). Data collection began in December 2021; complete findings will be shared at the conference. The poster will illustrate agreement plots and other graphical representations of the data (Figure 5). This research is part of a larger project to build a skills-test battery that captures absolute- and relative-pitch abilities; this battery will have implications for both music-cognitive research and classroom applications. 
+
 
 ### Definitions of Absolute and Relative Pitch 
 
@@ -350,6 +432,21 @@ df %>%
   labs(title = "Percent of Time On Classical Rep")
    
 
+state_rep <- df %>%
+  filter(trial_index == 34) %>%
+  select(run_id, response) %>%
+  mutate(response = as.numeric(response)) %>%
+  left_join(states) %>%
+  filter(countr == "USA") %>%
+  group_by(state) %>%
+  summarise(mean_time = mean(response))
+
+
+# La Based vs Do Based Minor 
+plot_usmap(data = state_rep, values = "mean_time") + 
+  scale_fill_continuous(name = "Population (2015)", label = scales::comma) + 
+  theme(legend.position = "right") +
+  labs(title = "What percentage of time do you spend on classical repertoire?")
 
 ```
 
@@ -378,8 +475,10 @@ text_response_table %>%
 ### Please list any activities you do in the aural skills classroom that don’t involve musical staff notation.
 
 ```{r}
-text_response_table %>%
-  filter(t_id == "no_notation_list") %>%
+
+
+
+text_response_table %>% 
   select(run_id, response) %>%
   knitr::kable()
 ```
@@ -392,6 +491,22 @@ text_response_table %>%
 
 
 ```{r}
+no_notation_map <- df %>%
+  filter(trial_index == 37) %>%
+  select(run_id, response) %>%
+  mutate(run_id = as.character(run_id)) %>%
+  left_join(states) %>%
+  filter(countr == "USA") %>%
+  group_by(state) %>%
+  mutate(response = as.numeric(response)) %>%
+  summarise(mean_no_notation = mean(response))
+
+plot_usmap(data = no_notation_map, values = "mean_no_notation") + 
+  scale_fill_continuous(name = "Population (2015)", label = scales::comma) + 
+  theme(legend.position = "right") +
+  labs(title = "What percentage of your teaching time in the aural skills classroom do you spend on activities\n that don't depend on notation?")
+
+
 df %>%
   filter(trial_index == 37) %>%
   select(run_id, response) %>%
@@ -592,7 +707,20 @@ text
 df %>%
   select(run_id, trial_index, response) %>%
   filter(trial_index == 50) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
   knitr::kable()
+
+  
+# solf_systems$dola <- c("La","Letter","Do","Fixed","")
+
+
+
 ```
 
 *** 
@@ -609,6 +737,29 @@ df %>%
   mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
   mutate(response = str_remove_all(response, "Q0")) %>%
   knitr::kable()
+
+```
+
+*** 
+
+text
+
+### USA Solfa Map 
+
+```{r}
+
+
+library(usmap)
+
+# La Based vs Do Based Minor 
+plot_usmap(data = usa_map_solfa, values = "n") + 
+  scale_fill_continuous(name = "Population (2015)", label = scales::comma) + 
+  theme(legend.position = "right") +
+  facet_wrap(~solfa_group, nrow = 3, ncol = 1) +
+  labs(title = "What type of system did students learn where?")
+
+
+
 ```
 
 *** 
@@ -793,6 +944,79 @@ df %>%
 
 asdf
 
+### Alluvial Chart Ideas 
+
+```{r}
+library(ggalluvial)
+
+# System Learned As Student 
+
+system_learned <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 50) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  mutate(timepoint = "student")
+
+
+# Prefer to Teach
+system_prefer <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 52) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  mutate(timepoint = "prefer")
+
+
+# Teach At Institution 
+system_institution <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 53) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  mutate(timepoint = "institution")
+
+
+alluvial_data <- rbind(system_learned, system_prefer, system_institution)
+
+alluvial_data %>%
+  group_by(timepoint) %>%
+  count(response) %>%
+  mutate(timepoint = case_when(
+    timepoint == "student" ~ "Learned As Student",
+    timepoint == "prefer" ~ "System Prefer to Teach",
+    timepoint == "institution" ~ "Currently Teach at Institution",
+  )) %>%
+  mutate(timepoint = factor(timepoint, levels = c("Learned As Student","System Prefer to Teach","Currently Teach at Institution"))) %>%
+  ggplot(aes(x = timepoint, y = n, alluvium = response)) +
+  geom_alluvium(aes(fill = response, color = response),
+                alpha = .75, decreasing = FALSE) +
+  theme_bw() +
+  labs(title = "Alluvial Chart", x = "Time Point",
+       y = "Number of Responses", 
+       color = "System", fill = "System")
+
+```
+
+*** 
+
+Retrospectively should have done ranked categories. 
+
 
 ### Response Map 
 
@@ -807,3 +1031,48 @@ asdf
 
 asdf
 
+
+### References 
+
+
+Bermudez, P. & Zatorre, R. J. (2009). A distribution of absolute pitch ability as revealed by computerized testing. Music Perception, 27(2), 89–101.
+
+Brauchli, C., Leipold, S.& Jäncke, L. (2019). Univariate and multivariate analyses of functional networks in absolute pitch. Neuroimage, 189, 241–247.
+
+Burns, E. M., & Campbell, S. L. (1994). Frequency and frequency-ratio resolution by possessors of absolute and relative pitch: Examples of categorical perception? Journal of the Acoustical Society of America, 96(5, Pt 1), 2704–2719. https://doi.org/10.1121/1.411447
+
+Deutsch, D. (2013). Absolute pitch. In The psychology of music (ed. D. Deutsch), 3rd ed., 141–182. Academic Press.
+
+Deutsch, D., Henthorn, T., Marvin, E., & Xu, H. (2006). Absolute pitch among American and Chinese conservatory students: Prevalence differences and evidence for a speech-related critical period. Journal of the Acoustical Society of America, 119, 719–722.
+
+Halpern, A. R. (1989). Memory for the absolute pitch of familiar songs. Memory & Cognition, 17, 572–581.
+
+Karpinski, G. S. (2000). Aural skills acquisition: The development of listening, reading, and performing skills in college-level musicians. Oxford University Press.
+
+Leipold, S., Brauchli, C., Greber, M., & Jäncke, L. (2019). Absolute and relative pitch processing in the human brain: Neural and behavioral evidence. Brain Structure and Function, 224, 1723–1738. doi:10.1007/s00429-019-01872-2 pmid:30968240
+
+Leipold, S., Greber, M., & Elmer, S. (2019) Perception and cognition in absolute pitch: distinct yet inseparable. The Journal of Neuroscience, 39, 5839–5841. doi:10.1523/JNEUROSCI.0653-19.2019 pmid:31341067
+
+Levitin, D. J. (1994). Absolute memory for musical pitch: Evidence from the production of learned memories. Perception & Psychophysics, 56, 414–423.
+
+Levitin, D., & Rogers, S. (2005). Absolute pitch: Perception, coding, and controversies. Trends in Cognitive Sciences, 9(1), 26–33.
+
+Marvin, E. W. (2007). Absolute pitch perception and the pedagogy of relative pitch. Journal of Music Theory Pedagogy, 21, 1–34.
+
+Marvin, E. W. (2017). Musical connections: Absolute pitch. In The Routledge companion to music cognition (ed. Richard Ashley and Renée Timmers), 203–212. Routledge.
+
+Marvin, E. W, VanderStel, J., & Siu, J. C. (2020). In their own words: Analyzing the extents and origins of absolute pitch. Psychology of Music, 48(6), 808–823. doi:10.1177/0305735619832959 
+
+McClaskey, C. M. (2016). Factors affecting relative pitch perception. [Doctoral dissertation, University of California, Irvine].
+
+Miyazaki, K., & Rakowski, A. (2002). Recognition of notated melodies by possessors and nonpossessors of absolute pitch. Perception & Psychophysics, 64, 1337–1345.
+
+Rogers, M. R. (2004). Teaching approaches in music theory: An overview of pedagogical philosophies, 2nd ed. Southern Illinois University Press.
+
+Plantinga, J., & Trainor, L. J. (2005). Memory for melody: Infants use a relative pitch code. Cognition, 98(1), 1–11.
+
+Schellenberg, E. G., & Trehub, S. E. (2003). Good pitch memory is widespread. Psychological Science, 14, 262–266.
+
+Van Hedger, S. C., Veillette, J., Heald, S. L. M., & Nusbaum, H. C. (2020). Revisiting discrete versus continuous models of human behavior: The case of absolute pitch. PLoS ONE, 15(12), Article e0244308. https://doi.org/10.1371/journal.pone.0244308
+
+Ward, W. D. (1999). Absolute pitch. In The psychology of music (ed. D. Deutsch), 265–298. Academic Press.
