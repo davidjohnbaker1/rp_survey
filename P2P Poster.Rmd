@@ -1,0 +1,456 @@
+---
+title: "Pedagogy 2 Practice Markdown"
+author: "David John Baker"
+date: "4/21/2022"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+This document contains code for the figures made for the Pedagogy to Practice 2022 poster for this project.
+
+```{r}
+#----------------------------------------------------------------------
+library(dplyr)
+library(magrittr)
+library(readr)
+library(ggplot2)
+library(ggridges)
+library(stringr)
+library(usmap)
+library(tidyr)
+library(viridis)
+#----------------------------------------------------------------------
+source("R/cleaning_functions.R")
+source("R/assemble_functions.R")
+source("R/create_tables.R")
+#----------------------------------------------------------------------
+# Import Data For Analysis 
+
+activity_table <- read_csv("data/cleaned_tables/activity_table.csv")
+text_response_table <- read_csv("data/cleaned_tables/text_response_table.csv")
+demographic_table <- read_csv("data/cleaned_tables/demographic_table.csv")
+demo_key <- read_csv("data/demokey.csv")
+states <- read.csv("data/temp_states - Sheet1.csv") %>% mutate(run_id = as.character(run_id))
+
+#----------------------------------------------------------------------
+# Temporary Functions  
+
+'%!in%' <- function(x,y)!('%in%'(x,y))
+
+
+#----------------------------------------------------------------------
+# Remove Participants 
+
+participants_to_exclude <- c(15)
+
+#----------------------------------------------------------------------
+# Temporary Functions  
+
+activity_table <- activity_table %>%
+  filter(run_id %!in% participants_to_exclude)
+
+text_response_table <- text_response_table %>%
+  filter(run_id %!in% participants_to_exclude)
+
+demographic_table <- demographic_table %>%
+  filter(run_id %!in% participants_to_exclude)
+
+df <- df %>%
+  filter(run_id %!in% participants_to_exclude)
+
+def_table <- create_definition_table(df)
+
+n_total_respondents <- demographic_table %>%
+  select(run_id) %>%
+  mutate(run_id = as.character(run_id)) %>%
+  distinct() %>%
+  nrow()
+
+demo_key <- demo_key %>%
+  rename(t_id = Key)
+
+def_table_2 <- def_table %>%
+  left_join(demo_key)
+
+state_list <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 51) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) 
+
+# write.csv(state_list, "data/state_list.csv")
+
+solfa_learned_table <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 50) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response))
+
+solf_systems <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 50) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  select(response) %>%
+  distinct() 
+
+solf_systems$solfa_group <- c("Moveable","Moveable","Moveable","Fixed",
+                              "Moveable","Moveable","Moveable","Fixed","No Response","Moveable")
+
+
+usa_map_solfa <- solfa_learned_table %>%
+  left_join(states) %>%
+  left_join(solf_systems) %>%
+  filter(countr ==  "USA") %>%
+  select(solfa_group, state) %>%
+  group_by(state) %>%
+  count(solfa_group)
+
+usa_map_solfa[usa_map_solfa$solfa_group == "No Response",] <- NA
+
+total_n_survey <- demographic_table %>%
+  pull(run_id) %>%
+  unique() %>%
+  length()
+
+```
+
+## Column A
+
+### Breakdown of Survey Respondents 
+
+```{r}
+
+where_teach <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 56)  %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = ",NASM-accredited music program")) %>%
+  count(response) %>%
+  ggplot(aes(x = reorder(response, n), y = n)) +
+  geom_histogram(stat = "identity") +
+  coord_flip() +
+  theme( axis.text = element_text(size = 14 )) +
+  labs(title = "Where do our respondents teach?",
+       x = "Description of School",
+       y = "Number of Responses")
+  
+where_teach
+
+ggsave(filename = "img/fig/where_teach.png",where_teach, dpi = 300, height = 9, width = 12)
+
+  
+what_teach <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 40) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7","r8","r9","r10","r11","r12"),  sep = "\\),") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r12, names_to = "responsibility", values_to = "response") %>%
+  mutate(response = str_remove_all(response, pattern = "[[:punct:]]")) %>%
+  filter(!is.na(response)) %>%
+  count(response) %>%
+  ggplot(aes(x = reorder(response, n), y = n)) +
+  geom_histogram(stat = "identity") +
+  coord_flip() +
+  theme( axis.text = element_text(size = 14 )) +
+  labs(title = "Total Counts of Teaching Reponse Across Survey", 
+       x = "Description of Teaching",
+       y = "Number of Responses")
+
+what_teach  
+
+ggsave(filename = "img/fig/what_teach.png", what_teach, dpi = 300, height = 9, width = 12)
+
+
+what_cow <- cowplot::plot_grid(where_teach, what_teach, ncol = 1)
+
+ggsave(filename = "img/fig/what_cow.png", what_cow, dpi = 300, height = 15, width = 20)
+
+
+```
+
+
+### Breakdown of Classroom Time Devoted to RP and AP 
+
+```{r}
+aprp_time_est_plot <- activity_table %>%
+  filter(t_id %in% c("perc_class_time_ap", "perc_class_time_rp")) %>%
+  mutate(response = as.numeric(response)) %>%
+  mutate(t_id = case_when(
+    t_id == "perc_class_time_ap" ~ "Absolute Pitch",
+    t_id == "perc_class_time_rp" ~ "Relative Pitch"
+  )) %>%
+  ggplot(aes(response, fill = t_id)) +
+  geom_freqpoly(aes(color = t_id)) +
+  facet_wrap(~t_id, nrow = 2) +
+  theme_bw() +
+  viridis::scale_color_viridis(discrete = TRUE, begin = .1, end = .8) +
+  labs(title = "Classroom Time Devoted to \nAbsolute Pitch vs Relative Pitch in the Classroom",
+       x = "Estimated Percentage of Time",
+       y = "Frequency Count in Survey",
+       color = "Question Bank")
+
+aprp_time_est_plot
+
+ggsave(filename = "img/fig/aprp_time_est_plot.png", aprp_time_est_plot, dpi = 300, height = 6, width = 12)
+
+```
+
+
+
+### Alluvial Chart 
+
+```{r}
+library(ggalluvial)
+
+# System Learned As Student 
+
+system_learned <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 50) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  mutate(timepoint = "student")
+
+
+# Prefer to Teach
+system_prefer <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 52) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  mutate(timepoint = "prefer")
+
+
+# Teach At Institution 
+system_institution <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 53) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\\[\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"\\]\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\\"")) %>%
+  separate(col = response, into = c("r1","r2","r3","r4","r5","r6","r7"),  sep = ",") %>%
+  select(-trial_index) %>%
+  pivot_longer(cols = r1:r7, names_to = "system",values_to = "response") %>%
+  filter(!is.na(response)) %>%
+  mutate(timepoint = "institution")
+
+
+alluvial_data <- rbind(system_learned, system_prefer, system_institution)
+
+# TODO: Add Histogram of WHO is taking this survey (as histogram or something )
+# TODO: Do up colors
+
+alluvial_chart <- alluvial_data %>%
+  group_by(timepoint) %>%
+  count(response) %>%
+  left_join(solf_systems) %>%
+  mutate(timepoint = case_when(
+    timepoint == "student" ~ "Learned As Student",
+    timepoint == "prefer" ~ "System Prefer to Teach",
+    timepoint == "institution" ~ "Currently Teach at Institution",
+  )) %>%
+  mutate(timepoint = factor(timepoint, levels = c("Learned As Student","System Prefer to Teach","Currently Teach at Institution"))) %>%
+  ggplot(aes(x = timepoint, y = n, alluvium = response)) +
+  geom_alluvium(aes(fill = response, color = response),
+                alpha = .75, decreasing = FALSE) +
+  theme_bw() +
+  viridis::scale_fill_viridis(discrete = TRUE,option = "B") +
+  viridis::scale_color_viridis(discrete = TRUE,option = "B") +
+  labs( x = "Time Point",
+       y = "Number of Responses", 
+       color = "System", fill = "System")
+
+alluvial_chart
+
+ggsave(filename = "img/fig/alluvial_chart.png",plot = alluvial_chart, dpi = 300, height = 9, width = 14)
+
+```
+
+
+### Years Teaching In Classroom 
+
+```{r}
+teaching_rank <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 45) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\{\"Colors\"\\:\"")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"$")) %>%
+  select(run_id, response) %>%
+  rename(type_role = response)
+
+
+years_teaching <- df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 41)  %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  mutate(response = as.numeric(response)) %>%
+  mutate(median_years = median(response, na.rm = TRUE)) %>%
+  filter(response < 75) %>%
+  left_join(teaching_rank) %>%
+  ggplot(aes(x = response, fill = type_role)) +
+  geom_dotplot(binwidth = 2, alpha = .8) +
+  labs(title = "How many years have you been teaching music in the classroom?",
+       x = "Number of Years", fill = "Type of Role") +
+  theme_bw() +
+  viridis::scale_fill_viridis(discrete = TRUE,option = "C") +
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+
+ggsave(filename = "img/fig/years_teaching.png",plot = years_teaching, dpi = 300, height = 3, width = 10)
+
+years_teaching  
+```
+
+
+### Map of Sofla
+
+```{r}
+# La Based vs Do Based Minor 
+solfa_map_with_na <- plot_usmap(data = usa_map_solfa, values = "n") + 
+  scale_fill_continuous(name = "Number of Responses Per State", label = scales::comma) + 
+  theme(legend.position = "right") +
+  facet_wrap(~solfa_group, nrow = 1, ncol = 4) +
+  scale_fill_viridis() +
+    theme() +
+  labs(title = "Location of Domestic Responses: Fixed Versus Moveable Do",
+       fill = "Count")
+
+solfa_map_with_na
+
+ggsave(filename = "img/fig/solfa_map_with_na.png", plot = solfa_map_with_na, dpi = 300, height = 3, width = 6)
+
+
+df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index == 61) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  count(response)
+
+11 + 1 + 5 + 1 + 35 + 1
+
+manual_country <- tibble(country = c("China","Canada","Does Not Teach","Malta","USA","UK"),
+                         n = c(14,1,1,1,54, 1))
+
+country_plot <- manual_country %>%
+  ggplot(aes(x = country,y = n, fill = country)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Location ",
+       x =  "Country",
+       y = "Frequency",
+       fill = "Country") +
+  scale_fill_viridis(option = "A", discrete = TRUE) +
+  theme_bw()
+
+
+ggsave(filename = "img/fig/country_plot.png", plot = country_plot, dpi = 300, height = 4, width = 8)
+```
+
+
+
+
+
+## Column B 
+
+### Definitions of AP and RP 
+
+
+```{r}
+agreement_plot <- def_table_2 %>%
+  filter(response != 8) %>%
+  filter(Question != is.na(Question)) %>%
+  mutate(APRP = case_when(
+    APRP == "ap" ~ "Absolute Pitch",
+    APRP == "rp" ~ "Relative Pitch",
+  )) %>%
+  ggplot(aes(y = reorder(Question, response), x = response, fill = APRP)) +
+  geom_density_ridges2(panel_scaling = FALSE, scale = 3) +
+  scale_x_continuous(limits = c(0,7), breaks = seq(1,7,1)) +
+  labs(title = "Agreeing on Definitions of \nAbsolute and Relative Pitch",
+       subtitle = paste("N = ", n_total_respondents),
+       y = "Question",
+       x = "  Strongly Disagree     Strongly Agree",
+       fill = "Question Bank") +
+  theme_bw() +
+  viridis::scale_fill_viridis(discrete = TRUE, begin = .1, end = .8, alpha = .75)
+
+agreement_plot
+
+ggsave(filename = "img/fig/p2p_agreementplot.png", agreement_plot, dpi = 300, height = 9, width = 9)
+
+```
+
+
+### Definitions of People with AP and RP 
+
+
+```{r}
+people_table <- create_people_table(df)
+people_key <- read_csv("PeopleTable2.csv")
+
+people_key <- people_key %>%
+  rename(t_id = key) %>%
+  mutate(t_id = str_remove_all(t_id, "\'"))
+
+people_plot <- people_table %>%
+  left_join(people_key, by = "t_id") %>%
+  filter(response != 8) %>%
+  filter(Question != is.na(Question)) %>%
+  mutate(APRP = case_when(
+    APRP == "ap" ~ "Absolute Pitch",
+    APRP == "rp" ~ "Relative Pitch"
+  )) %>%
+  ggplot(aes(y = reorder(Question, response), x = response, fill = APRP)) +
+    geom_density_ridges2(panel_scaling = FALSE, scale = 3) +
+  scale_x_continuous(limits = c(0,7), breaks = seq(1,7,1)) +
+  labs(title = "Agreeing on Definitions of People\n with Absolute and Relative Pitch",
+       subtitle = paste("N = ", n_total_respondents),
+       y = "Question",
+       x = "   Strongly Disagree      Strongly Agree",
+       fill = "Question Bank") +
+  theme_bw() +
+  viridis::scale_fill_viridis(discrete = TRUE, begin = .1, end = .8, alpha = .75)
+
+people_plot
+
+ggsave(filename = "img/fig/p2p_peopleplot.png", people_plot, dpi = 300, height = 9, width = 9)
+
+  ```
+
+
+## Column C
+
+### Qualitative Breakdown Histogram
+
+### Choice Quotes 
+

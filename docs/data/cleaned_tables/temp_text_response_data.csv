@@ -1,0 +1,246 @@
+run_id,P,Activity,int_q_number,Label,response,k,text,detector
+1011,AP,Activity,1,use_skill_ap,1,1011 AP Activity 1,I play a melody at the piano without telling students what key it is in They are asked to notate it in the correct key,118
+1011,AP,Activity,1,easy_teach_ap,2,1011 AP Activity 1,I play a melody at the piano without telling students what key it is in They are asked to notate it in the correct key,118
+1011,AP,Activity,1,easy_learn_ap,1,1011 AP Activity 1,I play a melody at the piano without telling students what key it is in They are asked to notate it in the correct key,118
+1011,AP,Activity,1,helps_foster_ap,7,1011 AP Activity 1,I play a melody at the piano without telling students what key it is in They are asked to notate it in the correct key,118
+1011,AP,Activity,1,reps_absolute_ap,7,1011 AP Activity 1,I play a melody at the piano without telling students what key it is in They are asked to notate it in the correct key,118
+1011,AP,Activity,2,use_skill_ap,1,1011 AP Activity 2,I play a harmonic progression on the piano without telling students what key it is in Students are asked to notate the outer voices in the correct key,150
+1011,AP,Activity,2,easy_teach_ap,9,1011 AP Activity 2,I play a harmonic progression on the piano without telling students what key it is in Students are asked to notate the outer voices in the correct key,150
+1011,AP,Activity,2,easy_learn_ap,9,1011 AP Activity 2,I play a harmonic progression on the piano without telling students what key it is in Students are asked to notate the outer voices in the correct key,150
+1011,AP,Activity,2,helps_foster_ap,7,1011 AP Activity 2,I play a harmonic progression on the piano without telling students what key it is in Students are asked to notate the outer voices in the correct key,150
+1011,AP,Activity,2,reps_absolute_ap,7,1011 AP Activity 2,I play a harmonic progression on the piano without telling students what key it is in Students are asked to notate the outer voices in the correct key,150
+1011,AP,Activity,3,use_skill_ap,1,1011 AP Activity 3,Using specialized software I alter a recording of a wellknown piece transposing it up by some interval I play that transposed version for students asking them to identify the interval of transposition based solely on the difference between the notated key and the heard recording,279
+1011,AP,Activity,3,easy_teach_ap,9,1011 AP Activity 3,Using specialized software I alter a recording of a wellknown piece transposing it up by some interval I play that transposed version for students asking them to identify the interval of transposition based solely on the difference between the notated key and the heard recording,279
+1011,AP,Activity,3,easy_learn_ap,9,1011 AP Activity 3,Using specialized software I alter a recording of a wellknown piece transposing it up by some interval I play that transposed version for students asking them to identify the interval of transposition based solely on the difference between the notated key and the heard recording,279
+1011,AP,Activity,3,helps_foster_ap,7,1011 AP Activity 3,Using specialized software I alter a recording of a wellknown piece transposing it up by some interval I play that transposed version for students asking them to identify the interval of transposition based solely on the difference between the notated key and the heard recording,279
+1011,AP,Activity,3,reps_absolute_ap,7,1011 AP Activity 3,Using specialized software I alter a recording of a wellknown piece transposing it up by some interval I play that transposed version for students asking them to identify the interval of transposition based solely on the difference between the notated key and the heard recording,279
+1061,AP,Activity,11,use_skill_ap,1,1061 AP Activity 11,No answer,9
+1061,AP,Activity,11,easy_teach_ap,8,1061 AP Activity 11,No answer,9
+1061,AP,Activity,11,easy_learn_ap,8,1061 AP Activity 11,No answer,9
+1061,AP,Activity,11,helps_foster_ap,8,1061 AP Activity 11,No answer,9
+1061,AP,Activity,11,reps_absolute_ap,8,1061 AP Activity 11,No answer,9
+1061,AP,Activity,12,use_skill_ap,8,1061 AP Activity 12,No answer,9
+1061,AP,Activity,12,easy_teach_ap,8,1061 AP Activity 12,No answer,9
+1061,AP,Activity,12,easy_learn_ap,8,1061 AP Activity 12,No answer,9
+1061,AP,Activity,12,helps_foster_ap,8,1061 AP Activity 12,No answer,9
+1061,AP,Activity,12,reps_absolute_ap,8,1061 AP Activity 12,No answer,9
+1081,AP,Activity,21,use_skill_ap,7,1081 AP Activity 21,Singing melodies using fixed pitch names eg note names like CF etc or fixed Do syllables,88
+1081,AP,Activity,21,easy_teach_ap,7,1081 AP Activity 21,Singing melodies using fixed pitch names eg note names like CF etc or fixed Do syllables,88
+1081,AP,Activity,21,easy_learn_ap,6,1081 AP Activity 21,Singing melodies using fixed pitch names eg note names like CF etc or fixed Do syllables,88
+1081,AP,Activity,21,helps_foster_ap,6,1081 AP Activity 21,Singing melodies using fixed pitch names eg note names like CF etc or fixed Do syllables,88
+1081,AP,Activity,21,reps_absolute_ap,7,1081 AP Activity 21,Singing melodies using fixed pitch names eg note names like CF etc or fixed Do syllables,88
+1081,AP,Activity,22,use_skill_ap,5,1081 AP Activity 22,Identifying the name of reference pitch or key when giving melodic dictation,76
+1081,AP,Activity,22,easy_teach_ap,5,1081 AP Activity 22,Identifying the name of reference pitch or key when giving melodic dictation,76
+1081,AP,Activity,22,easy_learn_ap,3,1081 AP Activity 22,Identifying the name of reference pitch or key when giving melodic dictation,76
+1081,AP,Activity,22,helps_foster_ap,6,1081 AP Activity 22,Identifying the name of reference pitch or key when giving melodic dictation,76
+1081,AP,Activity,22,reps_absolute_ap,6,1081 AP Activity 22,Identifying the name of reference pitch or key when giving melodic dictation,76
+1129,AP,Activity,36,use_skill_ap,6,1129 AP Activity 36,Dictation emphasizing note identification rather than function,62
+1129,AP,Activity,36,easy_teach_ap,5,1129 AP Activity 36,Dictation emphasizing note identification rather than function,62
+1129,AP,Activity,36,easy_learn_ap,4,1129 AP Activity 36,Dictation emphasizing note identification rather than function,62
+1129,AP,Activity,36,helps_foster_ap,5,1129 AP Activity 36,Dictation emphasizing note identification rather than function,62
+1129,AP,Activity,36,reps_absolute_ap,3,1129 AP Activity 36,Dictation emphasizing note identification rather than function,62
+1129,AP,Activity,37,use_skill_ap,1,1129 AP Activity 37,Practice producing a specific reference pitch eg A440,53
+1129,AP,Activity,37,easy_teach_ap,9,1129 AP Activity 37,Practice producing a specific reference pitch eg A440,53
+1129,AP,Activity,37,easy_learn_ap,9,1129 AP Activity 37,Practice producing a specific reference pitch eg A440,53
+1129,AP,Activity,37,helps_foster_ap,5,1129 AP Activity 37,Practice producing a specific reference pitch eg A440,53
+1129,AP,Activity,37,reps_absolute_ap,7,1129 AP Activity 37,Practice producing a specific reference pitch eg A440,53
+1207,AP,Activity,41,use_skill_ap,9,1207 AP Activity 41,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,41,easy_teach_ap,9,1207 AP Activity 41,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,41,easy_learn_ap,9,1207 AP Activity 41,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,41,helps_foster_ap,9,1207 AP Activity 41,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,41,reps_absolute_ap,9,1207 AP Activity 41,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,42,use_skill_ap,9,1207 AP Activity 42,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,42,easy_teach_ap,9,1207 AP Activity 42,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,42,easy_learn_ap,9,1207 AP Activity 42,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,42,helps_foster_ap,9,1207 AP Activity 42,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1207,AP,Activity,42,reps_absolute_ap,9,1207 AP Activity 42,I have never thought about absolute pitch pedagogy and do not have anything to offer ,85
+1521,AP,Activity,81,use_skill_ap,9,1521 AP Activity 81,listen and sing,15
+1521,AP,Activity,81,easy_teach_ap,7,1521 AP Activity 81,listen and sing,15
+1521,AP,Activity,81,easy_learn_ap,7,1521 AP Activity 81,listen and sing,15
+1521,AP,Activity,81,helps_foster_ap,8,1521 AP Activity 81,listen and sing,15
+1521,AP,Activity,81,reps_absolute_ap,9,1521 AP Activity 81,listen and sing,15
+1521,AP,Activity,82,use_skill_ap,9,1521 AP Activity 82,listen,6
+1521,AP,Activity,82,easy_teach_ap,9,1521 AP Activity 82,listen,6
+1521,AP,Activity,82,easy_learn_ap,7,1521 AP Activity 82,listen,6
+1521,AP,Activity,82,helps_foster_ap,9,1521 AP Activity 82,listen,6
+1521,AP,Activity,82,reps_absolute_ap,9,1521 AP Activity 82,listen,6
+1616,AP,Activity,96,use_skill_ap,7,1616 AP Activity 96,sing different key scales without A,35
+1616,AP,Activity,96,easy_teach_ap,3,1616 AP Activity 96,sing different key scales without A,35
+1616,AP,Activity,96,easy_learn_ap,4,1616 AP Activity 96,sing different key scales without A,35
+1616,AP,Activity,96,helps_foster_ap,6,1616 AP Activity 96,sing different key scales without A,35
+1616,AP,Activity,96,reps_absolute_ap,6,1616 AP Activity 96,sing different key scales without A,35
+1677,AP,Activity,101,use_skill_ap,7,1677 AP Activity 101,Listen and distinguish of interval,34
+1677,AP,Activity,101,easy_teach_ap,7,1677 AP Activity 101,Listen and distinguish of interval,34
+1677,AP,Activity,101,easy_learn_ap,7,1677 AP Activity 101,Listen and distinguish of interval,34
+1677,AP,Activity,101,helps_foster_ap,7,1677 AP Activity 101,Listen and distinguish of interval,34
+1677,AP,Activity,101,reps_absolute_ap,7,1677 AP Activity 101,Listen and distinguish of interval,34
+1677,AP,Activity,102,use_skill_ap,7,1677 AP Activity 102,Listen and distinguish of chord,31
+1677,AP,Activity,102,easy_teach_ap,7,1677 AP Activity 102,Listen and distinguish of chord,31
+1677,AP,Activity,102,easy_learn_ap,7,1677 AP Activity 102,Listen and distinguish of chord,31
+1677,AP,Activity,102,helps_foster_ap,7,1677 AP Activity 102,Listen and distinguish of chord,31
+1677,AP,Activity,102,reps_absolute_ap,7,1677 AP Activity 102,Listen and distinguish of chord,31
+1729,AP,Activity,121,use_skill_ap,6,1729 AP Activity 121,nr                                                                                n n n n n n n n  n                                                              ,162
+1729,AP,Activity,121,easy_teach_ap,6,1729 AP Activity 121,nr                                                                                n n n n n n n n  n                                                              ,162
+1729,AP,Activity,121,easy_learn_ap,5,1729 AP Activity 121,nr                                                                                n n n n n n n n  n                                                              ,162
+1729,AP,Activity,121,helps_foster_ap,9,1729 AP Activity 121,nr                                                                                n n n n n n n n  n                                                              ,162
+1729,AP,Activity,121,reps_absolute_ap,9,1729 AP Activity 121,nr                                                                                n n n n n n n n  n                                                              ,162
+1729,AP,Activity,122,use_skill_ap,6,1729 AP Activity 122, nr  nnnnnnnnn,14
+1729,AP,Activity,122,easy_teach_ap,6,1729 AP Activity 122, nr  nnnnnnnnn,14
+1729,AP,Activity,122,easy_learn_ap,4,1729 AP Activity 122, nr  nnnnnnnnn,14
+1729,AP,Activity,122,helps_foster_ap,6,1729 AP Activity 122, nr  nnnnnnnnn,14
+1729,AP,Activity,122,reps_absolute_ap,4,1729 AP Activity 122, nr  nnnnnnnnn,14
+173,AP,Activity,136,use_skill_ap,1,173 AP Activity 136,Playing random pitches and asking students to remember them,59
+173,AP,Activity,136,easy_teach_ap,9,173 AP Activity 136,Playing random pitches and asking students to remember them,59
+173,AP,Activity,136,easy_learn_ap,9,173 AP Activity 136,Playing random pitches and asking students to remember them,59
+173,AP,Activity,136,helps_foster_ap,1,173 AP Activity 136,Playing random pitches and asking students to remember them,59
+173,AP,Activity,136,reps_absolute_ap,7,173 AP Activity 136,Playing random pitches and asking students to remember them,59
+173,AP,Activity,137,use_skill_ap,1,173 AP Activity 137,Listening to how different notes resonante differently to help identify absolute pitches,88
+173,AP,Activity,137,easy_teach_ap,9,173 AP Activity 137,Listening to how different notes resonante differently to help identify absolute pitches,88
+173,AP,Activity,137,easy_learn_ap,9,173 AP Activity 137,Listening to how different notes resonante differently to help identify absolute pitches,88
+173,AP,Activity,137,helps_foster_ap,1,173 AP Activity 137,Listening to how different notes resonante differently to help identify absolute pitches,88
+173,AP,Activity,137,reps_absolute_ap,4,173 AP Activity 137,Listening to how different notes resonante differently to help identify absolute pitches,88
+366,AP,Activity,191,use_skill_ap,1,366 AP Activity 191,Deliberate induction of tinnitus,32
+366,AP,Activity,191,easy_teach_ap,1,366 AP Activity 191,Deliberate induction of tinnitus,32
+366,AP,Activity,191,easy_learn_ap,8,366 AP Activity 191,Deliberate induction of tinnitus,32
+366,AP,Activity,191,helps_foster_ap,4,366 AP Activity 191,Deliberate induction of tinnitus,32
+366,AP,Activity,191,reps_absolute_ap,7,366 AP Activity 191,Deliberate induction of tinnitus,32
+360,AP,Activity,196,use_skill_ap,1,360 AP Activity 196,Singing the pitch that an oboe uses to tune the orchestra,57
+360,AP,Activity,196,easy_teach_ap,1,360 AP Activity 196,Singing the pitch that an oboe uses to tune the orchestra,57
+360,AP,Activity,196,easy_learn_ap,1,360 AP Activity 196,Singing the pitch that an oboe uses to tune the orchestra,57
+360,AP,Activity,196,helps_foster_ap,4,360 AP Activity 196,Singing the pitch that an oboe uses to tune the orchestra,57
+360,AP,Activity,196,reps_absolute_ap,6,360 AP Activity 196,Singing the pitch that an oboe uses to tune the orchestra,57
+371,AP,Activity,201,use_skill_ap,1,371 AP Activity 201,asking students to sing with letter note names ,47
+371,AP,Activity,201,easy_teach_ap,4,371 AP Activity 201,asking students to sing with letter note names ,47
+371,AP,Activity,201,easy_learn_ap,4,371 AP Activity 201,asking students to sing with letter note names ,47
+371,AP,Activity,201,helps_foster_ap,6,371 AP Activity 201,asking students to sing with letter note names ,47
+371,AP,Activity,201,reps_absolute_ap,6,371 AP Activity 201,asking students to sing with letter note names ,47
+427,AP,Activity,211,use_skill_ap,1,427 AP Activity 211,Ask students to listen to piece of music by Haydn like a symphony or Mozart like a piano concerto and to create a synethsesia like D major equals royalty and purple ,165
+427,AP,Activity,211,easy_teach_ap,7,427 AP Activity 211,Ask students to listen to piece of music by Haydn like a symphony or Mozart like a piano concerto and to create a synethsesia like D major equals royalty and purple ,165
+427,AP,Activity,211,easy_learn_ap,9,427 AP Activity 211,Ask students to listen to piece of music by Haydn like a symphony or Mozart like a piano concerto and to create a synethsesia like D major equals royalty and purple ,165
+427,AP,Activity,211,helps_foster_ap,7,427 AP Activity 211,Ask students to listen to piece of music by Haydn like a symphony or Mozart like a piano concerto and to create a synethsesia like D major equals royalty and purple ,165
+427,AP,Activity,211,reps_absolute_ap,7,427 AP Activity 211,Ask students to listen to piece of music by Haydn like a symphony or Mozart like a piano concerto and to create a synethsesia like D major equals royalty and purple ,165
+395,AP,Activity,216,use_skill_ap,2,395 AP Activity 216,Im out of ideas ,16
+395,AP,Activity,216,easy_teach_ap,4,395 AP Activity 216,Im out of ideas ,16
+395,AP,Activity,216,easy_learn_ap,4,395 AP Activity 216,Im out of ideas ,16
+395,AP,Activity,216,helps_foster_ap,5,395 AP Activity 216,Im out of ideas ,16
+395,AP,Activity,216,reps_absolute_ap,5,395 AP Activity 216,Im out of ideas ,16
+44,AP,Activity,221,use_skill_ap,2,44 AP Activity 221,Play a complex polychordcluster chord Ask students to identify the pitches present,82
+44,AP,Activity,221,easy_teach_ap,2,44 AP Activity 221,Play a complex polychordcluster chord Ask students to identify the pitches present,82
+44,AP,Activity,221,easy_learn_ap,2,44 AP Activity 221,Play a complex polychordcluster chord Ask students to identify the pitches present,82
+44,AP,Activity,221,helps_foster_ap,4,44 AP Activity 221,Play a complex polychordcluster chord Ask students to identify the pitches present,82
+44,AP,Activity,221,reps_absolute_ap,7,44 AP Activity 221,Play a complex polychordcluster chord Ask students to identify the pitches present,82
+401,AP,Activity,226,use_skill_ap,1,401 AP Activity 226,Teacher asks students to name pitch of sounding notes in various timbres piano string insts voice multiinstrument recordings etc,128
+401,AP,Activity,226,easy_teach_ap,8,401 AP Activity 226,Teacher asks students to name pitch of sounding notes in various timbres piano string insts voice multiinstrument recordings etc,128
+401,AP,Activity,226,easy_learn_ap,8,401 AP Activity 226,Teacher asks students to name pitch of sounding notes in various timbres piano string insts voice multiinstrument recordings etc,128
+401,AP,Activity,226,helps_foster_ap,5,401 AP Activity 226,Teacher asks students to name pitch of sounding notes in various timbres piano string insts voice multiinstrument recordings etc,128
+401,AP,Activity,226,reps_absolute_ap,3,401 AP Activity 226,Teacher asks students to name pitch of sounding notes in various timbres piano string insts voice multiinstrument recordings etc,128
+486,AP,Activity,246,use_skill_ap,2,486 AP Activity 246,Clef reading or transposedpart reading from scores while playing other parts on the piano,89
+486,AP,Activity,246,easy_teach_ap,5,486 AP Activity 246,Clef reading or transposedpart reading from scores while playing other parts on the piano,89
+486,AP,Activity,246,easy_learn_ap,2,486 AP Activity 246,Clef reading or transposedpart reading from scores while playing other parts on the piano,89
+486,AP,Activity,246,helps_foster_ap,2,486 AP Activity 246,Clef reading or transposedpart reading from scores while playing other parts on the piano,89
+486,AP,Activity,246,reps_absolute_ap,7,486 AP Activity 246,Clef reading or transposedpart reading from scores while playing other parts on the piano,89
+540,AP,Activity,261,use_skill_ap,1,540 AP Activity 261,I play an unfamiliar tonal piece or excerpt for students and ask them to identify the key it is in,98
+540,AP,Activity,261,easy_teach_ap,7,540 AP Activity 261,I play an unfamiliar tonal piece or excerpt for students and ask them to identify the key it is in,98
+540,AP,Activity,261,easy_learn_ap,1,540 AP Activity 261,I play an unfamiliar tonal piece or excerpt for students and ask them to identify the key it is in,98
+540,AP,Activity,261,helps_foster_ap,7,540 AP Activity 261,I play an unfamiliar tonal piece or excerpt for students and ask them to identify the key it is in,98
+540,AP,Activity,261,reps_absolute_ap,7,540 AP Activity 261,I play an unfamiliar tonal piece or excerpt for students and ask them to identify the key it is in,98
+598,AP,Activity,276,use_skill_ap,9,598 AP Activity 276,Im of the firm belief absolute pitch cannot be taught,53
+598,AP,Activity,276,easy_teach_ap,9,598 AP Activity 276,Im of the firm belief absolute pitch cannot be taught,53
+598,AP,Activity,276,easy_learn_ap,9,598 AP Activity 276,Im of the firm belief absolute pitch cannot be taught,53
+598,AP,Activity,276,helps_foster_ap,9,598 AP Activity 276,Im of the firm belief absolute pitch cannot be taught,53
+598,AP,Activity,276,reps_absolute_ap,9,598 AP Activity 276,Im of the firm belief absolute pitch cannot be taught,53
+1011,RP,Activity,1,use_skill_rp,4,1011 RP Activity 1,Given a reference note or chord students are asked to identify a given scale degree using a solfege syllable,108
+1011,RP,Activity,1,easy_teach_rp,7,1011 RP Activity 1,Given a reference note or chord students are asked to identify a given scale degree using a solfege syllable,108
+1011,RP,Activity,1,easy_learn_rp,6,1011 RP Activity 1,Given a reference note or chord students are asked to identify a given scale degree using a solfege syllable,108
+1011,RP,Activity,1,helps_foster_rp,7,1011 RP Activity 1,Given a reference note or chord students are asked to identify a given scale degree using a solfege syllable,108
+1011,RP,Activity,1,reps_relative_rp,7,1011 RP Activity 1,Given a reference note or chord students are asked to identify a given scale degree using a solfege syllable,108
+1011,RP,Activity,2,use_skill_rp,5,1011 RP Activity 2,I write solfege syllables on the board and point to them in a random sequence asking students to sing each scale degree after I point to it,139
+1011,RP,Activity,2,easy_teach_rp,7,1011 RP Activity 2,I write solfege syllables on the board and point to them in a random sequence asking students to sing each scale degree after I point to it,139
+1011,RP,Activity,2,easy_learn_rp,6,1011 RP Activity 2,I write solfege syllables on the board and point to them in a random sequence asking students to sing each scale degree after I point to it,139
+1011,RP,Activity,2,helps_foster_rp,7,1011 RP Activity 2,I write solfege syllables on the board and point to them in a random sequence asking students to sing each scale degree after I point to it,139
+1011,RP,Activity,2,reps_relative_rp,7,1011 RP Activity 2,I write solfege syllables on the board and point to them in a random sequence asking students to sing each scale degree after I point to it,139
+1011,RP,Activity,3,use_skill_rp,7,1011 RP Activity 3,During melodic dictation exercises I ask students to recognize notes as scale degrees and then to interpret those scale degrees as notes on the staff in the given key,166
+1011,RP,Activity,3,easy_teach_rp,7,1011 RP Activity 3,During melodic dictation exercises I ask students to recognize notes as scale degrees and then to interpret those scale degrees as notes on the staff in the given key,166
+1011,RP,Activity,3,easy_learn_rp,6,1011 RP Activity 3,During melodic dictation exercises I ask students to recognize notes as scale degrees and then to interpret those scale degrees as notes on the staff in the given key,166
+1011,RP,Activity,3,helps_foster_rp,7,1011 RP Activity 3,During melodic dictation exercises I ask students to recognize notes as scale degrees and then to interpret those scale degrees as notes on the staff in the given key,166
+1011,RP,Activity,3,reps_relative_rp,7,1011 RP Activity 3,During melodic dictation exercises I ask students to recognize notes as scale degrees and then to interpret those scale degrees as notes on the staff in the given key,166
+1079,RP,Activity,6,use_skill_rp,6,1079 RP Activity 6,I play a short melodic string of 46 pitches eg 2 bars in 44 with simple rhythms students sing back the string with solfege   ,125
+1079,RP,Activity,6,easy_teach_rp,4,1079 RP Activity 6,I play a short melodic string of 46 pitches eg 2 bars in 44 with simple rhythms students sing back the string with solfege   ,125
+1079,RP,Activity,6,easy_learn_rp,3,1079 RP Activity 6,I play a short melodic string of 46 pitches eg 2 bars in 44 with simple rhythms students sing back the string with solfege   ,125
+1079,RP,Activity,6,helps_foster_rp,7,1079 RP Activity 6,I play a short melodic string of 46 pitches eg 2 bars in 44 with simple rhythms students sing back the string with solfege   ,125
+1079,RP,Activity,6,reps_relative_rp,5,1079 RP Activity 6,I play a short melodic string of 46 pitches eg 2 bars in 44 with simple rhythms students sing back the string with solfege   ,125
+1079,RP,Activity,7,use_skill_rp,7,1079 RP Activity 7,sequentials  repeating a short pitch pattern eg lower neighbors on multiple scale degrees ,90
+1079,RP,Activity,7,easy_teach_rp,6,1079 RP Activity 7,sequentials  repeating a short pitch pattern eg lower neighbors on multiple scale degrees ,90
+1079,RP,Activity,7,easy_learn_rp,5,1079 RP Activity 7,sequentials  repeating a short pitch pattern eg lower neighbors on multiple scale degrees ,90
+1079,RP,Activity,7,helps_foster_rp,7,1079 RP Activity 7,sequentials  repeating a short pitch pattern eg lower neighbors on multiple scale degrees ,90
+1079,RP,Activity,7,reps_relative_rp,7,1079 RP Activity 7,sequentials  repeating a short pitch pattern eg lower neighbors on multiple scale degrees ,90
+1079,RP,Activity,8,use_skill_rp,7,1079 RP Activity 8,Students sing melody either at sight or prepared along with accompaniment Change keys either up or down and repeat the performance ,131
+1079,RP,Activity,8,easy_teach_rp,5,1079 RP Activity 8,Students sing melody either at sight or prepared along with accompaniment Change keys either up or down and repeat the performance ,131
+1079,RP,Activity,8,easy_learn_rp,4,1079 RP Activity 8,Students sing melody either at sight or prepared along with accompaniment Change keys either up or down and repeat the performance ,131
+1079,RP,Activity,8,helps_foster_rp,7,1079 RP Activity 8,Students sing melody either at sight or prepared along with accompaniment Change keys either up or down and repeat the performance ,131
+1079,RP,Activity,8,reps_relative_rp,7,1079 RP Activity 8,Students sing melody either at sight or prepared along with accompaniment Change keys either up or down and repeat the performance ,131
+1061,RP,Activity,11,use_skill_rp,7,1061 RP Activity 11,Identification of scale degrees within a given tonality ,56
+1061,RP,Activity,11,easy_teach_rp,6,1061 RP Activity 11,Identification of scale degrees within a given tonality ,56
+1061,RP,Activity,11,easy_learn_rp,4,1061 RP Activity 11,Identification of scale degrees within a given tonality ,56
+1061,RP,Activity,11,helps_foster_rp,7,1061 RP Activity 11,Identification of scale degrees within a given tonality ,56
+1061,RP,Activity,11,reps_relative_rp,7,1061 RP Activity 11,Identification of scale degrees within a given tonality ,56
+1061,RP,Activity,12,use_skill_rp,7,1061 RP Activity 12,Written identification of intervals musical dictation given a reference tone ,77
+1061,RP,Activity,12,easy_teach_rp,5,1061 RP Activity 12,Written identification of intervals musical dictation given a reference tone ,77
+1061,RP,Activity,12,easy_learn_rp,5,1061 RP Activity 12,Written identification of intervals musical dictation given a reference tone ,77
+1061,RP,Activity,12,helps_foster_rp,7,1061 RP Activity 12,Written identification of intervals musical dictation given a reference tone ,77
+1061,RP,Activity,12,reps_relative_rp,7,1061 RP Activity 12,Written identification of intervals musical dictation given a reference tone ,77
+1061,RP,Activity,13,use_skill_rp,6,1061 RP Activity 13,Written identification music dictation of melodies given a reference tone ,74
+1061,RP,Activity,13,easy_teach_rp,6,1061 RP Activity 13,Written identification music dictation of melodies given a reference tone ,74
+1061,RP,Activity,13,easy_learn_rp,6,1061 RP Activity 13,Written identification music dictation of melodies given a reference tone ,74
+1061,RP,Activity,13,helps_foster_rp,7,1061 RP Activity 13,Written identification music dictation of melodies given a reference tone ,74
+1061,RP,Activity,13,reps_relative_rp,7,1061 RP Activity 13,Written identification music dictation of melodies given a reference tone ,74
+1071,RP,Activity,16,use_skill_rp,7,1071 RP Activity 16,A choir directed by a colleague uses tuning forks instead of a piano The students constantly are finding their pitches during rehearsal from a tuning fork A ,157
+1071,RP,Activity,16,easy_teach_rp,7,1071 RP Activity 16,A choir directed by a colleague uses tuning forks instead of a piano The students constantly are finding their pitches during rehearsal from a tuning fork A ,157
+1071,RP,Activity,16,easy_learn_rp,6,1071 RP Activity 16,A choir directed by a colleague uses tuning forks instead of a piano The students constantly are finding their pitches during rehearsal from a tuning fork A ,157
+1071,RP,Activity,16,helps_foster_rp,7,1071 RP Activity 16,A choir directed by a colleague uses tuning forks instead of a piano The students constantly are finding their pitches during rehearsal from a tuning fork A ,157
+1071,RP,Activity,16,reps_relative_rp,7,1071 RP Activity 16,A choir directed by a colleague uses tuning forks instead of a piano The students constantly are finding their pitches during rehearsal from a tuning fork A ,157
+1081,RP,Activity,21,use_skill_rp,7,1081 RP Activity 21,Analyzinglabeling the scale degrees andor intervals of melodiessongs which are very well known to the individual in order to draw upon these specific examples to identify scale degreesintervals in other contexts  ,213
+1081,RP,Activity,21,easy_teach_rp,6,1081 RP Activity 21,Analyzinglabeling the scale degrees andor intervals of melodiessongs which are very well known to the individual in order to draw upon these specific examples to identify scale degreesintervals in other contexts  ,213
+1081,RP,Activity,21,easy_learn_rp,6,1081 RP Activity 21,Analyzinglabeling the scale degrees andor intervals of melodiessongs which are very well known to the individual in order to draw upon these specific examples to identify scale degreesintervals in other contexts  ,213
+1081,RP,Activity,21,helps_foster_rp,7,1081 RP Activity 21,Analyzinglabeling the scale degrees andor intervals of melodiessongs which are very well known to the individual in order to draw upon these specific examples to identify scale degreesintervals in other contexts  ,213
+1081,RP,Activity,21,reps_relative_rp,7,1081 RP Activity 21,Analyzinglabeling the scale degrees andor intervals of melodiessongs which are very well known to the individual in order to draw upon these specific examples to identify scale degreesintervals in other contexts  ,213
+1081,RP,Activity,22,use_skill_rp,5,1081 RP Activity 22,Singing with a relative syllable system eg moveable solfege or scale degree numbers,83
+1081,RP,Activity,22,easy_teach_rp,5,1081 RP Activity 22,Singing with a relative syllable system eg moveable solfege or scale degree numbers,83
+1081,RP,Activity,22,easy_learn_rp,4,1081 RP Activity 22,Singing with a relative syllable system eg moveable solfege or scale degree numbers,83
+1081,RP,Activity,22,helps_foster_rp,7,1081 RP Activity 22,Singing with a relative syllable system eg moveable solfege or scale degree numbers,83
+1081,RP,Activity,22,reps_relative_rp,7,1081 RP Activity 22,Singing with a relative syllable system eg moveable solfege or scale degree numbers,83
+1081,RP,Activity,23,use_skill_rp,6,1081 RP Activity 23,Not identifying the key or name of a reference pitch when giving melodicharmonic dictation Instead labeling a reference pitch by scale degree or giving no label at all ,168
+1081,RP,Activity,23,easy_teach_rp,5,1081 RP Activity 23,Not identifying the key or name of a reference pitch when giving melodicharmonic dictation Instead labeling a reference pitch by scale degree or giving no label at all ,168
+1081,RP,Activity,23,easy_learn_rp,4,1081 RP Activity 23,Not identifying the key or name of a reference pitch when giving melodicharmonic dictation Instead labeling a reference pitch by scale degree or giving no label at all ,168
+1081,RP,Activity,23,helps_foster_rp,7,1081 RP Activity 23,Not identifying the key or name of a reference pitch when giving melodicharmonic dictation Instead labeling a reference pitch by scale degree or giving no label at all ,168
+1081,RP,Activity,23,reps_relative_rp,7,1081 RP Activity 23,Not identifying the key or name of a reference pitch when giving melodicharmonic dictation Instead labeling a reference pitch by scale degree or giving no label at all ,168
+112,RP,Activity,26,use_skill_rp,7,112 RP Activity 26,Harmonic dictation using only solfege and roman numeral chords or played in another key than what is written,108
+112,RP,Activity,26,easy_teach_rp,7,112 RP Activity 26,Harmonic dictation using only solfege and roman numeral chords or played in another key than what is written,108
+112,RP,Activity,26,easy_learn_rp,7,112 RP Activity 26,Harmonic dictation using only solfege and roman numeral chords or played in another key than what is written,108
+112,RP,Activity,26,helps_foster_rp,7,112 RP Activity 26,Harmonic dictation using only solfege and roman numeral chords or played in another key than what is written,108
+112,RP,Activity,26,reps_relative_rp,7,112 RP Activity 26,Harmonic dictation using only solfege and roman numeral chords or played in another key than what is written,108
+112,RP,Activity,27,use_skill_rp,7,112 RP Activity 27,Routine integration of moveable do solfege and scale degrees in classroom activities,84
+112,RP,Activity,27,easy_teach_rp,5,112 RP Activity 27,Routine integration of moveable do solfege and scale degrees in classroom activities,84
+112,RP,Activity,27,easy_learn_rp,5,112 RP Activity 27,Routine integration of moveable do solfege and scale degrees in classroom activities,84
+112,RP,Activity,27,helps_foster_rp,7,112 RP Activity 27,Routine integration of moveable do solfege and scale degrees in classroom activities,84
+112,RP,Activity,27,reps_relative_rp,7,112 RP Activity 27,Routine integration of moveable do solfege and scale degrees in classroom activities,84
+1095,RP,Activity,31,use_skill_rp,7,1095 RP Activity 31,I teach harmony according to the three fundamental Reimann functions tonic dominant and predominant I invented dance steps to reflect the nature of each function I establish a key and then improvise chord progressions while they identify Reimann functions by their movements ,275
+1095,RP,Activity,31,easy_teach_rp,7,1095 RP Activity 31,I teach harmony according to the three fundamental Reimann functions tonic dominant and predominant I invented dance steps to reflect the nature of each function I establish a key and then improvise chord progressions while they identify Reimann functions by their movements ,275
+1095,RP,Activity,31,easy_learn_rp,7,1095 RP Activity 31,I teach harmony according to the three fundamental Reimann functions tonic dominant and predominant I invented dance steps to reflect the nature of each function I establish a key and then improvise chord progressions while they identify Reimann functions by their movements ,275
+1095,RP,Activity,31,helps_foster_rp,7,1095 RP Activity 31,I teach harmony according to the three fundamental Reimann functions tonic dominant and predominant I invented dance steps to reflect the nature of each function I establish a key and then improvise chord progressions while they identify Reimann functions by their movements ,275
+1095,RP,Activity,31,reps_relative_rp,7,1095 RP Activity 31,I teach harmony according to the three fundamental Reimann functions tonic dominant and predominant I invented dance steps to reflect the nature of each function I establish a key and then improvise chord progressions while they identify Reimann functions by their movements ,275
+1095,RP,Activity,32,use_skill_rp,7,1095 RP Activity 32,Cant think of a fifth one,25
+1095,RP,Activity,32,easy_teach_rp,6,1095 RP Activity 32,Cant think of a fifth one,25
+1095,RP,Activity,32,easy_learn_rp,5,1095 RP Activity 32,Cant think of a fifth one,25
+1095,RP,Activity,32,helps_foster_rp,7,1095 RP Activity 32,Cant think of a fifth one,25
+1095,RP,Activity,32,reps_relative_rp,7,1095 RP Activity 32,Cant think of a fifth one,25
+1129,RP,Activity,36,use_skill_rp,7,1129 RP Activity 36,improvisation within a tonalharmonic framework,46
+1129,RP,Activity,36,easy_teach_rp,7,1129 RP Activity 36,improvisation within a tonalharmonic framework,46
+1129,RP,Activity,36,easy_learn_rp,6,1129 RP Activity 36,improvisation within a tonalharmonic framework,46
+1129,RP,Activity,36,helps_foster_rp,7,1129 RP Activity 36,improvisation within a tonalharmonic framework,46
+1129,RP,Activity,36,reps_relative_rp,7,1129 RP Activity 36,improvisation within a tonalharmonic framework,46
+1129,RP,Activity,37,use_skill_rp,7,1129 RP Activity 37,interval identificationlabeling,31
+1129,RP,Activity,37,easy_teach_rp,7,1129 RP Activity 37,interval identificationlabeling,31
+1129,RP,Activity,37,easy_learn_rp,5,1129 RP Activity 37,interval identificationlabeling,31
+1129,RP,Activity,37,helps_foster_rp,7,1129 RP Activity 37,interval identificationlabeling,31
+1129,RP,Activity,37,reps_relative_rp,7,1129 RP Activity 37,interval identificationlabeling,31

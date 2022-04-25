@@ -63,6 +63,11 @@ df <- df %>%
 
 def_table <- create_definition_table(df)
 
+n_total_respondents <- demographic_table %>%
+  select(run_id) %>%
+  mutate(run_id = as.character(run_id)) %>%
+  distinct() %>%
+  nrow()
 
 demo_key <- demo_key %>%
   rename(t_id = Key)
@@ -147,7 +152,7 @@ agreement_plot <- def_table_2 %>%
   geom_density_ridges2() +
   scale_x_continuous(limits = c(0,7), breaks = seq(1,7,1)) +
   labs(title = "Agreeing on Definitions of \nAbsolute and Relative Pitch",
-       subtitle = "N = 42",
+       subtitle = paste("N = ", n_total_respondents),
        y = "Question",
        x = "Density",
        fill = "Question Bank") +
@@ -751,14 +756,16 @@ text
 
 library(usmap)
 
+usa_map_solfa %>% View()
+
 # La Based vs Do Based Minor 
-plot_usmap(data = usa_map_solfa, values = "n") + 
-  scale_fill_continuous(name = "Population (2015)", label = scales::comma) + 
+solfa_map_with_na <- plot_usmap(data = usa_map_solfa, values = "n") + 
+  scale_fill_continuous(name = "Number of Responses Per State", label = scales::comma) + 
   theme(legend.position = "right") +
-  facet_wrap(~solfa_group, nrow = 3, ncol = 1) +
-  labs(title = "What type of system did students learn where?")
+  facet_wrap(~solfa_group, nrow = 3, ncol = 1)
 
 
+ggsave(filename = "img/fig/solfa_map_with_na.png", plot = solfa_map_with_na, dpi = 300, height = 8, width = 4)
 
 ```
 
@@ -994,7 +1001,10 @@ system_institution <- df %>%
 
 alluvial_data <- rbind(system_learned, system_prefer, system_institution)
 
-alluvial_data %>%
+# TODO: Add Histogram of WHO is taking this survey (as histogram or something )
+# TODO: Do up colors
+
+alluvial_chart <- alluvial_data %>%
   group_by(timepoint) %>%
   count(response) %>%
   mutate(timepoint = case_when(
@@ -1010,6 +1020,9 @@ alluvial_data %>%
   labs(title = "Alluvial Chart", x = "Time Point",
        y = "Number of Responses", 
        color = "System", fill = "System")
+
+
+ggsave(filename = "img/fig/alluvial_chart.png",plot = alluvial_chart, dpi = 300, height = 9, width = 13)
 
 ```
 

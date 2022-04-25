@@ -1,5 +1,5 @@
 #----------------------------------------------------------------------
-# EDA Plot 
+# EDA Plot | Poster Plots 
 #----------------------------------------------------------------------
 library(dplyr)
 library(magrittr)
@@ -10,11 +10,11 @@ library(stringr)
 library(tidyr)
 library(viridis)
 #----------------------------------------------------------------------
+# Import Data 
 
 activity_table <- read_csv("data/cleaned_tables/activity_table.csv")
 text_response_table <- read_csv("data/cleaned_tables/text_response_table.csv")
 demographic_table <- read_csv("data/cleaned_tables/demographic_table.csv")
-
 
 demo_key <- read_csv("data/demokey.csv")
 
@@ -26,7 +26,6 @@ demo_key <- demo_key %>%
 def_table_2 <- def_table %>%
   left_join(demo_key)
 
-table(def_table_2$response)
 
 #------------------------------------------------------------------------------
 # Agreement Plot 
@@ -42,7 +41,7 @@ agreement_plot <- def_table_2 %>%
   geom_density_ridges2() +
   scale_x_continuous(limits = c(0,7), breaks = seq(1,7,1)) +
   labs(title = "Agreeing on Definitions of \nAbsolute and Relative Pitch",
-       subtitle = "N = 42",
+       subtitle = paste("N = ", n_total_respondents),
        y = "Question",
        x = "Density",
        fill = "Question Bank") +
@@ -111,7 +110,46 @@ people_plot
 
 ggsave(filename = "img/fig/people_plot.png", width = 10, height = 10, dpi = 300)
 
+#---------------------------------------------------------------------------------------
+# Activity Data Extraction
+
+
+
   
+#---------------------------------------------------------------------------------------
+# Activity Data Extraction
+main_responses <- activity_table %>%
+  mutate(a.key = str_detect(string = t_id, pattern = "Activity")) %>%
+  mutate(t.key = str_detect(string = response, pattern = "Q0")) %>% 
+  filter(a.key == TRUE & t.key == FALSE) %>%
+  select(-t.key, -a.key) %>%
+  separate(col = t_id, into = c("P","Activity", "int_q_number", "Label"), sep = " ") %>%
+  mutate(run_id = as.character(run_id)) %>%
+  mutate(k = paste(run_id,P, Activity, int_q_number))
+
+left_responses <- activity_table %>%
+  mutate(t.key = str_detect(string = response, pattern = "Q0")) %>%
+  filter(t.key == TRUE) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  select(-t.key) %>%
+  mutate(run_id = as.character(run_id)) %>%
+  mutate(k = paste(run_id, t_id)) %>%
+  select(k, response) %>%
+  mutate(text = response) %>%
+  select(-response)
+
+left_responses
+
+temp_response_data_with_text <- main_responses %>%
+  left_join(left_responses) %>%
+  filter(!is.na(text)) %>%
+  mutate(detector = nchar(text)) %>%
+  filter(detector > 5) 
+
+temp_response_data_with_text
+
+write_csv(temp_response_data_with_text, file = "data/cleaned_tables/temp_text_response_data.csv")
 
 
 #----------------------------------------------------------------------
