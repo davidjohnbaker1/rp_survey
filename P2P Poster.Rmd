@@ -273,14 +273,16 @@ alluvial_chart <- alluvial_data %>%
   left_join(solf_systems) %>%
   mutate(timepoint = case_when(
     timepoint == "student" ~ "Learned As Student",
-    timepoint == "prefer" ~ "System Prefer to Teach",
+    timepoint == "prefer" ~ "Prefer to Teach",
     timepoint == "institution" ~ "Currently Teach at Institution",
   )) %>%
-  mutate(timepoint = factor(timepoint, levels = c("Learned As Student","System Prefer to Teach","Currently Teach at Institution"))) %>%
+  mutate(timepoint = factor(timepoint, levels = c("Learned As Student","Currently Teach at Institution","Prefer to Teach"))) %>%
+  mutate(response = str_trim(string = response)) %>%
   ggplot(aes(x = timepoint, y = n, alluvium = response)) +
   geom_alluvium(aes(fill = response, color = response),
                 alpha = .75, decreasing = FALSE) +
   theme_bw() +
+  theme(text = element_text(size=20)) +
   viridis::scale_fill_viridis(discrete = TRUE,option = "B") +
   viridis::scale_color_viridis(discrete = TRUE,option = "B") +
   labs( x = "Time Point",
@@ -445,10 +447,36 @@ people_plot
 
 ggsave(filename = "img/fig/p2p_peopleplot.png", people_plot, dpi = 300, height = 9, width = 9)
 
-  ```
+```
 
 
 ## Column C
+
+```{r}
+participant_submitted_responses <- activity_table %>%
+  mutate(text_responses = str_detect(string = response, pattern = "Q0")) %>%
+  mutate(RP_tag = str_detect(string = t_id, pattern = "RP")) %>%
+  mutate(AP_tag = str_detect(string = t_id, pattern = "AP")) %>%
+  filter(text_responses == TRUE) %>%
+  select(run_id, response, RP_tag, AP_tag) %>%
+  mutate(response = str_remove_all(response, '[[:punct:]]')) %>%
+  mutate(response = str_remove_all(response, "Q0")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\\}$")) %>%
+  mutate(response = str_remove_all(string = response,pattern = "\"$")) 
+
+participant_submitted_responses
+
+temp_df <- read_csv("data/2022-03-16-data-complete.csv")
+
+View(temp_df)
+
+temp_df %>%
+  select(run_id, trial_index, response) %>%
+  filter(trial_index %in% c(12:21))
+
+
+```
+
 
 ### Qualitative Breakdown Histogram
 
