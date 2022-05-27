@@ -25,3 +25,4 @@ write_csv(activity_table, file = "data/cleaned_tables/activity_table.csv")
 write_csv(text_response_table, file = "data/cleaned_tables/text_response_table.csv")
 write_csv(demographic_table, file = "data/cleaned_tables/demographic_table.csv")
 
+

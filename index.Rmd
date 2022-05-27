@@ -280,6 +280,33 @@ Below are statements about people with relative and absolute pitch. Using the sc
 
 **Comments**
 
+
+### Poster Inset 1 
+
+```{r picture-1, echo = F, fig.cap = "AP", out.width = '100%'}
+knitr::include_graphics("aux_img/AP_All.png")
+```
+
+**Comments** 
+
+
+### Poster Inset 2 
+
+```{r picture-2, echo = F, fig.cap = "RP", out.width = '100%'}
+knitr::include_graphics("aux_img/RP_All.png")
+```
+
+**Comments** 
+
+### Poster Inset 3 
+
+```{r picture-3, echo = F, fig.cap = "Demographics", out.width = '100%'}
+knitr::include_graphics("aux_img/demographics.png")
+```
+
+
+**Comments** 
+
 ### Select the average percentage of time per class period you currently spend fostering relative + absolute pitch skills.
 
 ```{r}
